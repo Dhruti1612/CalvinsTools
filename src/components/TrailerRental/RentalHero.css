@@ -1,0 +1,457 @@
+/* =========================================
+   RENTAL HERO
+   Unique rental hero classes
+========================================= */
+
+.rental-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 548px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: stretch;
+
+  background-image: url("/Images/truck2.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.rental-hero__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 11, 10, 0.96) 0%,
+      rgba(12, 11, 10, 0.91) 38%,
+      rgba(12, 11, 10, 0.72) 68%,
+      rgba(12, 11, 10, 0.58) 100%
+    );
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rental-hero__container {
+  position: relative;
+
+  z-index: 2;
+
+  width: calc(100% - 110px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  padding: 29px 0 45px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.rental-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1;
+}
+
+.rental-hero__breadcrumb strong {
+  color: #ffffff;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.rental-hero__content {
+  max-width: 780px;
+
+  margin-top: 50px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.rental-hero__eyebrow {
+  margin-bottom: 24px;
+
+  color: #d89163;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.rental-hero__title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: clamp(52px, 5.2vw, 72px);
+
+  font-weight: 800;
+
+  line-height: 0.98;
+
+  letter-spacing: -2.8px;
+}
+
+.rental-hero__title span {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.rental-hero__description {
+  max-width: 670px;
+
+  margin: 27px 0 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.rental-hero__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.rental-hero__button {
+  min-height: 57px;
+
+  box-sizing: border-box;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 26px;
+
+  border-radius: 5px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* Primary */
+
+.rental-hero__button--primary {
+  background: #c45d1d;
+
+  color: #ffffff;
+}
+
+.rental-hero__button--primary:hover {
+  background: #a94f19;
+
+  transform: translateY(-2px);
+}
+
+
+/* Secondary */
+
+.rental-hero__button--secondary {
+  border: 2px solid rgba(255, 255, 255, 0.85);
+
+  background: transparent;
+
+  color: #ffffff;
+}
+
+.rental-hero__button--secondary:hover {
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #171715;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   QUICK INFO
+========================================= */
+
+.rental-hero__quick-info {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 31px;
+}
+
+.rental-hero__quick-item {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+}
+
+.rental-hero__quick-item i {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 1px;
+
+  background: #d89163;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .rental-hero {
+    min-height: 560px;
+  }
+
+  .rental-hero__container {
+    width: calc(100% - 70px);
+
+    padding-top: 28px;
+  }
+
+  .rental-hero__content {
+    max-width: 720px;
+
+    margin-top: 55px;
+  }
+
+  .rental-hero__title {
+    font-size: clamp(48px, 7vw, 64px);
+  }
+
+  .rental-hero__description {
+    max-width: 620px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .rental-hero {
+    min-height: 650px;
+
+    background-position: 62% center;
+  }
+
+
+  .rental-hero__overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(12, 11, 10, 0.95) 0%,
+        rgba(12, 11, 10, 0.88) 55%,
+        rgba(12, 11, 10, 0.72) 100%
+      );
+  }
+
+
+  .rental-hero__container {
+    width: 90%;
+
+    padding: 25px 0 38px;
+  }
+
+
+  /* Breadcrumb */
+
+  .rental-hero__breadcrumb {
+    font-size: 10px;
+  }
+
+
+  /* Content */
+
+  .rental-hero__content {
+    max-width: none;
+
+    margin-top: 58px;
+  }
+
+
+  /* Eyebrow */
+
+  .rental-hero__eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.6px;
+  }
+
+
+  /* Title */
+
+  .rental-hero__title {
+    font-size: clamp(42px, 11vw, 57px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+  }
+
+
+  /* Description */
+
+  .rental-hero__description {
+    margin-top: 23px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Buttons */
+
+  .rental-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-top: 25px;
+  }
+
+  .rental-hero__button {
+    width: 100%;
+
+    min-height: 51px;
+
+    font-size: 11px;
+  }
+
+
+  /* Quick info */
+
+  .rental-hero__quick-info {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 25px;
+  }
+
+  .rental-hero__quick-item {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .rental-hero {
+    min-height: 680px;
+  }
+
+  .rental-hero__title {
+    font-size: 40px;
+  }
+
+  .rental-hero__description {
+    font-size: 12px;
+  }
+
+}

@@ -1,0 +1,526 @@
+/* =========================================================
+   SHOP BY SIZE
+========================================================= */
+
+.shop-size {
+  width: 100%;
+  background: #fbfaf7;
+  color: #171715;
+  padding: 77px 0 88px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.shop-size__container {
+  width: calc(100% - 120px);
+  max-width: 1228px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.shop-size__header {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  column-gap: 80px;
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.shop-size__section-label {
+  margin-bottom: 17px;
+  color: #b8581f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  line-height: 1;
+}
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.shop-size__title {
+  margin: 0;
+  color: #171715;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(60px, 5.3vw, 76px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -2.8px;
+}
+
+.shop-size__title em {
+  color: #bd5a20;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.shop-size__header-right {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.shop-size__header-right p {
+  margin: 0 0 17px;
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SIZE GUIDE BUTTON
+========================================================= */
+
+.shop-size__guide-button {
+  min-height: 49px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #171715;
+  border: 1px solid #171715;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.shop-size__guide-button:hover {
+  background: #2a2926;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   SIZE GRID
+========================================================= */
+
+.shop-size__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+/* =========================================================
+   SIZE CARD
+========================================================= */
+
+.shop-size__card {
+  min-width: 0;
+  min-height: 213px;
+  padding: 25px 23px 22px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #d8d3ca;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* =========================================================
+   SIZE NUMBER
+========================================================= */
+
+.shop-size__size {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 9px;
+}
+
+.shop-size__size strong {
+  color: #171715;
+  font-family: "DM Sans", sans-serif;
+  font-size: 43px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -1.8px;
+}
+
+.shop-size__size span {
+  color: #292826;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.shop-size__card h3 {
+  margin: 0 0 11px;
+  color: #292826;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.shop-size__card p {
+  margin: 0;
+  color: #6b665f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.shop-size__actions {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   RENT BUTTON
+========================================================= */
+
+.shop-size__rent-button {
+  height: 31px;
+  min-width: 0;
+  flex: 1;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #bd5a20;
+  border: 1px solid #bd5a20;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.shop-size__rent-button:hover {
+  background: #a94f1b;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   BUY BUTTON
+========================================================= */
+
+.shop-size__buy-button {
+  height: 31px;
+  min-width: 0;
+  flex: 0.78;
+  padding: 0 9px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 2px solid #292826;
+  border-radius: 5px;
+  color: #292826;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.shop-size__buy-button:hover {
+  background: #171715;
+  color: #ffffff;
+}
+
+/* =========================================================
+   CUSTOM CARD
+========================================================= */
+
+.shop-size__custom {
+  min-width: 0;
+  min-height: 213px;
+  padding: 25px 22px 23px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #171715;
+  border: 1px solid #171715;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* =========================================================
+   CUSTOM TITLE
+========================================================= */
+
+.shop-size__custom h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   CUSTOM LINK
+========================================================= */
+
+.shop-size__custom-link {
+  margin-top: auto;
+  color: #d18455;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.shop-size__custom-link:hover {
+  color: #e29b70;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .shop-size__container {
+    width: calc(100% - 70px);
+  }
+
+  .shop-size__header {
+    column-gap: 50px;
+  }
+
+  .shop-size__title {
+    font-size: clamp(53px, 5.7vw, 69px);
+  }
+
+  .shop-size__card {
+    padding: 22px 17px 20px;
+  }
+
+  .shop-size__size strong {
+    font-size: 39px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .shop-size {
+    padding: 65px 0 75px;
+  }
+
+  .shop-size__container {
+    width: calc(100% - 60px);
+  }
+
+  .shop-size__header {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  /* =======================================================
+     TWO SEPARATE CARDS PER ROW
+  ======================================================= */
+
+  .shop-size__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .shop-size__card,
+  .shop-size__custom {
+    border: 1px solid #d8d3ca;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .shop-size__custom {
+    min-height: 210px;
+    background: #171715;
+    border-color: #171715;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .shop-size {
+    padding: 55px 0 65px;
+  }
+
+  .shop-size__container {
+    width: 90%;
+  }
+
+  .shop-size__title {
+    font-size: clamp(46px, 11vw, 59px);
+    letter-spacing: -1.8px;
+  }
+
+  .shop-size__header-right p {
+    font-size: 14px;
+  }
+
+  /* =======================================================
+     TWO SEPARATE CARDS ON MOBILE
+  ======================================================= */
+
+  .shop-size__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+    overflow: visible;
+  }
+
+  .shop-size__card {
+    min-width: 0;
+    min-height: 190px;
+    padding: 22px 12px;
+    border: 1px solid #d8d3ca;
+    border-radius: 8px;
+    background: #ffffff;
+  }
+
+  .shop-size__custom {
+    min-width: 0;
+    min-height: 190px;
+    padding: 22px 12px;
+    border: 1px solid #171715;
+    border-radius: 8px;
+    background: #171715;
+  }
+
+  /* =======================================================
+     MOBILE BUTTON FIX
+  ======================================================= */
+
+  .shop-size__actions {
+    width: 100%;
+    gap: 6px;
+    padding-top: 14px;
+    box-sizing: border-box;
+  }
+
+  .shop-size__rent-button {
+    flex: 1;
+    min-width: 0;
+    height: 31px;
+    padding: 0 5px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .shop-size__buy-button {
+    flex: 0.72;
+    min-width: 0;
+    height: 31px;
+    padding: 0 5px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .shop-size__title {
+    font-size: 42px;
+  }
+
+  .shop-size__size strong {
+    font-size: 38px;
+  }
+
+  .shop-size__card h3 {
+    font-size: 15px;
+  }
+
+  .shop-size__card p {
+    font-size: 12px;
+  }
+
+  /* Keep buttons inside narrow cards */
+
+  .shop-size__actions {
+    gap: 5px;
+  }
+
+  .shop-size__rent-button {
+    height: 30px;
+    padding: 0 4px;
+    font-size: 9px;
+    letter-spacing: 0.3px;
+  }
+
+  .shop-size__buy-button {
+    height: 30px;
+    padding: 0 4px;
+    font-size: 9px;
+    letter-spacing: 0.2px;
+  }
+}

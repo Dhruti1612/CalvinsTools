@@ -1,0 +1,572 @@
+/* =========================================
+   CUSTOM BUILD TYPES
+   Unique classes only
+========================================= */
+
+.custom-build-types {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 72px;
+
+  background: #ffffff;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.custom-build-types__container {
+  width: calc(100% - 110px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.custom-build-types__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 70px;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.custom-build-types__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.custom-build-types__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.custom-build-types__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.custom-build-types__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.custom-build-types__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 57px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.custom-build-types__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.custom-build-types__intro {
+  padding-top: 63px;
+}
+
+.custom-build-types__intro p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CARD GRID
+========================================= */
+
+.custom-build-types__grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.custom-build-types__card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #ddd8cf;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.custom-build-types__card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(23, 23, 21, 0.07);
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.custom-build-types__photo {
+  position: relative;
+
+  width: 100%;
+  height: 187px;
+
+  overflow: hidden;
+
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+
+  background: #eee9df;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.custom-build-types__photo-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: none;
+
+  transform: scale(1.01);
+
+  transition: transform 0.5s ease;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.custom-build-types__card:hover
+.custom-build-types__photo-image {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.custom-build-types__photo-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.04),
+    transparent 55%,
+    rgba(0, 0, 0, 0.12)
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PHOTO NOTE
+========================================= */
+
+.custom-build-types__photo-note {
+  position: absolute;
+
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+
+  z-index: 2;
+
+  box-sizing: border-box;
+
+  padding: 5px 8px;
+
+  border-radius: 3px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.custom-build-types__card-content {
+  min-height: 151px;
+
+  box-sizing: border-box;
+
+  padding: 20px 22px 19px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.custom-build-types__card-title {
+  margin: 0 0 8px;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 27px;
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.custom-build-types__card-description {
+  max-width: 350px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   CARD LINK
+========================================= */
+
+.custom-build-types__card-link {
+  display: inline-block;
+
+  margin-top: auto;
+  padding-top: 13px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.custom-build-types__card-link:hover {
+  color: #171715;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .custom-build-types {
+    padding: 68px 0 65px;
+  }
+
+  .custom-build-types__container {
+    width: calc(100% - 70px);
+  }
+
+  .custom-build-types__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+
+    margin-bottom: 30px;
+  }
+
+  .custom-build-types__intro {
+    padding-top: 0;
+  }
+
+  .custom-build-types__title {
+    font-size: 53px;
+  }
+
+  .custom-build-types__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .custom-build-types {
+    padding: 55px 0 55px;
+  }
+
+  .custom-build-types__container {
+    width: 90%;
+  }
+
+
+  /* Label */
+
+  .custom-build-types__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .custom-build-types__label span {
+    font-size: 12px;
+  }
+
+  .custom-build-types__label i {
+    width: 34px;
+  }
+
+  .custom-build-types__label strong {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* Title */
+
+  .custom-build-types__title {
+    font-size: clamp(42px, 11vw, 57px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Intro */
+
+  .custom-build-types__top {
+    row-gap: 23px;
+
+    margin-bottom: 27px;
+  }
+
+  .custom-build-types__intro p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Cards */
+
+  .custom-build-types__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+  }
+
+  .custom-build-types__photo {
+    height: 155px;
+  }
+
+  .custom-build-types__photo-note {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+
+    font-size: 9px;
+  }
+
+  .custom-build-types__card-content {
+    min-height: 160px;
+
+    padding: 17px 14px 15px;
+  }
+
+  .custom-build-types__card-title {
+    font-size: 22px;
+
+    line-height: 1.05;
+  }
+
+  .custom-build-types__card-description {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .custom-build-types__card-link {
+    padding-top: 11px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   KEEP 2 COLUMNS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .custom-build-types__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .custom-build-types__photo {
+    height: 145px;
+  }
+
+  .custom-build-types__card-content {
+    min-height: 155px;
+
+    padding: 15px 11px 14px;
+  }
+
+  .custom-build-types__card-title {
+    font-size: 19px;
+  }
+
+  .custom-build-types__card-description {
+    font-size: 12px;
+  }
+
+  .custom-build-types__card-link {
+    font-size: 10px;
+  }
+
+}

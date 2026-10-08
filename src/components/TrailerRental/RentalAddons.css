@@ -1,0 +1,433 @@
+/* =========================================
+   ADD-ON EQUIPMENT
+   Completely unique class prefix
+========================================= */
+
+.rental-addons-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 78px 0 75px;
+
+  background: #ffffff;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rental-addons-section__container {
+  width: calc(100% - 96px);
+  max-width: 1230px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.rental-addons-section__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 65px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.rental-addons-section__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 21px;
+}
+
+.rental-addons-section__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.rental-addons-section__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.rental-addons-section__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.rental-addons-section__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 52px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.rental-addons-section__intro {
+  padding-top: 8px;
+}
+
+.rental-addons-section__intro p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.58;
+}
+
+
+
+
+
+/* =========================================
+   ADD-ON GRID
+========================================= */
+
+.rental-addons-section__grid {
+  display: grid;
+
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+/* =========================================
+   ADD-ON CARD
+========================================= */
+
+.rental-addons-section__card {
+  min-height: 137px;
+
+  box-sizing: border-box;
+
+  padding: 17px 16px 15px;
+
+  border: 1px solid #ded8ce;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.rental-addons-section__card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(23, 23, 21, 0.06);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.rental-addons-section__icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+
+  border-radius: 6px;
+
+  background: #f6e8dd;
+}
+
+.rental-addons-section__icon span {
+  position: relative;
+
+  width: 11px;
+  height: 9px;
+
+  display: block;
+
+  box-sizing: border-box;
+
+  border: 2px solid #d06a27;
+
+  border-radius: 2px;
+}
+
+.rental-addons-section__icon span::before {
+  content: "";
+
+  position: absolute;
+
+  left: 2px;
+  right: 2px;
+
+  top: 2px;
+
+  height: 2px;
+
+  background: #d06a27;
+}
+
+.rental-addons-section__icon span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 2px;
+  right: 2px;
+
+  bottom: 2px;
+
+  height: 1px;
+
+  background: #d06a27;
+}
+
+
+/* =========================================
+   ADD-ON TITLE
+========================================= */
+
+.rental-addons-section__card h3 {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.rental-addons-section__card p {
+  margin: 10px 0 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1150px) {
+
+  .rental-addons-section__container {
+    width: calc(100% - 70px);
+  }
+
+  .rental-addons-section__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .rental-addons-section {
+    padding: 65px 0;
+  }
+
+  .rental-addons-section__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+  }
+
+  .rental-addons-section__intro {
+    padding-top: 0;
+  }
+
+  .rental-addons-section__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .rental-addons-section {
+    padding: 55px 0 60px;
+  }
+
+  .rental-addons-section__container {
+    width: 90%;
+  }
+
+
+  /* Label */
+
+  .rental-addons-section__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .rental-addons-section__label span {
+    font-size: 11px;
+  }
+
+  .rental-addons-section__label i {
+    width: 34px;
+  }
+
+  .rental-addons-section__label strong {
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  /* Title */
+
+  .rental-addons-section__title {
+    font-size: clamp(39px, 10vw, 52px);
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Intro */
+
+  .rental-addons-section__intro p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  
+
+
+  /* Grid */
+
+  .rental-addons-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+  }
+
+
+  /* Card */
+
+  .rental-addons-section__card {
+    min-height: 145px;
+
+    padding: 16px 14px 14px;
+  }
+
+  .rental-addons-section__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .rental-addons-section__card h3 {
+    font-size: 13px;
+  }
+
+  .rental-addons-section__card p {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .rental-addons-section__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rental-addons-section__card {
+    min-height: 140px;
+  }
+}

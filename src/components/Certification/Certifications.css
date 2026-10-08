@@ -1,0 +1,785 @@
+.certifications-page {
+  background: #fbfaf7;
+  color: #171715;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.certifications-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  padding: 22px 5%;
+}
+
+.certifications-nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.certifications-logo {
+  color: #fff;
+
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.certifications-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.certifications-nav-links a {
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+.certifications-nav-links a:hover {
+  color: #fff;
+}
+
+.certifications-nav-button {
+  padding: 12px 20px;
+
+  background: #b8581f;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+
+  transition: background 0.25s ease;
+}
+
+.certifications-nav-button:hover {
+  background: #a34e1c;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.certifications-hero {
+  min-height: 610px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 150px 7% 100px;
+
+  background:
+    url("/images/trailer-sale.jpg")
+    center / cover no-repeat;
+}
+
+.certifications-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 15, 12, 0.80),
+      rgba(18, 15, 12, 0.30)
+    );
+}
+
+.certifications-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 720px;
+}
+
+.certifications-eyebrow,
+.section-eyebrow {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #b8581f;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.certifications-hero .certifications-eyebrow {
+  color: #e6a06f;
+}
+
+.certifications-hero h1 {
+  color: #fff;
+
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+}
+
+.certifications-hero p {
+  max-width: 600px;
+
+  margin-top: 28px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.section-padding {
+  padding: 110px 7%;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.certifications-intro {
+  background: #fbfaf7;
+}
+
+.certifications-intro-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+}
+
+.certifications-intro-heading h2,
+.certifications-section-heading h2,
+.certifications-food-content h2,
+.certifications-fire h2,
+.certifications-ahj-heading h2,
+.certifications-cta h2 {
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.certifications-intro-text {
+  padding-top: 35px;
+}
+
+.certifications-intro-text p {
+  margin: 0 0 22px;
+
+  color: #4f4b44;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications-list {
+  background: #f3efe9;
+}
+
+.certifications-section-heading {
+  max-width: 1250px;
+  margin: 0 auto 55px;
+}
+
+.certifications-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.certification-card {
+  min-height: 330px;
+
+  position: relative;
+
+  padding: 40px;
+
+  background: #fbfaf7;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(23, 23, 21, 0.08);
+}
+
+.certification-number {
+  color: #b8581f;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.certification-card-content {
+  margin-top: 65px;
+}
+
+.certification-card h3 {
+  font-size: 38px;
+}
+
+.certification-subtitle {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #777169;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.certification-card p {
+  max-width: 550px;
+
+  margin-top: 22px;
+
+  color: #5d5952;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* =========================
+   FOOD TRAILER
+========================= */
+
+.certifications-food {
+  background: #fbfaf7;
+}
+
+.certifications-food-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+
+  align-items: center;
+}
+
+.certifications-food-image {
+  height: 560px;
+  overflow: hidden;
+}
+
+.certifications-food-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.certifications-food-content p {
+  max-width: 550px;
+
+  margin-top: 24px;
+
+  color: #4f4b44;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.certifications-text-link {
+  display: inline-block;
+
+  margin-top: 28px;
+
+  color: #b8581f;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   FIRE SUPPRESSION
+========================= */
+
+.certifications-fire {
+  min-height: 560px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 100px 7%;
+
+  background:
+    linear-gradient(
+      rgba(20, 17, 14, 0.78),
+      rgba(20, 17, 14, 0.78)
+    ),
+    url("/images/food-trailer.jpg")
+    center / cover no-repeat;
+}
+
+.certifications-fire-content {
+  max-width: 720px;
+}
+
+.certifications-fire .section-eyebrow {
+  color: #e6a06f;
+}
+
+.certifications-fire h2 {
+  color: #fff;
+}
+
+.certifications-fire p {
+  max-width: 590px;
+
+  margin-top: 24px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   AHJ
+========================= */
+
+.certifications-ahj {
+  background: #f3efe9;
+}
+
+.certifications-ahj-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+}
+
+.certifications-ahj-content {
+  padding-top: 35px;
+}
+
+.certifications-ahj-content > p {
+  margin: 0 0 22px;
+
+  color: #4f4b44;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.ahj-note {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 30px;
+  padding: 25px;
+
+  background: #fbfaf7;
+
+  border-left: 3px solid #b8581f;
+}
+
+.ahj-note strong {
+  flex-shrink: 0;
+
+  font-size: 13px;
+}
+
+.ahj-note span {
+  color: #5d5952;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   PROCESS
+========================= */
+
+.certifications-process {
+  background: #fbfaf7;
+}
+
+.certifications-process-grid {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-item {
+  min-height: 270px;
+
+  padding: 35px;
+
+  border-top: 1px solid #d8d1c7;
+}
+
+.process-item > span {
+  color: #b8581f;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.process-item h3 {
+  margin-top: 50px;
+
+  font-size: 27px;
+}
+
+.process-item p {
+  margin-top: 15px;
+
+  color: #5d5952;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.certifications-cta {
+  padding: 120px 7%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(20, 17, 14, 0.80),
+      rgba(20, 17, 14, 0.80)
+    ),
+    url("/images/custom-build.jpg")
+    center / cover no-repeat;
+}
+
+.certifications-cta-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.certifications-cta .section-eyebrow {
+  color: #e6a06f;
+}
+
+.certifications-cta h2 {
+  color: #fff;
+}
+
+.certifications-cta p {
+  max-width: 570px;
+
+  margin: 25px auto 35px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.certifications-cta-button {
+  display: inline-block;
+
+  padding: 14px 25px;
+
+  background: #b8581f;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  transition: background 0.25s ease;
+}
+
+.certifications-cta-button:hover {
+  background: #a34e1c;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.certifications-footer {
+  background: #171715;
+  color: #fff;
+}
+
+.certifications-footer-main {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  padding: 75px 7% 55px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 60px;
+}
+
+.footer-logo {
+  display: inline-block;
+
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.footer-brand p {
+  max-width: 330px;
+
+  margin-top: 18px;
+
+  color: #aaa59d;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column h4 {
+  margin-bottom: 8px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-column a,
+.footer-column span {
+  color: #aaa59d;
+
+  font-size: 12px;
+
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.certifications-footer-bottom {
+  max-width: 1250px;
+  margin: 0 auto;
+
+  padding: 20px 7%;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid #34332f;
+
+  color: #77736d;
+
+  font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .certifications-nav-links {
+    gap: 18px;
+  }
+
+  .certifications-nav-links a {
+    font-size: 12px;
+  }
+
+  .certifications-intro-inner,
+  .certifications-ahj-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .certifications-intro-text,
+  .certifications-ahj-content {
+    padding-top: 0;
+  }
+
+  .certifications-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certifications-footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 850px) {
+
+  .certifications-nav-links {
+    display: none;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-food-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .certifications-food-image {
+    height: 480px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .certifications-navbar {
+    padding: 18px 5%;
+  }
+
+  .certifications-logo {
+    font-size: 21px;
+  }
+
+  .certifications-nav-button {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+
+  .certifications-hero {
+    min-height: 560px;
+    padding: 130px 7% 80px;
+  }
+
+  .certifications-hero h1 {
+    font-size: 47px;
+  }
+
+  .certifications-hero p {
+    font-size: 14px;
+  }
+
+  .section-padding {
+    padding: 75px 6%;
+  }
+
+  .certifications-intro-heading h2,
+  .certifications-section-heading h2,
+  .certifications-food-content h2,
+  .certifications-fire h2,
+  .certifications-ahj-heading h2,
+  .certifications-cta h2 {
+    font-size: 42px;
+  }
+
+  .certification-card {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .certification-card-content {
+    margin-top: 45px;
+  }
+
+  .certification-card h3 {
+    font-size: 34px;
+  }
+
+  .certifications-food-image {
+    height: 390px;
+  }
+
+  .certifications-fire {
+    min-height: 500px;
+    padding: 80px 7%;
+  }
+
+  .certifications-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-item {
+    min-height: auto;
+  }
+
+  .certifications-cta {
+    padding: 85px 7%;
+  }
+
+  .certifications-footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    padding: 55px 7% 40px;
+  }
+
+  .certifications-footer-bottom {
+    padding: 20px 7%;
+
+    flex-direction: column;
+    gap: 8px;
+  }
+}

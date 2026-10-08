@@ -1,0 +1,579 @@
+/* =========================================
+   HOW ONLINE RENTAL WORKS
+   Unique class prefix
+========================================= */
+
+.rental-how-it-works-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 79px 0 87px;
+
+  background: #f4f3ef;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rental-how-it-works-section__container {
+  width: calc(100% - 104px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.rental-how-it-works-section__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 65px;
+
+  margin-bottom: 34px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.rental-how-it-works-section__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 19px;
+}
+
+.rental-how-it-works-section__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.rental-how-it-works-section__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.rental-how-it-works-section__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.rental-how-it-works-section__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 52px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.rental-how-it-works-section__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.rental-how-it-works-section__intro {
+  padding-top: 63px;
+}
+
+.rental-how-it-works-section__intro p {
+  max-width: 445px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.62;
+}
+
+
+/* =========================================
+   STEPS
+   Separate cards with gaps
+========================================= */
+
+.rental-how-it-works-section__steps {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   INDIVIDUAL STEP
+========================================= */
+
+.rental-how-it-works-section__step {
+  min-height: 198px;
+
+  box-sizing: border-box;
+
+  padding: 27px 22px 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #ded8ce;
+
+  border-top: 3px solid #24221f;
+
+  border-radius: 8px;
+}
+
+
+/* First step orange top */
+
+.rental-how-it-works-section__step--first {
+  border-top-color: #c45d1d;
+}
+
+
+/* =========================================
+   STEP NUMBER
+========================================= */
+
+.rental-how-it-works-section__step-number {
+  margin-bottom: 13px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   STEP TITLE
+========================================= */
+
+.rental-how-it-works-section__step h3 {
+  margin: 0 0 10px;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================
+   STEP DESCRIPTION
+========================================= */
+
+.rental-how-it-works-section__step p {
+  max-width: 245px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   BOTTOM AREA
+========================================= */
+
+.rental-how-it-works-section__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 32px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.rental-how-it-works-section__buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.rental-how-it-works-section__button {
+  height: 53px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 0 25px;
+
+  border-radius: 5px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Orange */
+
+.rental-how-it-works-section__button--orange {
+  min-width: 266px;
+
+  background: #c45d1d;
+
+  color: #ffffff;
+}
+
+.rental-how-it-works-section__button--orange:hover {
+  background: #a84f19;
+
+  transform: translateY(-1px);
+}
+
+
+/* Black */
+
+.rental-how-it-works-section__button--black {
+  min-width: 269px;
+
+  background: #171715;
+
+  color: #ffffff;
+}
+
+.rental-how-it-works-section__button--black:hover {
+  background: #302e2a;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .rental-how-it-works-section {
+    padding: 68px 0 70px;
+  }
+
+  .rental-how-it-works-section__container {
+    width: calc(100% - 70px);
+  }
+
+  .rental-how-it-works-section__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 22px;
+  }
+
+  .rental-how-it-works-section__intro {
+    padding-top: 0;
+  }
+
+
+  /* Steps */
+
+  .rental-how-it-works-section__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .rental-how-it-works-section__step {
+    border: 1px solid #ded8ce;
+
+    border-top: 3px solid #24221f;
+
+    border-radius: 8px;
+  }
+
+  .rental-how-it-works-section__step--first {
+    border-top-color: #c45d1d;
+  }
+
+
+  /* Bottom */
+
+  .rental-how-it-works-section__bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .rental-how-it-works-section {
+    padding: 56px 0 60px;
+  }
+
+  .rental-how-it-works-section__container {
+    width: 90%;
+  }
+
+
+  /* =========================================
+     LABEL
+  ========================================= */
+
+  .rental-how-it-works-section__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .rental-how-it-works-section__label span {
+    font-size: 11px;
+  }
+
+  .rental-how-it-works-section__label i {
+    width: 34px;
+  }
+
+  .rental-how-it-works-section__label strong {
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  /* =========================================
+     TITLE
+  ========================================= */
+
+  .rental-how-it-works-section__title {
+    font-size: clamp(39px, 10vw, 52px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* =========================================
+     INTRO
+  ========================================= */
+
+  .rental-how-it-works-section__top {
+    margin-bottom: 27px;
+  }
+
+  .rental-how-it-works-section__intro p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =========================================
+     STEPS
+     2 COLUMNS WITH GAP
+  ========================================= */
+
+  .rental-how-it-works-section__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    background: transparent;
+  }
+
+  .rental-how-it-works-section__step {
+    min-height: 215px;
+
+    padding: 21px 16px 18px;
+
+    border: 1px solid #ded8ce;
+
+    border-top: 3px solid #24221f;
+
+    border-radius: 8px;
+  }
+
+  .rental-how-it-works-section__step--first {
+    border-top-color: #c45d1d;
+  }
+
+
+  /* =========================================
+     STEP CONTENT
+  ========================================= */
+
+  .rental-how-it-works-section__step h3 {
+    font-size: 18px;
+  }
+
+  .rental-how-it-works-section__step p {
+    font-size: 11px;
+
+    line-height: 1.55;
+  }
+
+  .rental-how-it-works-section__step-number {
+    font-size: 9px;
+  }
+
+
+  /* =========================================
+     BOTTOM
+  ========================================= */
+
+  .rental-how-it-works-section__bottom {
+    gap: 18px;
+
+    margin-top: 25px;
+  }
+
+  .rental-how-it-works-section__buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+  .rental-how-it-works-section__button {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 49px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   KEEP 2 COLUMNS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .rental-how-it-works-section__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .rental-how-it-works-section__step {
+    min-height: 205px;
+
+    padding: 20px 13px 17px;
+
+    border: 1px solid #ded8ce;
+
+    border-top: 3px solid #24221f;
+
+    border-radius: 8px;
+  }
+
+  .rental-how-it-works-section__step--first {
+    border-top-color: #c45d1d;
+  }
+
+  .rental-how-it-works-section__step h3 {
+    font-size: 16px;
+  }
+
+  .rental-how-it-works-section__step p {
+    font-size: 10px;
+  }
+
+  .rental-how-it-works-section__step-number {
+    font-size: 8px;
+  }
+}

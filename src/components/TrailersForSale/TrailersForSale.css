@@ -1,0 +1,1504 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap");
+
+.tfs {
+  --tfs-dark: #1a1816;
+  --tfs-dark-2: #221f1c;
+  --tfs-orange: #b5561b;
+  --tfs-orange-light: #e0924f;
+  --tfs-text: #1f1d1b;
+  --tfs-muted: #5f5a55;
+  --tfs-border: #e3ded8;
+  --tfs-bg: #ffffff;
+  --tfs-stripe-a: #e9e1d6;
+  --tfs-stripe-b: #efe9df;
+
+  font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--tfs-text);
+  background: var(--tfs-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tfs *,
+.tfs *::before,
+.tfs *::after {
+  box-sizing: border-box;
+}
+
+.tfs a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tfs-container {
+  width: 100%;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* ---------- BUTTONS ---------- */
+.tfs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.6px;
+  border-radius: 4px;
+  padding: 12px 18px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.tfs-btn:hover {
+  transform: translateY(-1px);
+}
+.tfs-btn-primary {
+  background: var(--tfs-orange);
+  color: #fff !important;
+}
+.tfs-btn-primary:hover {
+  background: #9c4713;
+}
+.tfs-btn-outline {
+  background: transparent;
+  color: #fff !important;
+  border-color: #fff;
+  letter-spacing: 0.3px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.tfs-btn-outline:hover {
+  background: #fff;
+  color: var(--tfs-dark) !important;
+}
+.tfs-btn-outline-dark {
+  background: #fff;
+  color: var(--tfs-text) !important;
+  border: 1.5px solid var(--tfs-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.tfs-btn-outline-dark:hover {
+  background: var(--tfs-dark);
+  color: #fff !important;
+}
+.tfs-btn-lg {
+  padding: 16px 26px;
+  font-size: 15px;
+}
+
+/* ---------- HERO ---------- */
+.tfs-hero {
+  position: relative;
+  color: #fff;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.025) 0,
+      rgba(255, 255, 255, 0.025) 22px,
+      rgba(255, 255, 255, 0) 22px,
+      rgba(255, 255, 255, 0) 44px
+    ),
+    var(--tfs-dark);
+  padding: 40px 0 96px;
+  min-height: 560px;
+}
+.tfs-hero-inner {
+  position: relative;
+  display: block;
+}
+.tfs-hero-copy {
+  max-width: 660px;
+  padding-left: 0;
+}
+.tfs-breadcrumb {
+  font-size: 12.5px;
+  color: #aaa39b;
+  margin-bottom: 52px;
+}
+.tfs-breadcrumb a:hover {
+  color: #fff;
+}
+.tfs-breadcrumb strong {
+  color: #fff;
+  font-weight: 600;
+}
+.tfs-eyebrow {
+  color: var(--tfs-orange-light);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  margin: 0 0 20px;
+}
+.tfs-hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 0 0 24px;
+}
+.tfs-hero-text {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #d4cec7;
+  max-width: 590px;
+  margin: 0 0 32px;
+}
+.tfs-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+.tfs-hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #e6e0d9;
+}
+.tfs-hero-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tfs-hero-bullets li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--tfs-orange-light);
+  border-radius: 2px;
+}
+
+/* ---------- LISTING ---------- */
+.tfs-listing {
+  padding: 72px 0 90px;
+  background: #fff;
+}
+.tfs-listing-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+.tfs-section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.tfs-section-num {
+  color: var(--tfs-orange);
+  font-size: 11px;
+}
+.tfs-section-line {
+  width: 40px;
+  height: 1.5px;
+  background: var(--tfs-orange);
+}
+.tfs-section-text {
+  color: #3a3631;
+}
+.tfs-section h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+.tfs-section h2 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--tfs-orange);
+}
+.tfs-listing-side {
+  max-width: 450px;
+  padding-top: 4px;
+}
+.tfs-listing-side p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--tfs-muted);
+  margin: 0 0 14px;
+}
+
+/* ---------- FILTERS ---------- */
+.tfs-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--tfs-border);
+  border-radius: 6px;
+  margin-bottom: 34px;
+}
+.tfs-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tfs-pill {
+  font-family: inherit;
+  font-weight: 600;
+  background: #fff;
+  color: var(--tfs-text);
+  border: 1px solid var(--tfs-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+.tfs-pill:hover {
+  border-color: var(--tfs-dark);
+}
+.tfs-pill-lg {
+  font-size: 13px;
+  padding: 10px 15px;
+}
+.tfs-pill-sm {
+  font-size: 11.5px;
+  padding: 8px 10px;
+}
+.tfs-pill.is-active {
+  background: var(--tfs-dark);
+  color: #fff;
+  border-color: var(--tfs-dark);
+}
+
+/* ---------- GRID / CARDS ---------- */
+.tfs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.tfs-card {
+  border: 1px solid var(--tfs-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.tfs-card:hover {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+.tfs-card-photo {
+  position: relative;
+  height: 217px;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--tfs-stripe-a) 0,
+    var(--tfs-stripe-a) 14px,
+    var(--tfs-stripe-b) 14px,
+    var(--tfs-stripe-b) 28px
+  );
+}
+.tfs-card-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tfs-card-photo {
+  overflow: hidden;
+}
+.tfs-card-tag {
+  z-index: 1;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--tfs-orange);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+.tfs-card-body {
+  padding: 20px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.tfs-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.tfs-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tfs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 9px;
+  border-radius: 3px;
+}
+.tfs-badge-new {
+  background: var(--tfs-dark);
+  color: #fff;
+}
+.tfs-badge-used {
+  background: #ece8e2;
+  color: #3a3631;
+}
+.tfs-badge-stock {
+  background: #e6f3e8;
+  color: #1f6b34;
+}
+.tfs-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2e9a4d;
+  display: inline-block;
+}
+.tfs-card-length {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.tfs-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+.tfs-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 0;
+}
+.tfs-features li {
+  font-size: 11.5px;
+  font-weight: 500;
+  border: 1px solid var(--tfs-border);
+  border-radius: 3px;
+  padding: 6px 10px;
+  color: #3a3631;
+}
+.tfs-card-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--tfs-border);
+  padding-top: 14px;
+  margin-bottom: 14px;
+  margin-top: auto;
+}
+.tfs-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+.tfs-price-note {
+  font-size: 11px;
+  color: var(--tfs-muted);
+  text-align: right;
+}
+.tfs-card-actions {
+  display: flex;
+  gap: 10px;
+}
+.tfs-card-actions .tfs-btn {
+  padding: 13px 16px;
+}
+.tfs-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--tfs-muted);
+  padding: 40px 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+  .tfs-listing-head {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .tfs-listing-side {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tfs-container {
+    padding: 0 24px;
+  }
+  .tfs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tfs-hero h1 {
+    font-size: 42px;
+  }
+  .tfs-section h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tfs-hero h1 {
+    font-size: 34px;
+  }
+  .tfs-hero-text {
+    font-size: 16px;
+  }
+  .tfs-section h2 {
+    font-size: 32px;
+  }
+  .tfs-card-actions {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =====================================================
+   SHARED SECTION STYLES
+   ===================================================== */
+.tfs-section {
+  padding: 80px 0;
+}
+.tfs-bg-soft {
+  background: #f5f3ef;
+}
+.tfs-bg-dark {
+  background: var(--tfs-dark);
+  color: #fff;
+}
+.tfs-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 48px;
+  margin-bottom: 36px;
+}
+.tfs-head-center {
+  align-items: center;
+}
+.tfs-head-side {
+  max-width: 450px;
+  width: 100%;
+  flex-shrink: 0;
+}
+.tfs-head-side p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--tfs-muted);
+  margin: 0 0 12px;
+}
+.tfs-head-side-btn {
+  max-width: 450px;
+}
+.tfs-text-link {
+  display: inline-block;
+  color: var(--tfs-orange) !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.tfs-text-link:hover {
+  text-decoration: underline;
+}
+.tfs-text-link-sm {
+  font-size: 11px;
+  letter-spacing: 0.6px;
+}
+.tfs-btn-white {
+  background: #fff;
+  color: var(--tfs-orange) !important;
+  padding: 15px 22px;
+  font-size: 12.5px;
+  border-radius: 4px;
+}
+.tfs-btn-white:hover {
+  background: #f3ece4;
+}
+
+/* ---------- 02 STANDARD ---------- */
+.tfs-std-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.tfs-std-card {
+  background: #fff;
+  border: 1px solid var(--tfs-border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.tfs-std-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+.tfs-std-photo {
+  height: 140px;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--tfs-stripe-a) 0,
+    var(--tfs-stripe-a) 14px,
+    var(--tfs-stripe-b) 14px,
+    var(--tfs-stripe-b) 28px
+  );
+}
+.tfs-std-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tfs-std-body {
+  padding: 18px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.tfs-std-size {
+  color: var(--tfs-orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.tfs-std-body h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+.tfs-std-body p {
+  font-size: 12.5px;
+  color: var(--tfs-muted);
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+.tfs-std-body .tfs-text-link {
+  margin-top: auto;
+}
+
+/* ---------- 03 INCLUDED ---------- */
+.tfs-bg-dark h2 {
+  color: #fff;
+}
+.tfs-bg-dark h2 em {
+  color: var(--tfs-orange-light);
+}
+.tfs-bg-dark .tfs-section-text {
+  color: #d9d3cc;
+}
+.tfs-bg-dark .tfs-section-num {
+  color: var(--tfs-orange-light);
+}
+.tfs-bg-dark .tfs-section-line {
+  background: var(--tfs-orange-light);
+}
+.tfs-included {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tfs-included-item {
+  padding: 22px 17px 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+.tfs-included-item:last-child {
+  border-right: 0;
+}
+.tfs-included-icon {
+  display: inline-flex;
+  color: var(--tfs-orange-light);
+  margin-bottom: 14px;
+}
+.tfs-included-item h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  color: #fff;
+}
+.tfs-included-item p {
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: #a9a29a;
+  margin: 0;
+}
+.tfs-ahj-note {
+  font-size: 11.5px;
+  color: #a9a29a;
+  margin: 28px 0 0;
+  line-height: 1.6;
+}
+
+/* ---------- 04 STEPS ---------- */
+.tfs-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #fff;
+  border: 1px solid var(--tfs-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.tfs-step {
+  position: relative;
+  padding: 32px 22px 30px;
+  border-right: 1px solid var(--tfs-border);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.4s ease;
+}
+.tfs-step:last-child {
+  border-right: 0;
+}
+/* top progress bar: dark base + orange fill that slides in */
+.tfs-step::before,
+.tfs-step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+.tfs-step::before {
+  background: var(--tfs-dark);
+}
+.tfs-step::after {
+  background: var(--tfs-orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.tfs-step.is-reached::after {
+  transform: scaleX(1);
+}
+.tfs-step:hover {
+  background: #fcfaf7;
+}
+.tfs-step:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--tfs-orange);
+}
+.tfs-step.is-active {
+  background: #fff6ee;
+}
+
+/* step label as a chip */
+.tfs-step-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  border: 1px solid #d9c3b2;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--tfs-orange);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  transition: background 0.35s, color 0.35s, border-color 0.35s, transform 0.35s;
+}
+.tfs-step.is-done .tfs-step-chip {
+  background: #f6e7da;
+  border-color: #e3c7ad;
+}
+.tfs-step.is-done .tfs-step-chip::before {
+  content: "✓";
+  font-size: 10px;
+}
+.tfs-step.is-active .tfs-step-chip {
+  background: var(--tfs-orange);
+  border-color: var(--tfs-orange);
+  color: #fff;
+  animation: tfsChipPop 0.45s ease;
+}
+@keyframes tfsChipPop {
+  0% { transform: scale(0.85); }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.tfs-step h3 {
+  transition: color 0.35s;
+}
+.tfs-step.is-active h3 {
+  color: var(--tfs-orange);
+}
+.tfs-step p {
+  opacity: 0.65;
+  transition: opacity 0.35s;
+}
+.tfs-step.is-active p {
+  opacity: 1;
+  animation: tfsFadeUp 0.5s ease;
+}
+@keyframes tfsFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tfs-step-next {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: var(--tfs-orange) !important;
+  animation: tfsFadeUp 0.5s ease;
+}
+.tfs-step-next:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tfs-step::after,
+  .tfs-step,
+  .tfs-step-chip {
+    transition: none;
+  }
+  .tfs-step.is-active .tfs-step-chip,
+  .tfs-step.is-active p,
+  .tfs-step-next {
+    animation: none;
+  }
+}
+
+.tfs-step h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+.tfs-step p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--tfs-muted);
+  margin: 0;
+}
+
+/* ---------- 05 TABLE ---------- */
+.tfs-table-wrap {
+  border: 1px solid var(--tfs-border);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+.tfs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  min-width: 640px;
+}
+.tfs-table thead {
+  background: var(--tfs-dark);
+  color: #fff;
+}
+.tfs-table th {
+  text-align: left;
+  font-size: 10.5px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  padding: 16px 17px;
+}
+.tfs-table td {
+  padding: 16px 17px;
+  border-bottom: 1px solid var(--tfs-border);
+  color: #3a3631;
+}
+.tfs-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.tfs-table tbody tr:hover {
+  background: #faf8f5;
+}
+.tfs-td-strong {
+  font-weight: 700;
+  color: var(--tfs-text) !important;
+  width: 17%;
+}
+.tfs-table td:nth-child(2) {
+  width: 17%;
+}
+.tfs-td-link button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: var(--tfs-orange);
+}
+.tfs-td-link button:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 06 CONTACT ---------- */
+.tfs-contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 52px;
+  align-items: flex-start;
+}
+.tfs-contact-copy h2 {
+  margin-bottom: 22px;
+}
+.tfs-contact-copy p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--tfs-muted);
+  max-width: 420px;
+  margin: 0 0 22px;
+}
+.tfs-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tfs-contact-list li {
+  border-left: 3px solid var(--tfs-orange);
+  padding-left: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.tfs-form {
+  background: #f5f3ef;
+  border: 1px solid var(--tfs-border);
+  border-radius: 8px;
+  padding: 34px 34px 36px;
+}
+.tfs-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+  margin-bottom: 18px;
+}
+.tfs-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.tfs-field > span {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--tfs-text);
+}
+.tfs-field b {
+  color: var(--tfs-orange);
+}
+.tfs-field em {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--tfs-muted);
+}
+.tfs-field input,
+.tfs-field select,
+.tfs-field textarea {
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--tfs-text);
+  background: #fff;
+  border: 1px solid var(--tfs-border);
+  border-radius: 4px;
+  padding: 14px 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.tfs-field select {
+  appearance: none;
+  -webkit-appearance: none;
+  color: #5f5a55;
+  padding-right: 34px;
+  background-image: linear-gradient(45deg, transparent 50%, #6b655f 50%),
+    linear-gradient(135deg, #6b655f 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.tfs-field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+.tfs-field input:focus,
+.tfs-field select:focus,
+.tfs-field textarea:focus {
+  border-color: var(--tfs-orange);
+  box-shadow: 0 0 0 3px rgba(181, 86, 27, 0.14);
+}
+.tfs-field-full {
+  margin-bottom: 18px;
+}
+.tfs-submit {
+  width: 100%;
+  padding: 18px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+.tfs-form-sent {
+  text-align: center;
+  padding: 60px 20px;
+}
+.tfs-form-sent h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+.tfs-form-sent p {
+  color: var(--tfs-muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ---------- 07 FAQ ---------- */
+.tfs-faq {
+  border-top: 1px solid var(--tfs-border);
+}
+.tfs-faq-item {
+  border-bottom: 1px solid var(--tfs-border);
+}
+.tfs-faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--tfs-text);
+  padding: 24px 4px;
+}
+.tfs-faq-q:hover {
+  color: var(--tfs-orange);
+}
+.tfs-faq-icon {
+  color: var(--tfs-orange);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+.tfs-faq-a {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--tfs-muted);
+  max-width: 820px;
+  margin: -6px 0 26px 4px;
+}
+
+/* ---------- RESPONSIVE (new sections) ---------- */
+@media (max-width: 1100px) {
+  .tfs-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .tfs-head-side {
+    max-width: 620px;
+  }
+  .tfs-std-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tfs-included {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tfs-included-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .tfs-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tfs-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .tfs-section {
+    padding: 56px 0;
+  }
+  .tfs-std-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tfs-included {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tfs-form {
+    padding: 22px 18px 24px;
+  }
+  .tfs-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ---------- RENT-TO-OWN BOX ---------- */
+.tfs-rto {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 72px;
+  padding: 34px 36px 38px;
+  border: 2px solid var(--tfs-dark);
+  border-radius: 8px;
+  background: transparent;
+}
+.tfs-rto-copy {
+  max-width: 780px;
+}
+.tfs-rto-eyebrow {
+  display: block;
+  color: var(--tfs-orange);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  margin-bottom: 14px;
+}
+.tfs-rto h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+.tfs-rto p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--tfs-muted);
+  margin: 0;
+}
+.tfs-rto-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--tfs-text) !important;
+  background: #fff;
+  border: 2px solid var(--tfs-dark);
+  border-radius: 4px;
+  padding: 16px 26px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+.tfs-rto-btn:hover {
+  background: var(--tfs-dark);
+  color: #fff !important;
+}
+
+/* ---------- FOUND THE ONE CTA ---------- */
+.tfs-cta {
+  background: var(--tfs-orange);
+  color: #fff;
+  padding: 56px 0;
+}
+.tfs-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.tfs-cta-copy h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0 0 12px;
+}
+.tfs-cta-copy p {
+  font-size: 15.5px;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  line-height: 1.6;
+}
+.tfs-cta-actions {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.tfs-cta-btn {
+  padding: 19px 27px;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+.tfs-btn-black {
+  background: var(--tfs-dark);
+  color: #fff !important;
+}
+.tfs-btn-black:hover {
+  background: #000;
+}
+
+@media (max-width: 1100px) {
+  .tfs-rto {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .tfs-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .tfs-rto {
+    padding: 24px 20px 28px;
+  }
+  .tfs-rto h3 {
+    font-size: 26px;
+  }
+  .tfs-cta-copy h2 {
+    font-size: 30px;
+  }
+  .tfs-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .tfs-cta-btn {
+    width: 100%;
+  }
+}
+
+
+/* =====================================================
+   MOBILE: 2-COLUMN CARDS
+   ===================================================== */
+@media (max-width: 1100px) {
+  .tfs-step:nth-child(even) {
+    border-right: 0;
+  }
+  .tfs-step:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--tfs-border);
+  }
+}
+
+@media (max-width: 700px) {
+  .tfs-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tfs-step {
+    padding: 18px 14px 20px;
+  }
+    .tfs-step h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .tfs-step p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .tfs-included {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tfs-included-item {
+    padding: 16px 13px 18px;
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .tfs-included-item:nth-child(even) {
+    border-right: 0;
+  }
+  .tfs-included-item:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+  .tfs-included-item h4 {
+    font-size: 13px;
+  }
+  .tfs-included-item p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tfs-container {
+    padding: 0 14px;
+  }
+  .tfs-section {
+    padding: 48px 0;
+  }
+  .tfs-hero {
+    min-height: 0;
+    padding: 28px 0 56px;
+  }
+  .tfs-breadcrumb {
+    margin-bottom: 32px;
+  }
+  .tfs-hero-actions .tfs-btn {
+    width: 100%;
+  }
+
+  .tfs-filters {
+    padding: 12px;
+    gap: 10px;
+  }
+  .tfs-pill-lg {
+    font-size: 12px;
+    padding: 9px 11px;
+  }
+
+  /* ---- In stock cards: 2 per row ---- */
+  .tfs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .tfs-card-photo {
+    height: 120px;
+  }
+  .tfs-card-tag {
+    top: 8px;
+    left: 8px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    padding: 4px 6px;
+  }
+  .tfs-card-body {
+    padding: 12px 11px 14px;
+  }
+  .tfs-card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .tfs-badge {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+    padding: 4px 6px;
+    gap: 4px;
+  }
+  .tfs-badges {
+    gap: 4px;
+  }
+  .tfs-dot {
+    width: 6px;
+    height: 6px;
+  }
+  .tfs-card-length {
+    font-size: 11px;
+  }
+  .tfs-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .tfs-features {
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+  .tfs-features li {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+  .tfs-card-price {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  .tfs-price {
+    font-size: 20px;
+  }
+  .tfs-price-note {
+    font-size: 9.5px;
+    text-align: left;
+  }
+  .tfs-card-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .tfs-card-actions .tfs-btn {
+    width: 100%;
+    padding: 11px 6px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  /* ---- Standard configurations: 2 per row ---- */
+  .tfs-std-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .tfs-std-photo {
+    height: 105px;
+  }
+  .tfs-std-body {
+    padding: 12px 11px 14px;
+  }
+  .tfs-std-size {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  .tfs-std-body h3 {
+    font-size: 15px;
+  }
+  .tfs-std-body p {
+    font-size: 11.5px;
+    margin-bottom: 10px;
+  }
+  .tfs-std-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  .tfs-std-card:last-child:nth-child(odd) .tfs-std-photo {
+    height: 140px;
+  }
+
+  /* ---- Headings ---- */
+  .tfs-section h2 {
+    font-size: 30px;
+  }
+  .tfs-head {
+    margin-bottom: 26px;
+  }
+
+  /* ---- Table ---- */
+  .tfs-table th,
+  .tfs-table td {
+    padding: 13px 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .tfs-step {
+    padding: 22px 14px 20px;
+  }
+  .tfs-step-chip {
+    font-size: 9px;
+    padding: 5px 9px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+
+/* ---------- RESULTS BAR / EMPTY STATE ---------- */
+.tfs-listing {
+  scroll-margin-top: 90px;
+}
+.tfs-results {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -14px 0 22px;
+}
+.tfs-results p {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--tfs-muted);
+}
+.tfs-results strong {
+  color: var(--tfs-text);
+}
+.tfs-result-chip {
+  background: #f6e7da;
+  color: var(--tfs-orange);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+.tfs-clear {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--tfs-orange);
+}
+.tfs-clear:hover {
+  text-decoration: underline;
+}
+.tfs-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px 16px;
+  border: 1px dashed var(--tfs-border);
+  border-radius: 6px;
+}
+.tfs-empty p {
+  margin: 0 0 18px;
+  font-size: 15px;
+  color: var(--tfs-muted);
+}
+.tfs-empty-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .tfs-results {
+    margin-top: -8px;
+  }
+  .tfs-empty {
+    padding: 32px 12px;
+  }
+}

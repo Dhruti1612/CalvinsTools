@@ -1,0 +1,243 @@
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust {
+  width: 100%;
+
+  background: #fbfaf7;
+
+  border-bottom: 1px solid #dedad3;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.trust__container {
+  width: min(1180px, calc(100% - 100px));
+
+  min-height: 88px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.trust__item {
+  min-height: 88px;
+
+  padding: 18px 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  border-right: 1px solid #dedad3;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* First item left border */
+
+.trust__item:first-child {
+  border-left: 1px solid #dedad3;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.trust__title {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #171715;
+
+  font-family: "DM Sans", sans-serif;
+
+  /* ONLY FONT SIZE CHANGED */
+  font-size: 18px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.trust__text {
+  display: block;
+
+  color: #666159;
+
+  font-family: "DM Sans", sans-serif;
+
+  /* ONLY FONT SIZE CHANGED */
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   STAR COLOR
+========================================================= */
+
+.trust__item:first-child .trust__title {
+  color: #b8581f;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.trust__item:hover {
+  background: #f3efe9;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .trust__container {
+    width: calc(100% - 60px);
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .trust__item {
+    min-height: 82px;
+
+    padding: 16px 20px;
+  }
+
+
+  /*
+    Add left border to the
+    second row.
+  */
+
+  .trust__item:nth-child(3) {
+    border-left: 1px solid #dedad3;
+  }
+
+
+  /*
+    Horizontal divider
+    between the two rows.
+  */
+
+  .trust__item:nth-child(3),
+  .trust__item:nth-child(4) {
+    border-top: 1px solid #dedad3;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .trust__container {
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .trust__item {
+    min-height: 82px;
+
+    padding: 15px 14px;
+  }
+
+
+  /* Remove outer left border */
+
+  .trust__item:first-child {
+    border-left: 0;
+  }
+
+
+  /* Keep mobile grid clean */
+
+  .trust__item:nth-child(3) {
+    border-left: 0;
+  }
+
+
+  /* Smaller title */
+
+  .trust__title {
+    /* ONLY FONT SIZE CHANGED */
+    font-size: 16px;
+  }
+
+
+  /* Smaller description */
+
+  .trust__text {
+    /* ONLY FONT SIZE CHANGED */
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .trust__item {
+    min-height: 76px;
+
+    padding: 13px 11px;
+  }
+
+
+  .trust__title {
+    /* ONLY FONT SIZE CHANGED */
+    font-size: 15px;
+  }
+
+
+  .trust__text {
+    /* ONLY FONT SIZE CHANGED */
+    font-size: 10px;
+  }
+}

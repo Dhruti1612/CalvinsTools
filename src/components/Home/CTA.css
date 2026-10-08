@@ -1,0 +1,298 @@
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
+.cta {
+  width: 100%;
+
+  background: #bd5a20;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.cta__container {
+  width: calc(100% - 110px);
+
+  max-width: 1228px;
+
+  min-height: 243px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.cta__content {
+  max-width: 650px;
+}
+
+
+.cta__content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: clamp(42px, 4.3vw, 54px);
+
+  font-weight: 800;
+
+  line-height: 0.98;
+
+  letter-spacing: -1.5px;
+}
+
+
+.cta__content p {
+  max-width: 620px;
+
+  margin: 15px 0 0;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.cta__actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.cta__button {
+  min-height: 58px;
+
+  padding: 0 27px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 6px;
+
+  box-sizing: border-box;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================================
+   LIGHT BUTTON
+========================================================= */
+
+.cta__button--light {
+  min-width: 162px;
+
+  background: #ffffff;
+
+  border: 1px solid #ffffff;
+
+  color: #bd5a20;
+}
+
+
+.cta__button--light:hover {
+  background: #f3efe9;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DARK BUTTON
+========================================================= */
+
+.cta__button--dark {
+  min-width: 286px;
+
+  background: #171715;
+
+  border: 1px solid #171715;
+
+  color: #ffffff;
+}
+
+
+.cta__button--dark:hover {
+  background: #282824;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .cta__container {
+    width: calc(100% - 70px);
+
+    min-height: 220px;
+
+    gap: 35px;
+  }
+
+  .cta__content h2 {
+    font-size: 41px;
+  }
+
+  .cta__content p {
+    font-size: 15px;
+  }
+
+  .cta__actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .cta__button {
+    width: 260px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .cta__container {
+    width: 90%;
+
+    min-height: auto;
+
+    padding: 55px 0;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .cta__content {
+    max-width: 100%;
+  }
+
+  .cta__content h2 {
+    font-size: 41px;
+
+    letter-spacing: -1px;
+  }
+
+  .cta__content p {
+    max-width: 500px;
+
+    font-size: 14px;
+  }
+
+  .cta__actions {
+    width: 100%;
+
+    flex-direction: row;
+
+    align-items: stretch;
+  }
+
+  .cta__button {
+    min-height: 52px;
+
+    flex: 1;
+
+    width: auto;
+
+    min-width: 0;
+
+    padding: 0 12px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .cta__container {
+    padding: 45px 0;
+  }
+
+  .cta__content h2 {
+    font-size: 37px;
+  }
+
+  .cta__actions {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .cta__button {
+    width: 100%;
+
+    min-height: 50px;
+  }
+
+}

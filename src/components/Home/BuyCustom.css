@@ -1,0 +1,753 @@
+/* =========================================================
+   BUY CUSTOM SECTION
+========================================================= */
+
+.buy-custom {
+  width: 100%;
+  padding: 88px 0 96px;
+  background: #fbfaf7;
+  color: #171715;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.buy-custom__container {
+  width: calc(100% - 100px);
+  max-width: 1228px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.buy-custom__section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.buy-custom__number {
+  color: #b8581f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.buy-custom__line {
+  width: 42px;
+  height: 2px;
+  background: #b8581f;
+}
+
+.buy-custom__label {
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.9px;
+  line-height: 1;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.buy-custom__intro {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  column-gap: 80px;
+  align-items: start;
+  margin-bottom: 35px;
+}
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.buy-custom__title {
+  margin: 0;
+  color: #171715;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(58px, 5.3vw, 78px);
+  font-weight: 500;
+  line-height: 0.91;
+  letter-spacing: -2.8px;
+}
+
+.buy-custom__title em {
+  color: #bd5a20;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* =========================================================
+   INTRO RIGHT
+========================================================= */
+
+.buy-custom__intro-right {
+  padding-top: 3px;
+}
+
+.buy-custom__intro-text {
+  max-width: 455px;
+  margin: 0 0 25px;
+  color: #514d47;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.buy-custom__intro-text strong {
+  color: #171715;
+  font-weight: 800;
+}
+
+/* =========================================================
+   TOP BUTTON
+========================================================= */
+
+.buy-custom__top-button {
+  min-height: 69px;
+  padding: 0 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #bd5a20;
+  border: 1px solid #bd5a20;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.buy-custom__top-button:hover {
+  background: #a94f1b;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.buy-custom__tabs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 2px solid #171715;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* =========================================================
+   TAB
+========================================================= */
+
+.buy-custom__tab {
+  min-height: 92px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 0;
+  border-right: 1px solid #171715;
+  background: #ffffff;
+  color: #4e4943;
+  font-family: "DM Sans", sans-serif;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.buy-custom__tab:last-child {
+  border-right: 0;
+}
+
+.buy-custom__tab-number {
+  color: #bd5a20;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.buy-custom__tab-title {
+  color: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   ACTIVE TAB
+========================================================= */
+
+.buy-custom__tab--active {
+  background: #171715;
+  color: #ffffff;
+}
+
+.buy-custom__tab--active .buy-custom__tab-number {
+  color: #bd5a20;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.buy-custom__content {
+  width: 100%;
+  min-height: 458px;
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: 1.06fr 0.94fr;
+  border: 1px solid #ddd8cf;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.buy-custom__image-wrapper {
+  position: relative;
+  min-width: 0;
+  min-height: 458px;
+  overflow: hidden;
+  background: #eee9df;
+}
+
+/* =========================================================
+   ACTUAL IMAGE
+========================================================= */
+
+.buy-custom__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  filter: none;
+  z-index: 1;
+  transition: transform 0.6s ease;
+}
+
+/* =========================================================
+   SUBTLE DIAGONAL TEXTURE
+========================================================= */
+
+.buy-custom__image-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(238, 233, 223, 0.10) 0px,
+      rgba(238, 233, 223, 0.10) 12px,
+      rgba(248, 245, 238, 0.10) 12px,
+      rgba(248, 245, 238, 0.10) 25px
+    );
+}
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.buy-custom__image-wrapper:hover .buy-custom__image {
+  transform: scale(1.025);
+}
+
+/* =========================================================
+   IMAGE LABEL
+========================================================= */
+
+.buy-custom__image-label {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  z-index: 4;
+  min-height: 44px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bd5a20;
+  border-radius: 0 4px 4px 0;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1;
+}
+
+/* =========================================================
+   PHOTO CAPTION
+========================================================= */
+
+.buy-custom__photo-caption {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 4;
+  max-width: calc(100% - 36px);
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 3px;
+  color: #706b64;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   RIGHT COPY
+========================================================= */
+
+.buy-custom__copy {
+  min-width: 0;
+  padding: 40px 40px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffffff;
+}
+
+/* =========================================================
+   MINI LABEL
+========================================================= */
+
+.buy-custom__mini-label {
+  display: block;
+  margin-bottom: 20px;
+  color: #bd5a20;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.9px;
+  line-height: 1;
+}
+
+/* =========================================================
+   COPY TITLE
+========================================================= */
+
+.buy-custom__copy-title {
+  margin: 0;
+  color: #171715;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(40px, 3.1vw, 49px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -1.5px;
+}
+
+.buy-custom__copy-title em {
+  color: #bd5a20;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.buy-custom__description {
+  max-width: 500px;
+  margin: 18px 0 16px;
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.buy-custom__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.buy-custom__option {
+  min-height: 32px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid #d8d1c7;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #35322e;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.buy-custom__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* =========================================================
+   MAIN BUTTON
+========================================================= */
+
+.buy-custom__main-button {
+  min-height: 51px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bd5a20;
+  border-radius: 5px;
+  background: #bd5a20;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.buy-custom__main-button:hover {
+  background: #a94f1b;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   QUOTE BUTTON
+========================================================= */
+
+.buy-custom__quote-button {
+  min-height: 51px;
+  padding: 0 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #171715;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #171715;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.buy-custom__quote-button:hover {
+  background: #171715;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   BOTTOM NOTE
+========================================================= */
+
+.buy-custom__bottom-note {
+  margin: 13px 0 0;
+  color: #777168;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.buy-custom__bottom-note a {
+  color: #bd5a20;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.buy-custom__bottom-note a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .buy-custom__container {
+    width: calc(100% - 70px);
+  }
+
+  .buy-custom__intro {
+    column-gap: 50px;
+  }
+
+  .buy-custom__title {
+    font-size: clamp(54px, 6vw, 69px);
+  }
+
+  .buy-custom__tab {
+    padding: 0 22px;
+  }
+
+  .buy-custom__tab-title {
+    font-size: 16px;
+  }
+
+  .buy-custom__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .buy-custom__copy {
+    padding: 35px 28px;
+  }
+
+  .buy-custom__copy-title {
+    font-size: 40px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+  .buy-custom {
+    padding: 70px 0 80px;
+  }
+
+  .buy-custom__intro {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  .buy-custom__intro-right {
+    max-width: 600px;
+  }
+
+  .buy-custom__content {
+    grid-template-columns: 1fr;
+  }
+
+  .buy-custom__image-wrapper {
+    min-height: 360px;
+  }
+
+  .buy-custom__copy {
+    min-height: 400px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .buy-custom {
+    padding: 60px 0 70px;
+  }
+
+  .buy-custom__container {
+    width: 90%;
+  }
+
+  .buy-custom__section-label {
+    gap: 11px;
+    margin-bottom: 27px;
+  }
+
+  .buy-custom__line {
+    width: 34px;
+  }
+
+  .buy-custom__label {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+  }
+
+  .buy-custom__intro {
+    margin-bottom: 27px;
+  }
+
+  .buy-custom__title {
+    font-size: clamp(46px, 11vw, 59px);
+    letter-spacing: -1.8px;
+  }
+
+  .buy-custom__intro-text {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .buy-custom__top-button {
+    min-height: 52px;
+    padding: 0 20px;
+    font-size: 12px;
+  }
+
+  /* =====================================================
+     TABS
+  ===================================================== */
+
+  .buy-custom__tabs {
+    grid-template-columns: 1fr;
+    border-radius: 7px;
+  }
+
+  .buy-custom__tab {
+    min-height: 60px;
+    padding: 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid #171715;
+  }
+
+  .buy-custom__tab:last-child {
+    border-bottom: 0;
+  }
+
+  .buy-custom__tab-number {
+    font-size: 15px;
+  }
+
+  .buy-custom__tab-title {
+    font-size: 14px;
+    letter-spacing: 0.9px;
+  }
+
+  /* =====================================================
+     CONTENT
+  ===================================================== */
+
+  .buy-custom__content {
+    margin-top: 25px;
+    border-radius: 7px;
+  }
+
+  .buy-custom__image-wrapper {
+    min-height: 300px;
+  }
+
+  .buy-custom__image-label {
+    top: 18px;
+    min-height: 39px;
+    padding: 0 14px;
+    font-size: 11px;
+  }
+
+  .buy-custom__photo-caption {
+    left: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+
+  /* =====================================================
+     COPY
+  ===================================================== */
+
+  .buy-custom__copy {
+    min-height: auto;
+    padding: 30px 22px 28px;
+  }
+
+  .buy-custom__mini-label {
+    margin-bottom: 16px;
+    font-size: 11px;
+  }
+
+  .buy-custom__copy-title {
+    font-size: 37px;
+    letter-spacing: -1px;
+  }
+
+  .buy-custom__description {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* =====================================================
+     OPTIONS
+  ===================================================== */
+
+  .buy-custom__option {
+    min-height: 30px;
+    padding: 0 9px;
+    font-size: 10px;
+  }
+
+  /* =====================================================
+     BUTTONS
+  ===================================================== */
+
+  .buy-custom__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+
+  .buy-custom__main-button,
+  .buy-custom__quote-button {
+    width: 100%;
+    min-height: 49px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .buy-custom__title {
+    font-size: 42px;
+  }
+
+  .buy-custom__image-wrapper {
+    min-height: 270px;
+  }
+
+  .buy-custom__copy-title {
+    font-size: 34px;
+  }
+
+  .buy-custom__description {
+    font-size: 12px;
+  }
+}

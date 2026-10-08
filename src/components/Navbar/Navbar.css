@@ -1,0 +1,1179 @@
+/* =========================================================
+   CALVIN'S NAVBAR
+========================================================= */
+
+.calvin-header {
+  position: relative;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  color: #171715;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   TOP ANNOUNCEMENT BAR
+========================================================= */
+
+.calvin-topbar {
+  width: 100%;
+
+  height: 27px;
+
+  background: #171715;
+
+  color: #ffffff;
+}
+
+
+.calvin-topbar-inner {
+  width: min(1220px, calc(100% - 40px));
+
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   TOP BAR RATING
+========================================================= */
+
+.calvin-rating {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+.calvin-stars {
+  color: #ffffff;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   TOP BAR TRUST
+========================================================= */
+
+.calvin-trust {
+  flex: 1;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TOP BAR CONTACT
+========================================================= */
+
+.calvin-top-contact {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+.calvin-top-contact a {
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+.calvin-top-contact a:hover {
+  color: #d06a2c;
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION WRAPPER
+========================================================= */
+
+.calvin-nav-wrap {
+  position: relative;
+
+  width: 100%;
+
+  height: 68px;
+
+  background: #fbfaf7;
+
+  border-bottom: 1px solid #ded8ce;
+}
+
+
+.calvin-nav-inner {
+  width: min(1220px, calc(100% - 40px));
+
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.calvin-logo {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+
+  color: #171715;
+
+  text-decoration: none;
+}
+
+
+.calvin-logo-image {
+  width: 35px;
+
+  height: 35px;
+
+  object-fit: contain;
+}
+
+
+.calvin-logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  line-height: 1;
+}
+
+
+.calvin-logo-text strong {
+  color: #292826;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+}
+
+
+.calvin-logo-text small {
+  margin-top: 4px;
+
+  color: #6c675f;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.35em;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.calvin-navigation {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.calvin-nav-links {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+}
+
+
+/* =========================================================
+   NAV ITEM
+========================================================= */
+
+.calvin-nav-item {
+  position: relative;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   DROPDOWN BUTTON
+========================================================= */
+
+.calvin-nav-trigger {
+  height: 38px;
+
+  padding: 0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: transparent;
+
+  color: #292826;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.01em;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.calvin-nav-trigger:hover,
+.calvin-nav-item.menu-active .calvin-nav-trigger {
+  background: #f4e6da;
+
+  color: #b8581f;
+}
+
+
+.calvin-chevron {
+  font-size: 12px;
+
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+
+.calvin-nav-item.menu-active .calvin-chevron {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   NORMAL NAV LINKS
+========================================================= */
+
+.calvin-plain-link {
+  height: 38px;
+
+  padding: 0 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #292826;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.calvin-plain-link:hover,
+.calvin-plain-link.active {
+  color: #b8581f;
+}
+
+
+/* =========================================================
+   RENT NOW BUTTON
+========================================================= */
+
+.calvin-rent-button {
+  min-width: 120px;
+
+  height: 40px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  background: #bd5a20;
+
+  border-radius: 5px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.calvin-rent-button span {
+  font-size: 15px;
+
+  line-height: 1;
+}
+
+
+.calvin-rent-button:hover {
+  background: #a94f1b;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(184, 88, 31, 0.2);
+}
+
+
+/* =========================================================
+   MEGA MENU
+========================================================= */
+
+.calvin-mega-menu {
+  position: fixed;
+
+  z-index: 999;
+
+  top: 95px;
+
+  left: 50%;
+
+  width: min(1216px, calc(100% - 40px));
+
+  transform: translateX(-50%);
+
+  /* OUTER FRAME REMOVED */
+
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 25px 70px rgba(23, 23, 21, 0.14),
+    0 8px 25px rgba(23, 23, 21, 0.08);
+
+  animation: calvinMegaIn 0.24s ease forwards;
+}
+
+
+@keyframes calvinMegaIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(-8px)
+      scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   MEGA INNER
+========================================================= */
+
+.calvin-mega-inner {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 9px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MEGA COLUMNS
+========================================================= */
+
+.calvin-mega-columns {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  min-height: 315px;
+
+  padding: 30px 40px 28px;
+
+  box-sizing: border-box;
+}
+
+
+.calvin-mega-column {
+  min-width: 0;
+
+  padding: 0 35px;
+
+  border-right: 1px solid #eee9e1;
+}
+
+
+.calvin-mega-column:first-child {
+  padding-left: 0;
+}
+
+
+.calvin-mega-column:last-child {
+  padding-right: 0;
+
+  border-right: none;
+}
+
+
+/* =========================================================
+   MEGA HEADINGS
+========================================================= */
+
+.calvin-mega-column h3 {
+  margin: 0 0 15px;
+
+  color: #292826;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  line-height: 1.15;
+}
+
+
+/* =========================================================
+   MEGA ITEMS
+========================================================= */
+
+.calvin-mega-items {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.calvin-mega-link {
+  min-height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #393733;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.calvin-mega-link:hover {
+  color: #bd5a20;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   MEGA ICON
+========================================================= */
+
+.calvin-mega-icon {
+  width: 27px;
+
+  height: 27px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #f6e9de;
+
+  color: #c15d20;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   MEGA BOTTOM CTA
+========================================================= */
+
+.calvin-mega-bottom {
+  min-height: 79px;
+
+  padding: 0 40px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-top: 1px solid #eee9e1;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   CTA COPY
+========================================================= */
+
+.calvin-mega-bottom-copy {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.calvin-mega-bottom-copy strong {
+  color: #292826;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.calvin-mega-bottom-copy span {
+  color: #6b665f;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.calvin-mega-bottom-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+
+.calvin-mega-secondary,
+.calvin-mega-primary {
+  height: 43px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.calvin-mega-secondary {
+  background: #ffffff;
+
+  border: 2px solid #292826;
+
+  color: #292826;
+}
+
+
+.calvin-mega-secondary:hover {
+  background: #292826;
+
+  color: #ffffff;
+}
+
+
+.calvin-mega-primary {
+  min-width: 220px;
+
+  background: #bd5a20;
+
+  border: 1px solid #bd5a20;
+
+  color: #ffffff;
+}
+
+
+.calvin-mega-primary:hover {
+  background: #a94f1b;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MENU SCRIM
+========================================================= */
+
+.calvin-menu-scrim {
+  position: fixed;
+
+  z-index: 900;
+
+  inset: 95px 0 0;
+
+  width: 100%;
+
+  border: none;
+
+  background: rgba(23, 23, 21, 0.03);
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+========================================================= */
+
+.calvin-mobile-toggle {
+  display: none;
+
+  width: 42px;
+
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid #ddd8cf;
+
+  background: #fbfaf7;
+
+  border-radius: 0;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+
+.calvin-mobile-toggle span {
+  width: 18px;
+
+  height: 1.5px;
+
+  background: #171715;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.calvin-mobile-toggle.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+
+.calvin-mobile-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+
+.calvin-mobile-toggle.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE SUBMENU
+========================================================= */
+
+.calvin-mobile-submenu {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .calvin-nav-inner {
+    width: calc(100% - 30px);
+  }
+
+  .calvin-navigation {
+    gap: 10px;
+  }
+
+  .calvin-nav-trigger,
+  .calvin-plain-link {
+    padding-left: 7px;
+
+    padding-right: 7px;
+
+    font-size: 14px;
+  }
+
+  .calvin-mega-columns {
+    padding-left: 28px;
+
+    padding-right: 28px;
+  }
+
+  .calvin-mega-column {
+    padding-left: 22px;
+
+    padding-right: 22px;
+  }
+
+  .calvin-mega-link {
+    font-size: 14px;
+  }
+
+  .calvin-mega-bottom {
+    padding-left: 28px;
+
+    padding-right: 28px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .calvin-topbar {
+    height: 27px;
+  }
+
+  .calvin-topbar-inner {
+    width: calc(100% - 20px);
+  }
+
+  .calvin-trust,
+  .calvin-top-contact a:not(:first-child) {
+    display: none;
+  }
+
+  .calvin-top-contact {
+    margin-left: auto;
+  }
+
+  .calvin-top-contact a:first-child {
+    font-size: 11px;
+  }
+
+  .calvin-nav-wrap {
+    height: 68px;
+  }
+
+  .calvin-nav-inner {
+    width: calc(100% - 30px);
+  }
+
+  .calvin-mobile-toggle {
+    display: flex;
+
+    margin-left: auto;
+  }
+
+  .calvin-navigation {
+    position: absolute;
+
+    top: 68px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+
+    background: #fbfaf7;
+
+    border-bottom: 1px solid #ddd8cf;
+
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .calvin-navigation.mobile-visible {
+    display: flex;
+  }
+
+  .calvin-nav-links {
+    width: 100%;
+
+    height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 3px;
+  }
+
+  .calvin-nav-item {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+  }
+
+  .calvin-nav-trigger {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    justify-content: space-between;
+
+    background: transparent;
+
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+  }
+
+  .calvin-nav-trigger:hover,
+  .calvin-nav-item.menu-active .calvin-nav-trigger {
+    background: #f4e6da;
+  }
+
+  .calvin-plain-link {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    justify-content: flex-start;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+  }
+
+  .calvin-plain-link:hover {
+    background: #f4e6da;
+  }
+
+  .calvin-rent-button {
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 5px;
+  }
+
+
+  /* ===============================================
+     HIDE DESKTOP MEGA MENU
+  =============================================== */
+
+  .calvin-mega-menu {
+    display: none;
+  }
+
+  .calvin-menu-scrim {
+    display: none;
+  }
+
+
+  /* ===============================================
+     MOBILE SUBMENU
+  =============================================== */
+
+  .calvin-mobile-submenu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 10px 15px 15px;
+
+    background: #f5f1eb;
+
+    border-radius: 5px;
+  }
+
+  .calvin-mobile-submenu-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .calvin-mobile-submenu-group p {
+    margin: 0 0 3px;
+
+    color: #b8581f;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+  }
+
+  .calvin-mobile-submenu-group a {
+    color: #393733;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+  }
+
+  .calvin-mobile-submenu-group a:hover {
+    color: #b8581f;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .calvin-topbar-inner {
+    width: calc(100% - 16px);
+  }
+
+  .calvin-rating {
+    font-size: 11px;
+
+    gap: 5px;
+  }
+
+  .calvin-stars {
+    font-size: 12px;
+  }
+
+  .calvin-top-contact a:first-child {
+    font-size: 10px;
+  }
+
+  .calvin-nav-inner {
+    width: calc(100% - 24px);
+  }
+
+  .calvin-logo-image {
+    width: 34px;
+
+    height: 34px;
+  }
+
+  .calvin-logo-text strong {
+    font-size: 14px;
+  }
+
+  .calvin-logo-text small {
+    font-size: 9px;
+  }
+
+}

@@ -1,0 +1,591 @@
+/* =========================================================
+   COMPLIANCE
+========================================================= */
+
+.compliance {
+  position: relative;
+  width: 100%;
+  padding: 105px 0 100px;
+  background: #171715;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.compliance::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 11px,
+      rgba(255, 255, 255, 0.018) 11px,
+      rgba(255, 255, 255, 0.018) 13px
+    );
+
+  pointer-events: none;
+}
+
+.compliance__container {
+  position: relative;
+  z-index: 1;
+  width: min(1385px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP AREA
+========================================================= */
+
+.compliance__top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 50px;
+  align-items: end;
+}
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.compliance__section-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #d9844d;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.compliance__number {
+  color: #d9844d;
+}
+
+.compliance__line {
+  width: 46px;
+  height: 2px;
+  background: #d9844d;
+}
+
+.compliance__label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.compliance__heading {
+  margin-top: 20px;
+}
+
+.compliance__heading h2 {
+  max-width: 1100px;
+  margin: 0;
+  font-family: var(
+    --playfair,
+    "Playfair Display",
+    serif
+  );
+  font-size: clamp(54px, 4.3vw, 72px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.compliance__heading h2 em {
+  color: #d9844d;
+  font-style: italic;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.compliance__description {
+  max-width: 700px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.compliance__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  margin-bottom: 3px;
+  padding: 0 27px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #171715;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.compliance__button:hover {
+  background: #d9844d;
+  border-color: #d9844d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.compliance__grid {
+  display: grid;
+
+  /*
+    EXACTLY SIX CARDS IN ONE ROW
+  */
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 0;
+  margin-top: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+/* =========================================================
+   INDIVIDUAL CARD
+========================================================= */
+
+.compliance__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 172px;
+  padding: 23px 17px 20px;
+  border: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.008);
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* =========================================================
+   LAST CARD
+========================================================= */
+
+.compliance__card:last-child {
+  border-right: none;
+}
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.compliance__card:hover {
+  background: rgba(255, 255, 255, 0.035);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.compliance__icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  border: 1.5px solid #d9844d;
+  border-radius: 50%;
+  color: #d9844d;
+  font-size: 13px;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.compliance__card h3 {
+  margin: 0 0 9px;
+  color: #ffffff;
+  font-family:
+    var(--playfair),
+    "Playfair Display",
+    serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.compliance__card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   BOTTOM INFORMATION
+========================================================= */
+
+.compliance__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.compliance__bottom p {
+  margin: 0;
+  max-width: 1050px;
+  color: rgba(255, 255, 255, 0.57);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   DOCUMENT NOTE
+========================================================= */
+
+.compliance__note {
+  flex-shrink: 0;
+  padding: 5px 8px;
+  border: 1px dashed rgba(217, 132, 77, 0.7);
+  color: #d9844d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .compliance {
+    padding: 110px 0 105px;
+  }
+
+  .compliance__container {
+    width: min(1385px, 90%);
+  }
+
+  .compliance__heading h2 {
+    font-size: 72px;
+  }
+
+  .compliance__card {
+    min-height: 175px;
+    padding: 24px 18px 21px;
+  }
+
+  .compliance__card h3 {
+    font-size: 19px;
+  }
+
+  .compliance__card p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .compliance {
+    padding: 95px 0;
+  }
+
+  .compliance__container {
+    width: 92%;
+  }
+
+  .compliance__top {
+    gap: 35px;
+  }
+
+  .compliance__heading h2 {
+    font-size: clamp(
+      49px,
+      5vw,
+      65px
+    );
+  }
+
+  .compliance__button {
+    min-height: 47px;
+    padding: 0 22px;
+    font-size: 12px;
+  }
+
+  /*
+    Three cards per row on tablet
+  */
+
+  .compliance__grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 8px;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .compliance__card {
+    min-height: 165px;
+    padding: 21px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+  }
+
+  .compliance__card:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .compliance {
+    padding: 85px 0;
+  }
+
+  .compliance__top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .compliance__button {
+    margin-bottom: 0;
+    width: fit-content;
+  }
+
+  .compliance__description {
+    margin-top: 20px;
+  }
+
+  .compliance__grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    margin-top: 28px;
+  }
+
+  .compliance__bottom {
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .compliance {
+    padding: 75px 0;
+  }
+
+  .compliance__container {
+    width: calc(100% - 30px);
+  }
+
+  .compliance__top {
+    display: block;
+  }
+
+  .compliance__section-label {
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .compliance__line {
+    width: 35px;
+    height: 1px;
+  }
+
+  .compliance__heading {
+    margin-top: 18px;
+  }
+
+  .compliance__heading h2 {
+    font-size: clamp(
+      44px,
+      10vw,
+      57px
+    );
+    line-height: 0.98;
+  }
+
+  .compliance__description {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 18px;
+  }
+
+  .compliance__button {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 22px;
+    font-size: 11px;
+  }
+
+  /* =======================================================
+     TWO CARDS PER ROW
+  ======================================================= */
+
+  .compliance__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+  .compliance__card {
+    min-height: 165px;
+    padding: 19px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+  }
+
+  .compliance__card:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .compliance__icon {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .compliance__card h3 {
+    font-size: 17px;
+    line-height: 1.18;
+  }
+
+  .compliance__card p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* =======================================================
+     BOTTOM
+  ======================================================= */
+
+  .compliance__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 22px;
+  }
+
+  .compliance__bottom p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .compliance__note {
+    white-space: normal;
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .compliance {
+    padding: 65px 0;
+  }
+
+  .compliance__container {
+    width: calc(100% - 30px);
+  }
+
+  .compliance__heading h2 {
+    font-size: 42px;
+  }
+
+  .compliance__section-label {
+    font-size: 10px;
+  }
+
+  /*
+    Keep two cards per row
+  */
+
+  .compliance__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 7px;
+  }
+
+  .compliance__card {
+    min-height: 155px;
+    padding: 15px;
+  }
+
+  .compliance__icon {
+    width: 23px;
+    height: 23px;
+    margin-bottom: 16px;
+    font-size: 10px;
+  }
+
+  .compliance__card h3 {
+    font-size: 14px;
+  }
+
+  .compliance__card p {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,701 @@
+/* =========================================================
+   HOW IT WORKS SECTION
+========================================================= */
+
+.how-it-works {
+  width: 100%;
+  background: #fbfaf7;
+  color: #171715;
+  padding: 78px 0 88px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.how-it-works__container {
+  width: calc(100% - 100px);
+  max-width: 1228px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.how-it-works__top {
+  margin-bottom: 38px;
+}
+
+.how-it-works__section-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.how-it-works__number {
+  color: #b8581f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ORANGE LINE
+========================================================= */
+
+.how-it-works__line {
+  width: 42px;
+  height: 2px;
+  display: block;
+  background: #b8581f;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.how-it-works__label {
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.how-it-works__intro {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  column-gap: 90px;
+  align-items: center;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.how-it-works__title {
+  margin: 0;
+  color: #171715;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(56px, 5.1vw, 74px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -2.7px;
+}
+
+
+/* =========================================================
+   ORANGE WORDS
+========================================================= */
+
+.how-it-works__title em {
+  color: #bd5a20;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   SECOND LINE
+========================================================= */
+
+.how-it-works__title span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   INTRO DESCRIPTION
+========================================================= */
+
+.how-it-works__intro-text {
+  display: flex;
+  align-items: stretch;
+  gap: 21px;
+  max-width: 440px;
+}
+
+
+/* =========================================================
+   ORANGE VERTICAL LINE
+========================================================= */
+
+.how-it-works__intro-line {
+  width: 3px;
+  flex-shrink: 0;
+  background: #bd5a20;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.how-it-works__intro-text p {
+  margin: 0;
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.how-it-works__divider {
+  width: 100%;
+  height: 1px;
+  margin: 34px 0 37px;
+  background: #d9d4cb;
+}
+
+
+/* =========================================================
+   STEPS GRID
+========================================================= */
+
+.how-it-works__steps {
+  width: 100%;
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+}
+
+
+/* =========================================================
+   INDIVIDUAL STEP
+========================================================= */
+
+.how-it-works__step {
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd8cf;
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   REMOVE CONNECTED CARD DIVIDERS
+========================================================= */
+
+.how-it-works__step + .how-it-works__step {
+  border-left: 1px solid #ddd8cf;
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.how-it-works__image-wrapper {
+  position: relative;
+  height: 186px;
+  overflow: hidden;
+  background: #eee9df;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.how-it-works__image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  opacity: 1;
+  filter: none;
+  z-index: 1;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* =========================================================
+   VERY SUBTLE DIAGONAL OVERLAY
+========================================================= */
+
+.how-it-works__image-pattern {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(238, 233, 223, 0.10) 0px,
+      rgba(238, 233, 223, 0.10) 12px,
+      rgba(248, 245, 238, 0.10) 12px,
+      rgba(248, 245, 238, 0.10) 25px
+    );
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.how-it-works__step:hover .how-it-works__image {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   PHOTO CAPTION
+========================================================= */
+
+.how-it-works__caption {
+  position: absolute;
+
+  left: 16px;
+  bottom: 10px;
+
+  z-index: 4;
+
+  max-width: calc(100% - 32px);
+
+  padding: 7px 10px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-radius: 2px;
+
+  color: #706b64;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STEP CONTENT
+========================================================= */
+
+.how-it-works__content {
+  min-height: 199px;
+
+  padding: 23px 22px 22px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   STEP LABEL
+========================================================= */
+
+.how-it-works__step-label {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   STEP TITLE
+========================================================= */
+
+.how-it-works__content h3 {
+  margin: 0 0 9px;
+
+  color: #292826;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 27px;
+  font-weight: 600;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.7px;
+}
+
+
+/* =========================================================
+   STEP DESCRIPTION
+========================================================= */
+
+.how-it-works__content p {
+  margin: 0;
+
+  color: #66615a;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CTA AREA
+========================================================= */
+
+.how-it-works__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 36px;
+}
+
+
+/* =========================================================
+   CTA BUTTON BASE
+========================================================= */
+
+.how-it-works__button {
+  min-height: 53px;
+
+  padding: 0 27px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 5px;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =========================================================
+   ORANGE CTA
+========================================================= */
+
+.how-it-works__button--orange {
+  background: #bd5a20;
+  border: 1px solid #bd5a20;
+  color: #ffffff;
+}
+
+.how-it-works__button--orange:hover {
+  background: #a94f1b;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DARK CTA
+========================================================= */
+
+.how-it-works__button--dark {
+  background: #171715;
+  border: 1px solid #171715;
+  color: #ffffff;
+}
+
+.how-it-works__button--dark:hover {
+  background: #292826;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .how-it-works__container {
+    width: calc(100% - 70px);
+  }
+
+  .how-it-works__intro {
+    column-gap: 50px;
+  }
+
+  .how-it-works__title {
+    font-size: clamp(50px, 5.8vw, 67px);
+  }
+
+  .how-it-works__content {
+    padding: 20px 17px;
+  }
+
+  .how-it-works__content h3 {
+    font-size: 23px;
+  }
+
+  .how-it-works__content p {
+    font-size: 12px;
+  }
+
+  .how-it-works__caption {
+    left: 10px;
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .how-it-works {
+    padding: 65px 0 75px;
+  }
+
+  .how-it-works__intro {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  .how-it-works__intro-text {
+    max-width: 600px;
+  }
+
+
+  /* =======================================================
+     TWO SEPARATE GRIDS
+  ======================================================= */
+
+  .how-it-works__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+
+  .how-it-works__step {
+    border: 1px solid #ddd8cf;
+    border-radius: 9px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+
+  .how-it-works__step + .how-it-works__step {
+    border-left: 1px solid #ddd8cf;
+  }
+
+
+  .how-it-works__image-wrapper {
+    height: 210px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .how-it-works {
+    padding: 55px 0 65px;
+  }
+
+  .how-it-works__container {
+    width: 90%;
+  }
+
+  .how-it-works__top {
+    margin-bottom: 28px;
+  }
+
+  .how-it-works__label {
+    font-size: 11px;
+    letter-spacing: 1.6px;
+  }
+
+  .how-it-works__line {
+    width: 35px;
+  }
+
+  .how-it-works__title {
+    font-size: clamp(45px, 11vw, 58px);
+    line-height: 0.94;
+    letter-spacing: -1.8px;
+  }
+
+  .how-it-works__intro-text {
+    gap: 15px;
+  }
+
+  .how-it-works__intro-text p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .how-it-works__divider {
+    margin: 27px 0 25px;
+  }
+
+
+  /* =======================================================
+     TWO SEPARATE CARDS ON MOBILE
+  ======================================================= */
+
+  .how-it-works__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+  }
+
+
+  .how-it-works__step {
+    min-width: 0;
+
+    border: 1px solid #ddd8cf;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+  }
+
+
+  .how-it-works__step + .how-it-works__step {
+    border-left: 1px solid #ddd8cf;
+    border-top: 1px solid #ddd8cf;
+  }
+
+
+  .how-it-works__image-wrapper {
+    height: 220px;
+  }
+
+  .how-it-works__content {
+    min-height: auto;
+    padding: 22px 20px 25px;
+  }
+
+  .how-it-works__content h3 {
+    font-size: 27px;
+  }
+
+  .how-it-works__content p {
+    font-size: 13px;
+  }
+
+  .how-it-works__actions {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  .how-it-works__button {
+    width: 100%;
+    min-height: 50px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .how-it-works__title {
+    font-size: 41px;
+  }
+
+  .how-it-works__image-wrapper {
+    height: 195px;
+  }
+
+  .how-it-works__content h3 {
+    font-size: 25px;
+  }
+
+  .how-it-works__caption {
+    font-size: 8px;
+  }
+}

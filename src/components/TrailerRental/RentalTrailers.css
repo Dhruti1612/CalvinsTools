@@ -1,0 +1,1154 @@
+/* =========================================
+   AVAILABLE RENTAL TRAILERS
+   Completely unique class prefix
+========================================= */
+
+.rental-trailers-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 68px;
+
+  background: #ffffff;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rental-trailers-section__container {
+  width: calc(100% - 100px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.rental-trailers-section__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 65px;
+
+  margin-bottom: 33px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.rental-trailers-section__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 19px;
+}
+
+.rental-trailers-section__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.rental-trailers-section__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.rental-trailers-section__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.rental-trailers-section__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 51px;
+  font-weight: 500;
+
+  line-height: 0.99;
+
+  letter-spacing: -2px;
+}
+
+.rental-trailers-section__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.rental-trailers-section__intro {
+  padding-top: 12px;
+}
+
+.rental-trailers-section__intro p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.58;
+}
+
+
+/* =========================================
+   AVAILABILITY LINK
+========================================= */
+
+.rental-trailers-section__availability-link {
+  display: inline-block;
+
+  margin-top: 14px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #b8581f;
+}
+
+.rental-trailers-section__availability-link:hover {
+  color: #8f4319;
+
+  border-color: #8f4319;
+}
+
+
+
+
+/* =========================================================
+   FILTER BAR
+========================================================= */
+
+.rental-trailers-section__filters {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  padding: 18px 20px;
+
+  margin-bottom: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd8cf;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   CATEGORY FILTERS
+========================================================= */
+
+.rental-trailers-section__category-filters {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   CATEGORY BUTTONS
+========================================================= */
+
+.rental-trailers-section__filter-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+
+  box-sizing: border-box;
+
+  padding: 0 19px;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd8cf;
+
+  border-radius: 8px;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px !important;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   CATEGORY HOVER
+========================================================= */
+
+.rental-trailers-section__filter-button:hover {
+  background: #f4f1ec;
+
+  border-color: #cfc8bd;
+
+  color: #171715;
+
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   ACTIVE CATEGORY
+========================================================= */
+
+.rental-trailers-section__filter-button--active {
+  background: #171715;
+
+  border-color: #171715;
+
+  color: #ffffff;
+
+  text-decoration: none !important;
+}
+
+
+.rental-trailers-section__filter-button--active:hover {
+  background: #171715;
+
+  border-color: #171715;
+
+  color: #ffffff;
+
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   SIZE FILTERS
+========================================================= */
+
+.rental-trailers-section__size-filters {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-left: auto;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SIZE LABEL
+========================================================= */
+
+.rental-trailers-section__size-label {
+  margin-right: 4px;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SIZE BUTTONS
+========================================================= */
+
+.rental-trailers-section__size-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 61px;
+
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd8cf;
+
+  border-radius: 7px;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px !important;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  text-decoration: none !important;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.rental-trailers-section__size-button:hover {
+  background: #f4f1ec;
+
+  border-color: #cfc8bd;
+
+  color: #171715;
+
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   ACTIVE SIZE
+========================================================= */
+
+.rental-trailers-section__size-button--active {
+  background: #171715;
+
+  border-color: #171715;
+
+  color: #ffffff;
+
+  text-decoration: none !important;
+}
+
+
+.rental-trailers-section__size-button--active:hover {
+  background: #171715;
+
+  border-color: #171715;
+
+  color: #ffffff;
+
+  text-decoration: none !important;
+}
+
+.rental-trailers-section__size-button--active {
+  background: #171715;
+
+  border-color: #171715;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TRAILER GRID
+========================================= */
+
+.rental-trailers-section__grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   TRAILER CARD
+========================================= */
+
+.rental-trailers-section__card {
+  overflow: hidden;
+
+  border: 1px solid #ded8ce;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-shadow: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.rental-trailers-section__card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(23, 23, 21, 0.07);
+}
+
+
+/* =========================================
+   PHOTO PLACEHOLDER
+========================================= */
+
+.rental-trailers-section__photo {
+  position: relative;
+
+  height: 213px;
+
+  box-sizing: border-box;
+
+  padding: 14px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background:
+    repeating-linear-gradient(
+      135deg,
+      #eee9df 0px,
+      #eee9df 12px,
+      #e4ded3 12px,
+      #e4ded3 23px
+    );
+}
+
+/* =========================================
+   TRAILER PHOTO
+========================================= */
+
+.rental-trailers-section__photo {
+  position: relative;
+
+  width: 100%;
+  height: 213px;
+
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  
+
+  background: #eee9df;
+}
+
+
+/* =========================================
+   ACTUAL IMAGE
+========================================= */
+
+.rental-trailers-section__photo-image {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: none;
+
+  transform: scale(1.01);
+
+  transition: transform 0.5s ease;
+}
+
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.rental-trailers-section__card:hover
+.rental-trailers-section__photo-image {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.rental-trailers-section__photo-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.12),
+    transparent 45%,
+    rgba(0, 0, 0, 0.15)
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CATEGORY BADGE
+========================================= */
+
+.rental-trailers-section__category-badge {
+  position: absolute;
+
+  top: 14px;
+  left: 14px;
+
+  z-index: 2;
+
+  padding: 7px 10px;
+
+  border-radius: 3px;
+
+  background: #171715;
+
+  color: #ffffff;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   CATEGORY BADGE
+========================================= */
+
+.rental-trailers-section__category-badge {
+  align-self: flex-start;
+
+  padding: 7px 10px;
+
+  border-radius: 3px;
+
+  background: #171715;
+
+  color: #ffffff;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   PHOTO NOTE
+========================================= */
+
+.rental-trailers-section__photo-note {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 5px 8px;
+
+  border-radius: 3px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.rental-trailers-section__card-content {
+  padding: 19px 20px 22px;
+}
+
+
+/* =========================================
+   CARD META
+========================================= */
+
+.rental-trailers-section__card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.rental-trailers-section__status {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 6px 9px;
+
+  border-radius: 4px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+}
+
+.rental-trailers-section__status i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+}
+
+.rental-trailers-section__status--available {
+  background: #e2f1e8;
+
+  color: #28784d;
+}
+
+.rental-trailers-section__status--available i {
+  background: #23804c;
+}
+
+.rental-trailers-section__status--soon {
+  background: #fff0d1;
+
+  color: #996500;
+}
+
+.rental-trailers-section__status--soon i {
+  background: #a87500;
+}
+
+.rental-trailers-section__status--booked {
+  background: #ebe8e3;
+
+  color: #625d56;
+}
+
+.rental-trailers-section__status--booked i {
+  background: #77716a;
+}
+
+
+/* =========================================
+   SIZE
+========================================= */
+
+.rental-trailers-section__size {
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.rental-trailers-section__card-title {
+  margin: 0 0 10px;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 23px;
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.6px;
+}
+
+
+/* =========================================
+   HIGHLIGHTS
+========================================= */
+
+.rental-trailers-section__highlights {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  padding-bottom: 11px;
+
+  border-bottom: 1px solid #e5dfd6;
+}
+
+.rental-trailers-section__highlights span {
+  padding: 7px 9px;
+
+  border: 1px solid #ddd6cc;
+
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #3f3b36;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.rental-trailers-section__price-row {
+  display: flex;
+  align-items: baseline;
+
+  gap: 5px;
+
+  padding: 12px 0 13px;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+}
+
+.rental-trailers-section__price-row strong {
+  color: #171715;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   CARD ACTIONS
+========================================= */
+
+.rental-trailers-section__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+/* Rent */
+
+.rental-trailers-section__rent-button {
+  min-width: 121px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border-radius: 5px;
+
+  background: #c45d1d;
+
+  color: #ffffff;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.rental-trailers-section__rent-button:hover {
+  background: #a84f19;
+}
+
+
+/* Waitlist */
+
+.rental-trailers-section__rent-button--waitlist {
+  background: #171715;
+}
+
+.rental-trailers-section__rent-button--waitlist:hover {
+  background: #302e2a;
+}
+
+
+/* Details */
+
+.rental-trailers-section__details-button {
+  min-width: 81px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 0 14px;
+
+  border: 2px solid #171715;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.rental-trailers-section__details-button:hover {
+  background: #171715;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .rental-trailers-section__container {
+    width: calc(100% - 70px);
+  }
+
+  .rental-trailers-section__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+  }
+
+  .rental-trailers-section__intro {
+    padding-top: 0;
+  }
+
+  .rental-trailers-section__filters {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rental-trailers-section__category-filters {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 2px;
+  }
+
+  .rental-trailers-section__size-filters {
+    width: 100%;
+
+    overflow-x: auto;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .rental-trailers-section {
+    padding: 60px 0;
+  }
+
+  .rental-trailers-section__container {
+    width: 90%;
+  }
+
+
+  /* Heading */
+
+  .rental-trailers-section__title {
+    font-size: clamp(39px, 10vw, 52px);
+  }
+
+
+  /* Filters */
+
+  .rental-trailers-section__filters {
+    padding: 12px;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .rental-trailers-section__category-filters {
+    gap: 6px;
+  }
+
+  .rental-trailers-section__filter-button {
+    height: 36px;
+
+    padding: 0 12px;
+
+    font-size: 9px;
+  }
+
+  .rental-trailers-section__size-button {
+    min-width: 45px;
+
+    height: 32px;
+
+    font-size: 9px;
+  }
+
+
+  /* Cards */
+
+  .rental-trailers-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .rental-trailers-section__photo {
+    height: 170px;
+
+    padding: 10px;
+  }
+
+  .rental-trailers-section__category-badge {
+    padding: 6px 7px;
+
+    font-size: 7px;
+  }
+
+  .rental-trailers-section__photo-note {
+    font-size: 7px;
+  }
+
+  .rental-trailers-section__card-content {
+    padding: 15px 13px 16px;
+  }
+
+  .rental-trailers-section__status {
+    padding: 5px 6px;
+
+    font-size: 7px;
+  }
+
+  .rental-trailers-section__status i {
+    width: 5px;
+    height: 5px;
+  }
+
+  .rental-trailers-section__size {
+    font-size: 9px;
+  }
+
+  .rental-trailers-section__card-title {
+    font-size: 18px;
+  }
+
+  .rental-trailers-section__highlights {
+    gap: 4px;
+  }
+
+  .rental-trailers-section__highlights span {
+    padding: 6px 6px;
+
+    font-size: 7px;
+  }
+
+  .rental-trailers-section__price-row {
+    gap: 3px;
+
+    font-size: 8px;
+  }
+
+  .rental-trailers-section__price-row strong {
+    font-size: 20px;
+  }
+
+  .rental-trailers-section__actions {
+    gap: 5px;
+  }
+
+  .rental-trailers-section__rent-button,
+  .rental-trailers-section__details-button {
+    min-width: 0;
+
+    width: 50%;
+
+    height: 36px;
+
+    padding: 0 5px;
+
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .rental-trailers-section__photo {
+    height: 170px;
+  }
+
+  .rental-trailers-section__category-badge {
+    top: 10px;
+    left: 10px;
+
+    padding: 6px 7px;
+
+    font-size: 7px;
+  }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+   KEEP 2 COLUMNS
+========================================= */
+
+@media (max-width: 420px) {
+
+  .rental-trailers-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .rental-trailers-section__photo {
+    height: 190px;
+  }
+
+  .rental-trailers-section__card-title {
+    font-size: 18px;
+  }
+
+}

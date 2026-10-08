@@ -1,0 +1,505 @@
+/* =========================================
+   RENTAL OPTIONS SECTION
+   Unique classes only
+========================================= */
+
+.rental-options-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 63px;
+
+  background: #f4f3ef;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rental-options-section__container {
+  width: calc(100% - 110px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.rental-options-section__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 70px;
+
+  margin-bottom: 34px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.rental-options-section__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.rental-options-section__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.rental-options-section__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.rental-options-section__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.rental-options-section__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 53px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.rental-options-section__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   RIGHT INTRO
+========================================= */
+
+.rental-options-section__intro {
+  padding-top: 15px;
+}
+
+.rental-options-section__intro p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.58;
+}
+
+
+/* =========================================
+   CARDS
+   Separate cards with gaps
+========================================= */
+
+.rental-options-section__cards {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD
+========================================= */
+
+.rental-options-section__card {
+  min-height: 178px;
+
+  box-sizing: border-box;
+
+  padding: 26px 24px 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #ddd8cf;
+
+  border-radius: 9px;
+}
+
+
+/* =========================================
+   CARD TYPE
+========================================= */
+
+.rental-options-section__card-type {
+  margin-bottom: 10px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.rental-options-section__card h3 {
+  margin: 0 0 9px;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.rental-options-section__card p {
+  max-width: 245px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.rental-options-section__price {
+  margin-top: 11px;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.2;
+}
+
+.rental-options-section__price strong {
+  color: #171715;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .rental-options-section {
+    padding: 68px 0 58px;
+  }
+
+  .rental-options-section__container {
+    width: calc(100% - 70px);
+  }
+
+  .rental-options-section__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+
+    margin-bottom: 30px;
+  }
+
+  .rental-options-section__intro {
+    padding-top: 0;
+  }
+
+  .rental-options-section__title {
+    font-size: 49px;
+  }
+
+
+  /* Cards */
+
+  .rental-options-section__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    background: transparent;
+  }
+
+  .rental-options-section__card {
+    border: 1px solid #ddd8cf;
+
+    border-radius: 9px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .rental-options-section {
+    padding: 55px 0 55px;
+  }
+
+  .rental-options-section__container {
+    width: 90%;
+  }
+
+
+  /* =========================================
+     LABEL
+  ========================================= */
+
+  .rental-options-section__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .rental-options-section__label span {
+    font-size: 11px;
+  }
+
+  .rental-options-section__label i {
+    width: 34px;
+  }
+
+  .rental-options-section__label strong {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* =========================================
+     TITLE
+  ========================================= */
+
+  .rental-options-section__title {
+    font-size: clamp(39px, 10vw, 52px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* =========================================
+     INTRO
+  ========================================= */
+
+  .rental-options-section__top {
+    row-gap: 23px;
+
+    margin-bottom: 27px;
+  }
+
+  .rental-options-section__intro p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =========================================
+     CARDS
+     ALWAYS 2 COLUMNS ON MOBILE
+  ========================================= */
+
+  .rental-options-section__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    background: transparent;
+  }
+
+  .rental-options-section__card {
+    min-height: 190px;
+
+    padding: 22px 17px 18px;
+
+    border: 1px solid #ddd8cf;
+
+    border-radius: 8px;
+  }
+
+
+  /* =========================================
+     CARD TYPE
+  ========================================= */
+
+  .rental-options-section__card-type {
+    margin-bottom: 12px;
+
+    font-size: 9px;
+  }
+
+
+  /* =========================================
+     CARD TITLE
+  ========================================= */
+
+  .rental-options-section__card h3 {
+    margin-bottom: 9px;
+
+    font-size: 18px;
+  }
+
+
+  /* =========================================
+     CARD DESCRIPTION
+  ========================================= */
+
+  .rental-options-section__card p {
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+
+  /* =========================================
+     PRICE
+  ========================================= */
+
+  .rental-options-section__price {
+    margin-top: 12px;
+
+    font-size: 11px;
+  }
+
+  .rental-options-section__price strong {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   KEEP 2 COLUMNS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .rental-options-section__title {
+    font-size: 37px;
+  }
+
+  .rental-options-section__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    background: transparent;
+  }
+
+  .rental-options-section__card {
+    min-height: 185px;
+
+    padding: 20px 13px 17px;
+
+    border: 1px solid #ddd8cf;
+
+    border-radius: 8px;
+  }
+
+  .rental-options-section__card-type {
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .rental-options-section__card h3 {
+    font-size: 16px;
+  }
+
+  .rental-options-section__card p {
+    font-size: 10px;
+  }
+
+  .rental-options-section__price {
+    font-size: 10px;
+  }
+
+  .rental-options-section__price strong {
+    font-size: 13px;
+  }
+}

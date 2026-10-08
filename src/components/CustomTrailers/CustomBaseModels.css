@@ -1,0 +1,683 @@
+/* =========================================
+   CUSTOM BASE MODELS
+   Unique classes only
+========================================= */
+
+.custom-base-models {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 76px;
+
+  background: #f4f3ef;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.custom-base-models__container {
+  width: calc(100% - 110px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.custom-base-models__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 70px;
+
+  margin-bottom: 34px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.custom-base-models__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.custom-base-models__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.custom-base-models__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.custom-base-models__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.custom-base-models__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 57px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.custom-base-models__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.custom-base-models__intro {
+  padding-top: 12px;
+}
+
+.custom-base-models__intro p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.custom-base-models__grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* =========================================
+   MODEL CARD
+========================================= */
+
+.custom-base-models__card {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #ddd8cf;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.custom-base-models__card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(23, 23, 21, 0.07);
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.custom-base-models__photo {
+  position: relative;
+
+  width: 100%;
+
+  height: 140px;
+
+  overflow: hidden;
+
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+
+  background: #eee9df;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.custom-base-models__photo-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: none;
+
+  transform: scale(1.01);
+
+  transition: transform 0.5s ease;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.custom-base-models__card:hover
+.custom-base-models__photo-image {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.custom-base-models__photo-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05),
+    transparent 55%,
+    rgba(0, 0, 0, 0.12)
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PHOTO NOTE
+========================================= */
+
+.custom-base-models__photo-note {
+  position: absolute;
+
+  left: 11px;
+  right: 11px;
+  bottom: 10px;
+
+  z-index: 2;
+
+  box-sizing: border-box;
+
+  padding: 5px 8px;
+
+  border-radius: 3px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.custom-base-models__card-content {
+  min-height: 105px;
+
+  box-sizing: border-box;
+
+  padding: 15px 18px 15px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   SIZE
+========================================= */
+
+.custom-base-models__size {
+  margin-bottom: 9px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.custom-base-models__card-title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 23px;
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =========================================
+   CARD LINK
+========================================= */
+
+.custom-base-models__card-link {
+  display: inline-block;
+
+  margin-top: auto;
+
+  padding-top: 10px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.custom-base-models__card-link:hover {
+  color: #171715;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   START FROM SCRATCH CARD
+========================================= */
+
+.custom-base-models__scratch-card {
+  min-height: 245px;
+
+  box-sizing: border-box;
+
+  padding: 25px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 9px;
+
+  background: #171715;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SCRATCH TITLE
+========================================= */
+
+.custom-base-models__scratch-card h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 23px;
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+
+/* =========================================
+   SCRATCH DESCRIPTION
+========================================= */
+
+.custom-base-models__scratch-card p {
+  max-width: 230px;
+
+  margin: 59px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   SCRATCH LINK
+========================================= */
+
+.custom-base-models__scratch-link {
+  margin-top: auto;
+
+  padding-top: 18px;
+
+  color: #d89163;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.custom-base-models__scratch-link:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .custom-base-models {
+    padding: 68px 0 65px;
+  }
+
+  .custom-base-models__container {
+    width: calc(100% - 70px);
+  }
+
+  .custom-base-models__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+
+    margin-bottom: 30px;
+  }
+
+  .custom-base-models__intro {
+    padding-top: 0;
+  }
+
+  .custom-base-models__title {
+    font-size: 53px;
+  }
+
+  .custom-base-models__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .custom-base-models {
+    padding: 55px 0 55px;
+  }
+
+  .custom-base-models__container {
+    width: 90%;
+  }
+
+
+  /* Label */
+
+  .custom-base-models__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .custom-base-models__label span {
+    font-size: 12px;
+  }
+
+  .custom-base-models__label i {
+    width: 34px;
+  }
+
+  .custom-base-models__label strong {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* Title */
+
+  .custom-base-models__title {
+    font-size: clamp(42px, 11vw, 57px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Intro */
+
+  .custom-base-models__top {
+    row-gap: 23px;
+
+    margin-bottom: 27px;
+  }
+
+  .custom-base-models__intro p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Grid */
+
+  .custom-base-models__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+
+  /* Photo */
+
+  .custom-base-models__photo {
+    height: 145px;
+  }
+
+
+  /* Content */
+
+  .custom-base-models__card-content {
+    min-height: 125px;
+
+    padding: 14px 13px;
+  }
+
+  .custom-base-models__size {
+    font-size: 11px;
+
+    margin-bottom: 8px;
+  }
+
+  .custom-base-models__card-title {
+    font-size: 19px;
+  }
+
+  .custom-base-models__card-link {
+    font-size: 10px;
+  }
+
+
+  /* Scratch Card */
+
+  .custom-base-models__scratch-card {
+    min-height: 215px;
+
+    padding: 20px 15px;
+  }
+
+  .custom-base-models__scratch-card h3 {
+    font-size: 20px;
+  }
+
+  .custom-base-models__scratch-card p {
+    margin-top: 35px;
+
+    font-size: 13px;
+  }
+
+  .custom-base-models__scratch-link {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   KEEP 2 COLUMNS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .custom-base-models__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 7px;
+  }
+
+  .custom-base-models__photo {
+    height: 135px;
+  }
+
+  .custom-base-models__card-content {
+    min-height: 120px;
+
+    padding: 13px 10px;
+  }
+
+  .custom-base-models__card-title {
+    font-size: 17px;
+  }
+
+  .custom-base-models__card-link {
+    font-size: 9px;
+  }
+
+  .custom-base-models__scratch-card {
+    min-height: 200px;
+
+    padding: 17px 12px;
+  }
+
+  .custom-base-models__scratch-card h3 {
+    font-size: 18px;
+  }
+
+  .custom-base-models__scratch-card p {
+    margin-top: 28px;
+
+    font-size: 11px;
+  }
+
+}

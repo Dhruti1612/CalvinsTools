@@ -1,0 +1,531 @@
+/* =========================================
+   CUSTOM HOW WE BUILD
+   Unique classes only
+========================================= */
+
+.custom-how-build {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 76px;
+
+  background: #f4f3ef;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.custom-how-build__container {
+  width: calc(100% - 110px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.custom-how-build__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 70px;
+
+  margin-bottom: 34px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.custom-how-build__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.custom-how-build__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.custom-how-build__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.custom-how-build__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.custom-how-build__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 57px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.custom-how-build__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   RIGHT INTRO
+========================================= */
+
+.custom-how-build__intro {
+  padding-top: 29px;
+}
+
+.custom-how-build__intro p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   BUILD TIME
+========================================= */
+
+.custom-how-build__timeline {
+  display: block;
+
+  margin-top: 24px;
+
+  color: #393631;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   CONFIRM LABEL
+========================================= */
+
+.custom-how-build__confirm {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  padding: 3px 5px;
+
+  border: 1px dashed #c97942;
+
+  border-radius: 2px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   STEPS
+   Separate cards with gaps
+========================================= */
+
+.custom-how-build__steps {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 10px;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   INDIVIDUAL STEP
+========================================= */
+
+.custom-how-build__step {
+  position: relative;
+
+  min-height: 176px;
+
+  box-sizing: border-box;
+
+  padding: 29px 22px 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3ded6;
+
+  border-top: 3px solid #171715;
+
+  border-radius: 9px;
+}
+
+
+/* =========================================
+   FIRST STEP ORANGE BORDER
+========================================= */
+
+.custom-how-build__step--first {
+  border-top-color: #c65e19;
+}
+
+
+/* =========================================
+   STEP NUMBER
+========================================= */
+
+.custom-how-build__step-number {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   STEP TITLE
+========================================= */
+
+.custom-how-build__step-title {
+  margin: 0 0 10px;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.4px;
+}
+
+
+/* =========================================
+   STEP DESCRIPTION
+========================================= */
+
+.custom-how-build__step-description {
+  max-width: 245px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .custom-how-build {
+    padding: 68px 0 65px;
+  }
+
+  .custom-how-build__container {
+    width: calc(100% - 70px);
+  }
+
+  .custom-how-build__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 24px;
+
+    margin-bottom: 30px;
+  }
+
+  .custom-how-build__intro {
+    padding-top: 0;
+  }
+
+  .custom-how-build__title {
+    font-size: 53px;
+  }
+
+
+  /* =========================================
+     STEPS
+     2 COLUMNS WITH GAP
+  ========================================= */
+
+  .custom-how-build__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    background: transparent;
+  }
+
+  .custom-how-build__step {
+    border: 1px solid #e3ded6;
+
+    border-top: 3px solid #171715;
+
+    border-radius: 9px;
+  }
+
+  .custom-how-build__step--first {
+    border-top-color: #c65e19;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .custom-how-build {
+    padding: 55px 0;
+  }
+
+  .custom-how-build__container {
+    width: 90%;
+  }
+
+
+  /* =========================================
+     LABEL
+  ========================================= */
+
+  .custom-how-build__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .custom-how-build__label span {
+    font-size: 12px;
+  }
+
+  .custom-how-build__label i {
+    width: 34px;
+  }
+
+  .custom-how-build__label strong {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* =========================================
+     TITLE
+  ========================================= */
+
+  .custom-how-build__title {
+    font-size: clamp(42px, 11vw, 56px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* =========================================
+     INTRO
+  ========================================= */
+
+  .custom-how-build__top {
+    row-gap: 22px;
+
+    margin-bottom: 27px;
+  }
+
+  .custom-how-build__intro p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .custom-how-build__timeline {
+    margin-top: 19px;
+
+    font-size: 14px;
+  }
+
+
+  /* =========================================
+     STEPS
+     2 COLUMNS WITH GAP
+  ========================================= */
+
+  .custom-how-build__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    background: transparent;
+  }
+
+  .custom-how-build__step {
+    min-height: 190px;
+
+    padding: 21px 16px 18px;
+
+    border: 1px solid #e3ded6;
+
+    border-top: 3px solid #171715;
+
+    border-radius: 8px;
+  }
+
+  .custom-how-build__step--first {
+    border-top-color: #c65e19;
+  }
+
+
+  /* =========================================
+     STEP CONTENT
+  ========================================= */
+
+  .custom-how-build__step-number {
+    margin-bottom: 11px;
+
+    font-size: 11px;
+  }
+
+  .custom-how-build__step-title {
+    font-size: 20px;
+
+    line-height: 1.08;
+  }
+
+  .custom-how-build__step-description {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   KEEP 2 COLUMNS
+========================================= */
+
+@media (max-width: 380px) {
+
+  .custom-how-build__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    background: transparent;
+  }
+
+  .custom-how-build__step {
+    min-height: 185px;
+
+    padding: 19px 12px 16px;
+
+    border: 1px solid #e3ded6;
+
+    border-top: 3px solid #171715;
+
+    border-radius: 8px;
+  }
+
+  .custom-how-build__step--first {
+    border-top-color: #c65e19;
+  }
+
+  .custom-how-build__step-title {
+    font-size: 18px;
+  }
+
+  .custom-how-build__step-description {
+    font-size: 12px;
+  }
+
+}

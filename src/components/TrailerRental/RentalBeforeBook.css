@@ -1,0 +1,439 @@
+/* =========================================
+   BEFORE YOU BOOK
+   Completely unique class prefix
+========================================= */
+
+.rental-before-book-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 90px;
+
+  background: #f4f3ef;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rental-before-book-section__container {
+  width: calc(100% - 116px);
+  max-width: 1220px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.rental-before-book-section__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 70px;
+
+  margin-bottom: 34px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.rental-before-book-section__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.rental-before-book-section__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.rental-before-book-section__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.rental-before-book-section__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.rental-before-book-section__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 52px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.rental-before-book-section__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.rental-before-book-section__intro {
+  padding-top: 60px;
+}
+
+.rental-before-book-section__intro p {
+  max-width: 440px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   INFORMATION CARDS
+========================================= */
+
+.rental-before-book-section__cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.rental-before-book-section__card {
+  min-height: 252px;
+
+  box-sizing: border-box;
+
+  padding: 28px 30px 25px;
+
+  border: 1px solid #ded8ce;
+
+  border-top: 3px solid #171715;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+
+/* Included card orange top */
+
+.rental-before-book-section__card--included {
+  border-top-color: #c45d1d;
+}
+
+
+/* =========================================
+   CARD HEADING
+========================================= */
+
+.rental-before-book-section__card-heading {
+  margin-bottom: 18px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.rental-before-book-section__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.rental-before-book-section__list li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin-bottom: 12px;
+
+  color: #3f3b36;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+}
+
+.rental-before-book-section__list li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   CHECK ICON
+========================================= */
+
+.rental-before-book-section__check {
+  width: 21px;
+  height: 21px;
+
+  flex: 0 0 21px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: -1px;
+
+  border-radius: 4px;
+
+  background: #171715;
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.rental-before-book-section__card--included
+.rental-before-book-section__check {
+  background: #c45d1d;
+}
+
+
+/* =========================================
+   BOTTOM NOTE
+========================================= */
+
+.rental-before-book-section__bottom-note {
+  margin: 35px 0 0;
+
+  color: #716c64;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .rental-before-book-section {
+    padding: 68px 0 75px;
+  }
+
+  .rental-before-book-section__container {
+    width: calc(100% - 70px);
+  }
+
+  .rental-before-book-section__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 24px;
+  }
+
+  .rental-before-book-section__intro {
+    padding-top: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .rental-before-book-section {
+    padding: 56px 0 60px;
+  }
+
+  .rental-before-book-section__container {
+    width: 90%;
+  }
+
+
+  /* Label */
+
+  .rental-before-book-section__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .rental-before-book-section__label span {
+    font-size: 11px;
+  }
+
+  .rental-before-book-section__label i {
+    width: 34px;
+  }
+
+  .rental-before-book-section__label strong {
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  /* Title */
+
+  .rental-before-book-section__title {
+    font-size: clamp(39px, 10vw, 52px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Intro */
+
+  .rental-before-book-section__intro p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Cards */
+
+  .rental-before-book-section__cards {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .rental-before-book-section__card {
+    min-height: auto;
+
+    padding: 23px 19px 21px;
+  }
+
+  .rental-before-book-section__card-heading {
+    margin-bottom: 16px;
+
+    font-size: 10px;
+  }
+
+  .rental-before-book-section__list li {
+    gap: 9px;
+
+    margin-bottom: 11px;
+
+    font-size: 12px;
+  }
+
+  .rental-before-book-section__check {
+    width: 19px;
+    height: 19px;
+
+    flex-basis: 19px;
+
+    font-size: 11px;
+  }
+
+
+  /* Bottom note */
+
+  .rental-before-book-section__bottom-note {
+    margin-top: 23px;
+
+    font-size: 9px;
+
+    line-height: 1.55;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .rental-before-book-section__title {
+    font-size: 37px;
+  }
+
+  .rental-before-book-section__list li {
+    font-size: 11px;
+  }
+}

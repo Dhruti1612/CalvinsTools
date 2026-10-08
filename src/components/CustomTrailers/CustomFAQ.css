@@ -1,0 +1,422 @@
+/* =========================================
+   CUSTOM BUILD FAQ
+   Unique classes only
+========================================= */
+
+.custom-build-faq {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 82px;
+
+  background: #f4f3ef;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.custom-build-faq__container {
+  width: calc(100% - 110px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.custom-build-faq__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 70px;
+
+  margin-bottom: 34px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.custom-build-faq__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.custom-build-faq__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.custom-build-faq__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.custom-build-faq__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.custom-build-faq__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 57px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.custom-build-faq__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.custom-build-faq__intro {
+  padding-top: 20px;
+}
+
+.custom-build-faq__intro p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FAQ LIST
+========================================= */
+
+.custom-build-faq__list {
+  width: 100%;
+
+  border-top: 1px solid #d9d3c9;
+}
+
+
+/* =========================================
+   FAQ ITEM
+========================================= */
+
+.custom-build-faq__item {
+  width: 100%;
+
+  border-bottom: 1px solid #d9d3c9;
+}
+
+
+/* =========================================
+   QUESTION BUTTON
+========================================= */
+
+.custom-build-faq__question {
+  width: 100%;
+
+  min-height: 67px;
+
+  padding: 0 5px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #292723;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.custom-build-faq__question span {
+  display: block;
+}
+
+.custom-build-faq__question strong {
+  flex-shrink: 0;
+
+  color: #bd5a20;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   ANSWER
+========================================= */
+
+.custom-build-faq__answer {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows 0.3s ease,
+    padding 0.3s ease;
+
+  padding: 0 5px;
+}
+
+.custom-build-faq__answer p {
+  min-height: 0;
+
+  overflow: hidden;
+
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+}
+
+
+/* =========================================
+   OPEN ANSWER
+========================================= */
+
+.custom-build-faq__answer--open {
+  grid-template-rows: 1fr;
+
+  padding-bottom: 22px;
+}
+
+.custom-build-faq__answer--open p {
+  opacity: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .custom-build-faq {
+    padding: 68px 0 65px;
+  }
+
+  .custom-build-faq__container {
+    width: calc(100% - 70px);
+  }
+
+  .custom-build-faq__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 24px;
+
+    margin-bottom: 30px;
+  }
+
+  .custom-build-faq__intro {
+    padding-top: 0;
+  }
+
+  .custom-build-faq__title {
+    font-size: 53px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .custom-build-faq {
+    padding: 55px 0 60px;
+  }
+
+  .custom-build-faq__container {
+    width: 90%;
+  }
+
+
+  /* Label */
+
+  .custom-build-faq__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .custom-build-faq__label span {
+    font-size: 12px;
+  }
+
+  .custom-build-faq__label i {
+    width: 34px;
+  }
+
+  .custom-build-faq__label strong {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* Title */
+
+  .custom-build-faq__title {
+    font-size: clamp(42px, 11vw, 57px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Intro */
+
+  .custom-build-faq__top {
+    row-gap: 22px;
+
+    margin-bottom: 27px;
+  }
+
+  .custom-build-faq__intro p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Questions */
+
+  .custom-build-faq__question {
+    min-height: 62px;
+
+    padding: 0 3px;
+
+    font-size: 15px;
+
+    gap: 15px;
+  }
+
+  .custom-build-faq__question strong {
+    font-size: 20px;
+  }
+
+
+  /* Answers */
+
+  .custom-build-faq__answer {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .custom-build-faq__answer--open {
+    padding-bottom: 18px;
+  }
+
+  .custom-build-faq__answer p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .custom-build-faq__title {
+    font-size: 39px;
+  }
+
+  .custom-build-faq__question {
+    font-size: 14px;
+  }
+
+  .custom-build-faq__answer p {
+    font-size: 13px;
+  }
+
+}

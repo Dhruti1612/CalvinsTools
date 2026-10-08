@@ -1,0 +1,992 @@
+/* =========================================================
+   WHY CALVIN'S — BASE
+========================================================= */
+
+.why-calvins {
+  width: 100%;
+  background: #fbfaf7;
+  color: #171715;
+}
+
+
+/* =========================================================
+   REVIEWS SECTION
+========================================================= */
+
+.why-calvins__reviews {
+  width: 100%;
+  padding: 24px 0 84px;
+}
+
+
+/* =========================================================
+   REVIEWS CONTAINER
+========================================================= */
+
+.why-calvins__reviews-header,
+.why-calvins__reviews-grid {
+  width: calc(100% - 110px);
+  max-width: 1228px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =========================================================
+   REVIEWS HEADER
+========================================================= */
+
+.why-calvins__reviews-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 36px;
+}
+
+
+/* =========================================================
+   REVIEWS HEADING
+========================================================= */
+
+.why-calvins__reviews-heading h2 {
+  margin: 0 0 8px;
+  color: #171715;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(46px, 4vw, 57px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.why-calvins__reviews-heading h2 em {
+  color: #bd5a20;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.why-calvins__reviews-heading p {
+  margin: 0;
+  color: #69645d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RATING BOX
+========================================================= */
+
+.why-calvins__rating {
+  width: 347px;
+  min-height: 136px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   RATING SCORE
+========================================================= */
+
+.why-calvins__rating-score {
+  grid-row: 1 / 3;
+  align-self: center;
+  color: #171715;
+  font-family: "DM Sans", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   RATING INFO
+========================================================= */
+
+.why-calvins__rating-info {
+  align-self: center;
+}
+
+.why-calvins__rating-stars {
+  margin-bottom: 5px;
+  color: #bd5a20;
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.why-calvins__rating-info span {
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   RATING ACTIONS
+========================================================= */
+
+.why-calvins__rating-actions {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+}
+
+.why-calvins__review-button {
+  height: 42px;
+  width: 157px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+}
+
+.why-calvins__review-button--outline {
+  background: #ffffff;
+  border: 2px solid #292826;
+  color: #292826;
+}
+
+.why-calvins__review-button--orange {
+  background: #bd5a20;
+  border: 1px solid #bd5a20;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   REVIEW GRID
+   Desktop = 3 columns
+========================================================= */
+
+.why-calvins__reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+
+/* =========================================================
+   REVIEW TRACK
+========================================================= */
+
+.why-calvins__reviews-track {
+  display: contents;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.why-calvins__review-card {
+  min-width: 0;
+  min-height: 279px;
+  padding: 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   REVIEW PERSON
+========================================================= */
+
+.why-calvins__review-person {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.why-calvins__review-avatar {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #171715;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.why-calvins__review-person h3 {
+  margin: 0 0 5px;
+  color: #292826;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.why-calvins__review-stars {
+  color: #bd5a20;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.7px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+========================================================= */
+
+.why-calvins__review-text {
+  margin: 0;
+  color: #4f4b45;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.72;
+}
+
+
+/* =========================================================
+   REVIEW CATEGORY
+========================================================= */
+
+.why-calvins__review-category {
+  margin-top: auto;
+  color: #b8581f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   NEXT REVIEW
+========================================================= */
+
+.why-calvins__next-review {
+  min-height: 279px;
+  padding: 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  border: 1px dashed #d6cfc4;
+  border-radius: 9px;
+}
+
+.why-calvins__next-review h3 {
+  margin: 0 0 9px;
+  color: #69645d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.why-calvins__next-review p {
+  max-width: 300px;
+  margin: 0;
+  color: #69645d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   MAIN WHY SECTION
+========================================================= */
+
+.why-calvins__main {
+  width: 100%;
+  padding: 52px 0 85px;
+  background: #f7f6f2;
+}
+
+.why-calvins__container {
+  width: calc(100% - 110px);
+  max-width: 1228px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.why-calvins__section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 38px;
+}
+
+.why-calvins__section-label span {
+  color: #b8581f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.why-calvins__section-label i {
+  width: 42px;
+  height: 2px;
+  display: block;
+  background: #b8581f;
+}
+
+.why-calvins__section-label strong {
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   WHY HEADER
+========================================================= */
+
+.why-calvins__header {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  column-gap: 90px;
+  align-items: start;
+}
+
+.why-calvins__header h2 {
+  margin: 0;
+  color: #171715;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(62px, 5.2vw, 76px);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -2.8px;
+}
+
+.why-calvins__header h2 em {
+  color: #bd5a20;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   HEADER COPY
+========================================================= */
+
+.why-calvins__header-copy {
+  padding-top: 7px;
+}
+
+.why-calvins__header-copy p {
+  max-width: 445px;
+  margin: 0 0 16px;
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.why-calvins__header-copy a {
+  color: #b8581f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.why-calvins__divider {
+  width: 100%;
+  height: 1px;
+  margin: 34px 0 36px;
+  background: #d9d3ca;
+}
+
+
+/* =========================================================
+   STATS
+   Desktop = 4 columns
+========================================================= */
+
+.why-calvins__stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  margin-bottom: 37px;
+}
+
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.why-calvins__stat {
+  min-width: 0;
+  min-height: 153px;
+  padding: 27px 27px 22px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.why-calvins__stat:last-child {
+  border-right: 1px solid #ddd8cf;
+}
+
+.why-calvins__stat strong {
+  display: block;
+  margin-bottom: 17px;
+  color: #171715;
+  font-family: "DM Sans", sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.why-calvins__stat p {
+  max-width: 220px;
+  margin: 0;
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   REASONS GRID
+   Desktop = 3 columns
+========================================================= */
+
+.why-calvins__reasons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+
+/* =========================================================
+   REASON CARD
+========================================================= */
+
+.why-calvins__reason {
+  min-width: 0;
+  min-height: 179px;
+  padding: 27px 28px 23px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #ddd8cf;
+  border-left: 4px solid #292826;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.why-calvins__reason--first {
+  border-left-color: #bd5a20;
+}
+
+
+/* =========================================================
+   REASON NUMBER
+========================================================= */
+
+.why-calvins__reason-number {
+  display: block;
+  margin-bottom: 16px;
+  color: #b8581f;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   REASON TITLE
+========================================================= */
+
+.why-calvins__reason h3 {
+  margin: 0 0 10px;
+  color: #292826;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.7px;
+}
+
+
+/* =========================================================
+   REASON DESCRIPTION
+========================================================= */
+
+.why-calvins__reason p {
+  max-width: 340px;
+  margin: 0;
+  color: #625d56;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .why-calvins__reviews-header,
+  .why-calvins__reviews-grid,
+  .why-calvins__container {
+    width: calc(100% - 70px);
+  }
+
+  .why-calvins__reviews-heading h2 {
+    font-size: 48px;
+  }
+
+  .why-calvins__header {
+    column-gap: 50px;
+  }
+
+  .why-calvins__header h2 {
+    font-size: 62px;
+  }
+
+  .why-calvins__stat {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .why-calvins__stat strong {
+    font-size: 34px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .why-calvins__reviews {
+    padding: 50px 0 70px;
+  }
+
+  .why-calvins__reviews-header {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .why-calvins__rating {
+    width: 100%;
+  }
+
+
+  /* =======================================================
+     REVIEWS = ONE CARD PER ROW
+  ======================================================= */
+
+  .why-calvins__reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .why-calvins__review-card,
+  .why-calvins__next-review {
+    min-width: 0;
+    border-radius: 9px;
+  }
+
+  .why-calvins__next-review {
+    grid-column: auto;
+  }
+
+
+  .why-calvins__header {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+
+  /* =======================================================
+     STATS = TWO CARDS PER ROW
+  ======================================================= */
+
+  .why-calvins__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .why-calvins__stat {
+    border: 1px solid #ddd8cf;
+    border-radius: 9px;
+  }
+
+
+  /* =======================================================
+     REASONS = TWO CARDS PER ROW
+  ======================================================= */
+
+  .why-calvins__reasons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .why-calvins__reason {
+    border-radius: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .why-calvins__reviews {
+    padding: 45px 0 60px;
+  }
+
+  .why-calvins__reviews-header,
+  .why-calvins__container {
+    width: 90%;
+  }
+
+  .why-calvins__reviews-heading h2 {
+    font-size: 41px;
+    letter-spacing: -1.5px;
+  }
+
+  .why-calvins__reviews-heading p {
+    font-size: 13px;
+  }
+
+  .why-calvins__rating {
+    min-height: 125px;
+    padding: 18px;
+  }
+
+  .why-calvins__rating-score {
+    font-size: 37px;
+  }
+
+  .why-calvins__review-button {
+    width: 145px;
+    height: 39px;
+    font-size: 10px;
+  }
+
+
+  /* =======================================================
+     MOBILE REVIEW AUTO SLIDER
+  ======================================================= */
+
+  .why-calvins__reviews-slider {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .why-calvins__reviews-grid {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+  }
+
+  .why-calvins__reviews-track {
+    width: 300%;
+    display: flex;
+    gap: 0;
+    animation: whyCalvinsReviewSlide 12s infinite;
+  }
+
+  .why-calvins__review-card,
+  .why-calvins__next-review {
+    width: 33.333333%;
+    min-width: 33.333333%;
+    flex: 0 0 33.333333%;
+    min-height: 250px;
+    padding: 23px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  .why-calvins__review-text {
+    font-size: 14px;
+  }
+
+
+  /* =======================================================
+     MAIN
+  ======================================================= */
+
+  .why-calvins__main {
+    padding: 48px 0 65px;
+  }
+
+  .why-calvins__section-label {
+    margin-bottom: 29px;
+  }
+
+  .why-calvins__header h2 {
+    font-size: 52px;
+    letter-spacing: -1.8px;
+  }
+
+  .why-calvins__header-copy p {
+    font-size: 14px;
+  }
+
+
+  /* =======================================================
+     STATS = TWO CARDS PER ROW
+  ======================================================= */
+
+  .why-calvins__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .why-calvins__stat {
+    min-height: 125px;
+    border: 1px solid #ddd8cf;
+    border-radius: 8px;
+  }
+
+  .why-calvins__stat:nth-child(n + 2) {
+    border-top: 1px solid #ddd8cf;
+  }
+
+
+  /* =======================================================
+     REASONS = TWO CARDS PER ROW
+  ======================================================= */
+
+  .why-calvins__reasons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  .why-calvins__reason {
+    min-width: 0;
+    min-height: auto;
+    padding: 23px;
+    border-radius: 8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE REVIEW AUTO SLIDE
+========================================================= */
+
+@keyframes whyCalvinsReviewSlide {
+
+  0%,
+  28% {
+    transform: translateX(0);
+  }
+
+  33%,
+  61% {
+    transform: translateX(-33.333333%);
+  }
+
+  66%,
+  94% {
+    transform: translateX(-66.666666%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .why-calvins__reviews-heading h2 {
+    font-size: 37px;
+  }
+
+  .why-calvins__header h2 {
+    font-size: 46px;
+  }
+
+  .why-calvins__rating-actions {
+    gap: 6px;
+  }
+
+  .why-calvins__review-button {
+    width: 130px;
+    font-size: 9px;
+  }
+
+
+  /* =======================================================
+     REVIEWS = AUTO SLIDER
+  ======================================================= */
+
+  .why-calvins__reviews-slider {
+    width: 90%;
+  }
+
+  .why-calvins__reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border: none;
+    overflow: hidden;
+  }
+
+  .why-calvins__review-card,
+  .why-calvins__next-review {
+    min-width: 33.333333%;
+    width: 33.333333%;
+    flex: 0 0 33.333333%;
+    border: 1px solid #ddd8cf;
+    border-radius: 8px;
+  }
+
+  .why-calvins__next-review {
+    grid-column: auto;
+  }
+
+  .why-calvins__review-text {
+    font-size: 13px;
+  }
+
+
+  /* =======================================================
+     STATS = TWO CARDS PER ROW
+  ======================================================= */
+
+  .why-calvins__stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+    overflow: visible;
+  }
+
+  .why-calvins__stat {
+    min-width: 0;
+    min-height: 125px;
+    padding: 20px 15px;
+    border: 1px solid #ddd8cf;
+    border-radius: 8px;
+  }
+
+  .why-calvins__stat:nth-child(n + 2) {
+    border-top: 1px solid #ddd8cf;
+  }
+
+
+  /* =======================================================
+     REASONS = TWO CARDS PER ROW
+  ======================================================= */
+
+  .why-calvins__reasons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    border: none;
+    overflow: visible;
+  }
+
+  .why-calvins__reason {
+    min-width: 0;
+    min-height: auto;
+    padding: 18px 15px;
+    border-radius: 8px;
+  }
+
+  .why-calvins__reason-number {
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .why-calvins__reason h3 {
+    font-size: 19px;
+    line-height: 1.08;
+    letter-spacing: -0.4px;
+  }
+
+  .why-calvins__reason p {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+}

@@ -1,0 +1,661 @@
+.food-sale-page {
+  background: #fbfaf7;
+  color: #171715;
+  overflow-x: hidden;
+}
+
+.food-sale-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.food-sale-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.food-sale-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-sale-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 14, 12, 0.8) 0%,
+      rgba(15, 14, 12, 0.56) 45%,
+      rgba(15, 14, 12, 0.18) 100%
+    );
+}
+
+.food-sale-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.food-sale-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.food-sale-hero h1 {
+  max-width: 760px;
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+}
+
+.food-sale-hero p {
+  max-width: 600px;
+  margin: 28px 0 34px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.food-sale-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.food-sale-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.food-sale-btn:hover {
+  transform: translateY(-2px);
+}
+
+.food-sale-btn-primary {
+  background: #b8581f;
+  color: #ffffff;
+}
+
+.food-sale-btn-primary:hover {
+  background: #a34e1c;
+}
+
+.food-sale-btn-outline {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+  color: #ffffff;
+}
+
+.food-sale-btn-outline:hover {
+  background: #ffffff;
+  color: #171715;
+}
+
+.food-sale-btn-dark {
+  background: #171715;
+  color: #ffffff;
+}
+
+.food-sale-btn-dark:hover {
+  background: #b8581f;
+}
+
+.food-sale-btn-light {
+  background: #ffffff;
+  color: #171715;
+}
+
+.food-sale-btn-light:hover {
+  background: #f3efe9;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.food-sale-section {
+  padding: 100px 0;
+}
+
+.food-sale-alt {
+  background: #f3efe9;
+}
+
+.food-sale-section-label {
+  display: block;
+  margin-bottom: 18px;
+  color: #b8581f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.food-sale-heading {
+  max-width: 720px;
+  margin-bottom: 55px;
+}
+
+.food-sale-heading h2,
+.food-sale-two-column h2,
+.food-sale-size-section h2,
+.food-sale-compare-content h2 {
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.food-sale-heading > p {
+  max-width: 620px;
+  margin-top: 20px;
+  color: #4f4b44;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.food-sale-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.food-sale-intro-text {
+  padding-top: 38px;
+}
+
+.food-sale-intro-text p {
+  margin: 0 0 20px;
+  color: #4f4b44;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.food-sale-text-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #b8581f;
+  color: #b8581f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   TRAILER CARDS
+========================= */
+
+.food-sale-trailer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.food-sale-trailer-card {
+  overflow: hidden;
+  background: #fbfaf7;
+  border: 1px solid rgba(23, 23, 21, 0.08);
+}
+
+.food-sale-card-image {
+  height: 270px;
+  overflow: hidden;
+}
+
+.food-sale-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.food-sale-trailer-card:hover .food-sale-card-image img {
+  transform: scale(1.04);
+}
+
+.food-sale-card-content {
+  padding: 28px 26px 30px;
+}
+
+.food-sale-card-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #b8581f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.food-sale-card-content h3 {
+  margin-bottom: 13px;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.food-sale-card-content p {
+  min-height: 70px;
+  margin: 0 0 22px;
+  color: #4f4b44;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.food-sale-card-content a {
+  color: #b8581f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   BUYING POINTS
+========================= */
+
+.food-sale-buy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.food-sale-buy-card {
+  min-height: 270px;
+  padding: 30px 26px;
+  border-top: 2px solid #b8581f;
+  background: #f3efe9;
+}
+
+.food-sale-buy-card > span {
+  display: block;
+  margin-bottom: 55px;
+  color: #b8581f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.food-sale-buy-card h3 {
+  margin-bottom: 14px;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.food-sale-buy-card p {
+  margin: 0;
+  color: #4f4b44;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SIZES
+========================= */
+
+.food-sale-size-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.food-sale-size-section > div:first-child p {
+  max-width: 480px;
+  margin-top: 24px;
+  color: #4f4b44;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.food-sale-size-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.food-sale-size-card {
+  min-height: 105px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fbfaf7;
+  border: 1px solid rgba(23, 23, 21, 0.1);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.food-sale-size-card:hover {
+  background: #ffffff;
+  border-color: #b8581f;
+  transform: translateY(-2px);
+}
+
+.food-sale-size-card span {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+}
+
+.food-sale-size-card small {
+  color: #b8581f;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================
+   STANDARD VS CUSTOM
+========================= */
+
+.food-sale-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.food-sale-compare-image {
+  min-height: 550px;
+  overflow: hidden;
+}
+
+.food-sale-compare-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+  object-fit: cover;
+}
+
+.food-sale-compare-content p {
+  margin: 22px 0;
+  color: #4f4b44;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.food-sale-compare-list {
+  margin: 30px 0;
+  border-top: 1px solid rgba(23, 23, 21, 0.12);
+}
+
+.food-sale-compare-list div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 15px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(23, 23, 21, 0.12);
+}
+
+.food-sale-compare-list strong {
+  font-size: 14px;
+}
+
+.food-sale-compare-list span {
+  color: #4f4b44;
+  font-size: 14px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.food-sale-cta {
+  padding: 110px 0;
+  background: #171715;
+  color: #ffffff;
+  text-align: center;
+}
+
+.food-sale-cta .food-sale-section-label {
+  color: #d47742;
+}
+
+.food-sale-cta h2 {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: clamp(42px, 5vw, 65px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.food-sale-cta p {
+  max-width: 600px;
+  margin: 22px auto 32px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.food-sale-footer {
+  background: #f3efe9;
+}
+
+.food-sale-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 50px;
+  padding: 70px 0;
+}
+
+.food-sale-footer-brand h3 {
+  margin-bottom: 14px;
+  font-size: 28px;
+}
+
+.food-sale-footer-brand p {
+  max-width: 280px;
+  margin: 0;
+  color: #4f4b44;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.food-sale-footer h4 {
+  margin-bottom: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.food-sale-footer a {
+  display: block;
+  width: fit-content;
+  margin-bottom: 10px;
+  color: #4f4b44;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.food-sale-footer a:hover {
+  color: #b8581f;
+}
+
+.food-sale-footer-bottom {
+  border-top: 1px solid rgba(23, 23, 21, 0.1);
+}
+
+.food-sale-footer-bottom .food-sale-container {
+  padding: 20px 0;
+  color: #77716a;
+  font-size: 12px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .food-sale-trailer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .food-sale-buy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .food-sale-two-column,
+  .food-sale-size-section,
+  .food-sale-compare {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .food-sale-intro-text {
+    padding-top: 0;
+  }
+
+  .food-sale-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .food-sale-container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .food-sale-hero {
+    min-height: 560px;
+  }
+
+  .food-sale-hero h1 {
+    font-size: 48px;
+    letter-spacing: -1.5px;
+  }
+
+  .food-sale-hero p {
+    font-size: 16px;
+  }
+
+  .food-sale-section {
+    padding: 72px 0;
+  }
+
+  .food-sale-heading {
+    margin-bottom: 38px;
+  }
+
+  .food-sale-heading h2,
+  .food-sale-two-column h2,
+  .food-sale-size-section h2,
+  .food-sale-compare-content h2 {
+    font-size: 40px;
+  }
+
+  .food-sale-trailer-grid,
+  .food-sale-buy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-sale-card-content p {
+    min-height: auto;
+  }
+
+  .food-sale-buy-card {
+    min-height: auto;
+  }
+
+  .food-sale-buy-card > span {
+    margin-bottom: 30px;
+  }
+
+  .food-sale-size-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-sale-compare-image,
+  .food-sale-compare-image img {
+    min-height: 360px;
+  }
+
+  .food-sale-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 25px;
+  }
+
+  .food-sale-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .food-sale-cta {
+    padding: 80px 0;
+  }
+
+  .food-sale-cta h2 {
+    font-size: 42px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .food-sale-hero {
+    min-height: 540px;
+  }
+
+  .food-sale-hero h1 {
+    font-size: 42px;
+  }
+
+  .food-sale-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .food-sale-btn {
+    width: 100%;
+  }
+
+  .food-sale-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-sale-footer-brand {
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,535 @@
+/* =========================================
+   RENTAL FAQ
+   Completely unique class prefix
+========================================= */
+
+.rental-faq-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 80px 0 86px;
+
+  background: #f4f3ef;
+
+  color: #171715;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.rental-faq-section__container {
+  width: calc(100% - 104px);
+  max-width: 1228px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP AREA
+========================================= */
+
+.rental-faq-section__top {
+  display: grid;
+
+  grid-template-columns: 1.65fr 1fr;
+
+  column-gap: 65px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.rental-faq-section__label {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+}
+
+.rental-faq-section__label span {
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.rental-faq-section__label i {
+  width: 41px;
+  height: 2px;
+
+  display: block;
+
+  background: #b8581f;
+}
+
+.rental-faq-section__label strong {
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.rental-faq-section__title {
+  margin: 0;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 52px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.rental-faq-section__title em {
+  color: #bd5a20;
+
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.rental-faq-section__intro {
+  padding-top: 61px;
+}
+
+.rental-faq-section__intro p {
+  max-width: 445px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+
+
+/* =========================================
+   FAQ LIST
+========================================= */
+
+.rental-faq-section__list {
+  width: 100%;
+
+  border-top: 1px solid #d9d3c9;
+}
+
+
+/* =========================================
+   FAQ ITEM
+========================================= */
+
+.rental-faq-section__item {
+  border-bottom: 1px solid #d9d3c9;
+}
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.rental-faq-section__question {
+  width: 100%;
+
+  min-height: 66px;
+
+  box-sizing: border-box;
+
+  padding: 0 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.rental-faq-section__question span {
+  display: block;
+}
+
+.rental-faq-section__question strong {
+  flex-shrink: 0;
+
+  color: #c45d1d;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   ANSWER
+========================================= */
+
+.rental-faq-section__answer {
+  padding: 0 45px 21px 5px;
+}
+
+.rental-faq-section__answer p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   RENT-TO-OWN
+========================================= */
+
+.rental-faq-section__rto {
+  min-height: 205px;
+
+  box-sizing: border-box;
+
+  margin-top: 88px;
+
+  padding: 31px 39px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  border: 2px solid #272521;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   RTO CONTENT
+========================================= */
+
+.rental-faq-section__rto-content {
+  max-width: 760px;
+}
+
+.rental-faq-section__rto-label {
+  margin-bottom: 14px;
+
+  color: #b8581f;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.rental-faq-section__rto h3 {
+  margin: 0 0 8px;
+
+  color: #171715;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 29px;
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.7px;
+}
+
+.rental-faq-section__rto p {
+  max-width: 730px;
+
+  margin: 0;
+
+  color: #625d56;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+
+
+/* =========================================
+   RTO BUTTON
+========================================= */
+
+.rental-faq-section__rto-button {
+  flex-shrink: 0;
+
+  min-width: 260px;
+
+  height: 56px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  padding: 0 20px;
+
+  border: 2px solid #171715;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #171715;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.rental-faq-section__rto-button:hover {
+  background: #171715;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .rental-faq-section {
+    padding: 68px 0 75px;
+  }
+
+  .rental-faq-section__container {
+    width: calc(100% - 70px);
+  }
+
+  .rental-faq-section__top {
+    grid-template-columns: 1fr;
+
+    row-gap: 24px;
+  }
+
+  .rental-faq-section__intro {
+    padding-top: 0;
+  }
+
+  .rental-faq-section__rto {
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .rental-faq-section {
+    padding: 56px 0 60px;
+  }
+
+  .rental-faq-section__container {
+    width: 90%;
+  }
+
+
+  /* Label */
+
+  .rental-faq-section__label {
+    gap: 11px;
+
+    margin-bottom: 17px;
+  }
+
+  .rental-faq-section__label span {
+    font-size: 11px;
+  }
+
+  .rental-faq-section__label i {
+    width: 34px;
+  }
+
+  .rental-faq-section__label strong {
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  /* Title */
+
+  .rental-faq-section__title {
+    font-size: clamp(39px, 10vw, 52px);
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+  }
+
+
+  /* Intro */
+
+  .rental-faq-section__intro p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* FAQ */
+
+  .rental-faq-section__question {
+    min-height: 62px;
+
+    padding: 0 3px;
+
+    font-size: 14px;
+  }
+
+  .rental-faq-section__question strong {
+    font-size: 18px;
+  }
+
+  .rental-faq-section__answer {
+    padding: 0 25px 18px 3px;
+  }
+
+  .rental-faq-section__answer p {
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+
+  /* RTO */
+
+  .rental-faq-section__rto {
+    min-height: auto;
+
+    margin-top: 55px;
+
+    padding: 25px 20px;
+
+    gap: 23px;
+  }
+
+  .rental-faq-section__rto-label {
+    font-size: 9px;
+  }
+
+  .rental-faq-section__rto h3 {
+    font-size: 24px;
+  }
+
+  .rental-faq-section__rto p {
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+ 
+  .rental-faq-section__rto-button {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 50px;
+
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .rental-faq-section__title {
+    font-size: 37px;
+  }
+
+  .rental-faq-section__question {
+    font-size: 13px;
+  }
+
+  .rental-faq-section__rto h3 {
+    font-size: 22px;
+  }
+}

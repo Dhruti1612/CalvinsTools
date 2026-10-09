@@ -10,9 +10,8 @@ import Reviews from "./components/Reviews/Reviews";
 import About from "./components/About/About";
 import Certifications from "./components/Certification/Certifications";
 import Blog from "./components/Blog/Blog";
-import FoodTrailerForSale from "./components/TrailersForSale/FoodTrailersForSale";
-import SpecialtyTrailersForSale from "./components/TrailersForSale/SpecialtyTrailersForSale";
-
+import RentalTrailerDetail from "./components/TrailerRental/RentalTrailerDetail";
+import SaleTrailerDetail from "./components/TrailersForSale/SaleTrailerDetail";
 import Footer from "./components/Footer/Footer";
 
 
@@ -32,6 +31,12 @@ function App() {
           element={<TrailerRental />}
         />
 
+
+        <Route
+    path="/trailer-rental/:slug"
+    element={<RentalTrailerDetail />}
+  />
+
        
 
         <Route
@@ -39,15 +44,12 @@ function App() {
           element={<TrailersForSale />}
         />
 
-        <Route
-          path="/trailers-for-sale/food-trailer-for-sale"
-          element={<FoodTrailerForSale />}
-        />
-
-        <Route
-          path="/trailers-for-sale/specialty-trailers"
-          element={<SpecialtyTrailersForSale />}
-        />
+        
+<Route
+  path="/trailers-for-sale/:slug"
+  element={<SaleTrailerDetail />}
+/>
+        
 
 
          <Route

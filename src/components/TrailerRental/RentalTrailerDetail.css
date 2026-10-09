@@ -1,0 +1,1040 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/* =====================================================
+   RENTAL DETAIL — GLOBAL
+===================================================== */
+
+.rental-detail {
+  --rd-bg: #fbfaf7;
+  --rd-paper: #ffffff;
+  --rd-cream: #f3efe9;
+  --rd-ink: #171715;
+  --rd-muted: #625d56;
+  --rd-border: #ddd8cf;
+  --rd-orange: #b8581f;
+  --rd-orange-dark: #a34e1c;
+
+  width: 100%;
+  overflow: hidden;
+  background: var(--rd-bg);
+  color: var(--rd-ink);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.rental-detail *,
+.rental-detail *::before,
+.rental-detail *::after {
+  box-sizing: border-box;
+}
+
+.rental-detail img {
+  display: block;
+  max-width: 100%;
+}
+
+.rental-detail a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rental-detail button,
+.rental-detail input {
+  font: inherit;
+}
+
+.rental-detail button {
+  cursor: pointer;
+}
+
+.rental-detail__container {
+  width: calc(100% - 100px);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HERO / TOP
+===================================================== */
+
+.rental-detail__hero {
+  padding: 28px 0 70px;
+  background: #f5f3ee;
+  border-top: 4px solid var(--rd-ink);
+}
+
+.rental-detail__breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 24px;
+  color: #716c64;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.rental-detail__breadcrumb a:hover {
+  color: var(--rd-orange);
+}
+
+.rental-detail__breadcrumb strong {
+  color: var(--rd-ink);
+  font-weight: 700;
+}
+
+.rental-detail__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--rd-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.rental-detail__eyebrow span {
+  width: 25px;
+  height: 2px;
+  background: var(--rd-orange);
+}
+
+.rental-detail__title {
+  max-width: 1000px;
+  margin: 0 0 35px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 4.5vw, 68px);
+  font-weight: 500;
+  line-height: 0.99;
+  letter-spacing: -1.8px;
+  overflow-wrap: anywhere;
+}
+
+.rental-detail__title em {
+  color: var(--rd-orange);
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   MAIN TWO-COLUMN LAYOUT
+===================================================== */
+
+.rental-detail__main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(350px, 1fr);
+  align-items: start;
+  gap: 26px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.rental-detail__gallery {
+  min-width: 0;
+}
+
+.rental-detail__main-image {
+  position: relative;
+  height: clamp(350px, 37vw, 570px);
+  overflow: hidden;
+  background: #e9e2d6;
+  border-radius: 3px;
+}
+
+.rental-detail__main-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rental-detail__image-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 8px 11px;
+  border-radius: 4px;
+  background: var(--rd-ink);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rental-detail__image-caption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.93);
+  color: var(--rd-muted);
+  font-size: 10px;
+}
+
+.rental-detail__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.rental-detail__thumbnail {
+  height: 100px;
+  padding: 0;
+  overflow: hidden;
+  background: #e9e2d6;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.rental-detail__thumbnail:hover,
+.rental-detail__thumbnail.is-selected {
+  border-color: var(--rd-orange);
+}
+
+.rental-detail__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   BOOKING PANEL
+===================================================== */
+
+.rental-detail__booking {
+  min-width: 0;
+  padding: 25px;
+  background: var(--rd-paper);
+  border: 2px solid #343330;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(23, 23, 21, 0.035);
+}
+
+.rental-detail__booking-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.rental-detail__price-from {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  color: var(--rd-muted);
+  font-size: 12px;
+}
+
+.rental-detail__price-from strong {
+  color: var(--rd-ink);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rental-detail__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: #e7f3e9;
+  color: #267441;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.rental-detail__availability i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+
+/* =====================================================
+   RENTAL PERIOD TABS
+===================================================== */
+
+.rental-detail__periods {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3px;
+  padding: 4px;
+  background: #f2efe9;
+  border-radius: 7px;
+}
+
+.rental-detail__periods button {
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 3px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: #625d56;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.rental-detail__periods button:hover {
+  color: var(--rd-orange);
+}
+
+.rental-detail__periods button.is-active {
+  background: var(--rd-ink);
+  color: #fff;
+}
+
+.rental-detail__period-note {
+  min-height: 43px;
+  margin: 15px 0 18px;
+  color: var(--rd-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* =====================================================
+   CALENDAR
+===================================================== */
+
+.rental-detail__calendar {
+  margin-bottom: 20px;
+}
+
+.rental-detail__calendar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+
+.rental-detail__calendar-heading strong {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.rental-detail__calendar-heading button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--rd-ink);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.rental-detail__calendar-heading button:hover {
+  background: #f3efe9;
+}
+
+.rental-detail__weekdays,
+.rental-detail__calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.rental-detail__weekdays {
+  margin-bottom: 6px;
+}
+
+.rental-detail__weekdays span {
+  padding: 7px 0;
+  color: #89847b;
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.rental-detail__calendar-days button {
+  min-width: 0;
+  height: 37px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: #4f4b44;
+  font-size: 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.rental-detail__calendar-days button:not(:disabled):hover {
+  border-color: var(--rd-orange);
+  color: var(--rd-orange);
+}
+
+.rental-detail__calendar-days button.is-selected {
+  background: var(--rd-orange);
+  color: #fff;
+  font-weight: 800;
+}
+
+.rental-detail__calendar-days button:disabled {
+  cursor: default;
+}
+
+
+/* =====================================================
+   PICKUP / DELIVERY
+===================================================== */
+
+.rental-detail__delivery-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.rental-detail__delivery-options button {
+  min-height: 42px;
+  padding: 8px;
+  border: 1px solid var(--rd-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--rd-ink);
+  font-size: 11px;
+  font-weight: 800;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.rental-detail__delivery-options button.is-selected {
+  border: 2px solid var(--rd-orange);
+  color: var(--rd-orange);
+}
+
+.rental-detail__zip-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 15px;
+  color: var(--rd-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.rental-detail__zip-field input {
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid var(--rd-border);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--rd-ink);
+  outline: none;
+}
+
+.rental-detail__zip-field input:focus {
+  border-color: var(--rd-orange);
+}
+
+
+/* =====================================================
+   PRICE SUMMARY
+===================================================== */
+
+.rental-detail__summary {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e7e1d8;
+}
+
+.rental-detail__summary > div,
+.rental-detail__addon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  color: var(--rd-muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.rental-detail__summary > div > span {
+  min-width: 0;
+}
+
+.rental-detail__summary > div > strong,
+.rental-detail__addon > strong {
+  flex-shrink: 0;
+  color: var(--rd-ink);
+  font-weight: 800;
+}
+
+.rental-detail__addon {
+  align-items: center;
+  cursor: pointer;
+}
+
+.rental-detail__addon input {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--rd-orange);
+}
+
+.rental-detail__addon span {
+  flex: 1;
+}
+
+.rental-detail__summary .rental-detail__total {
+  align-items: center;
+  margin-top: 3px;
+  padding: 13px 0;
+  border-top: 1px solid #e7e1d8;
+  color: var(--rd-ink);
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   PAYMENT OPTIONS
+===================================================== */
+
+.rental-detail__payment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 8px 0 14px;
+}
+
+.rental-detail__payment button {
+  min-height: 40px;
+  padding: 8px;
+  border: 1px solid var(--rd-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--rd-ink);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.rental-detail__payment button.is-selected {
+  border: 2px solid var(--rd-ink);
+}
+
+
+/* =====================================================
+   RENT NOW / SAVE QUOTE
+===================================================== */
+
+.rental-detail__rent-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 54px;
+  padding: 14px;
+  border: 1px solid var(--rd-orange);
+  border-radius: 5px;
+  background: var(--rd-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.rental-detail__rent-button:hover {
+  background: var(--rd-orange-dark);
+  transform: translateY(-2px);
+}
+
+.rental-detail__save-button {
+  display: block;
+  width: 100%;
+  padding: 13px 8px 9px;
+  border: 0;
+  background: transparent;
+  color: var(--rd-ink);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.rental-detail__save-button:hover {
+  color: var(--rd-orange);
+}
+
+.rental-detail__booking-note {
+  margin: 8px 0 0;
+  padding: 10px;
+  border: 1px solid #c7dced;
+  border-radius: 4px;
+  background: #e8f1f8;
+  color: #456780;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   SPECIFICATIONS / EQUIPMENT / FLOOR PLAN
+===================================================== */
+
+.rental-detail__information {
+  padding: 65px 0 80px;
+  background: #fff;
+}
+
+.rental-detail__info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+}
+
+.rental-detail__info-card {
+  min-width: 0;
+  padding: 25px 23px;
+  background: #fff;
+  border: 1px solid var(--rd-border);
+  border-top: 4px solid var(--rd-ink);
+  border-radius: 9px;
+}
+
+.rental-detail__floor-card {
+  border-top-color: var(--rd-orange);
+}
+
+.rental-detail__section-label {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--rd-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.rental-detail__spec-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.rental-detail__spec-list > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #eee8df;
+  font-size: 12px;
+}
+
+.rental-detail__spec-list > div span {
+  color: var(--rd-muted);
+}
+
+.rental-detail__spec-list > div strong {
+  color: var(--rd-ink);
+  font-weight: 800;
+  text-align: right;
+}
+
+.rental-detail__data-note {
+  margin: 14px 0 0;
+  padding: 8px;
+  border: 1px solid #c7dced;
+  border-radius: 4px;
+  background: #e8f1f8;
+  color: #456780;
+  font-size: 10px;
+}
+
+.rental-detail__equipment {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.rental-detail__equipment span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 7px 10px;
+  border: 1px solid #e1dbd2;
+  border-radius: 5px;
+  background: #fff;
+  color: #403c36;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.rental-detail__info-description {
+  margin: 18px 0 0;
+  color: var(--rd-muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.rental-detail__floor-placeholder {
+  display: flex;
+  align-items: flex-end;
+  min-height: 220px;
+  padding: 12px;
+  background: repeating-linear-gradient(
+    135deg,
+    #e7dfd1 0,
+    #e7dfd1 14px,
+    #f2ece2 14px,
+    #f2ece2 28px
+  );
+  border-radius: 3px;
+}
+
+.rental-detail__floor-placeholder span {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--rd-muted);
+  font-size: 10px;
+}
+
+.rental-detail__download-button {
+  margin-top: 13px;
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 2px solid var(--rd-ink);
+  border-radius: 5px;
+  background: #fff;
+  color: var(--rd-ink);
+  font-size: 11px;
+  font-weight: 800;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.rental-detail__download-button:hover {
+  background: var(--rd-ink);
+  color: #fff;
+}
+
+
+/* =====================================================
+   SIMILAR TRAILERS
+===================================================== */
+
+.rental-detail__similar {
+  padding: 85px 0 95px;
+  background: #f5f3ee;
+}
+
+.rental-detail__similar-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 28px;
+}
+
+.rental-detail__similar-heading .rental-detail__section-label {
+  margin-bottom: 12px;
+}
+
+.rental-detail__similar-heading h2 {
+  margin: 0;
+  color: var(--rd-ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.3px;
+}
+
+.rental-detail__similar-heading > a {
+  flex-shrink: 0;
+  padding-bottom: 5px;
+  color: var(--rd-orange);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.rental-detail__similar-heading > a:hover {
+  color: var(--rd-ink);
+}
+
+.rental-detail__similar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.rental-detail__similar-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--rd-border);
+  border-radius: 9px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rental-detail__similar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(23, 23, 21, 0.07);
+}
+
+.rental-detail__similar-image {
+  height: 210px;
+  overflow: hidden;
+  background: #e7dfd1;
+}
+
+.rental-detail__similar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.rental-detail__similar-card:hover img {
+  transform: scale(1.04);
+}
+
+.rental-detail__similar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 17px;
+}
+
+.rental-detail__similar-content h3 {
+  margin: 0;
+  color: var(--rd-ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.rental-detail__similar-content span {
+  flex-shrink: 0;
+  color: var(--rd-orange);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+  .rental-detail__container {
+    width: calc(100% - 60px);
+  }
+
+  .rental-detail__main-grid {
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.9fr);
+    gap: 18px;
+  }
+
+  .rental-detail__booking {
+    padding: 19px;
+  }
+
+  .rental-detail__thumbnails button {
+    height: 85px;
+  }
+
+  .rental-detail__info-grid {
+    gap: 12px;
+  }
+
+  .rental-detail__info-card {
+    padding: 20px 16px;
+  }
+
+  .rental-detail__similar-image {
+    height: 180px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 760px) {
+  .rental-detail__container {
+    width: 90%;
+  }
+
+  .rental-detail__hero {
+    padding: 20px 0 45px;
+  }
+
+  .rental-detail__breadcrumb {
+    gap: 5px;
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .rental-detail__eyebrow {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .rental-detail__title {
+    margin-bottom: 25px;
+    font-size: clamp(38px, 10vw, 56px);
+    line-height: 1;
+    letter-spacing: -1.2px;
+  }
+
+  .rental-detail__main-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .rental-detail__main-image {
+    height: clamp(250px, 65vw, 420px);
+  }
+
+  .rental-detail__thumbnails {
+    gap: 6px;
+  }
+
+  .rental-detail__thumbnail {
+    height: clamp(65px, 18vw, 110px);
+  }
+
+  .rental-detail__booking {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .rental-detail__price-from strong {
+    font-size: 27px;
+  }
+
+  .rental-detail__periods button {
+    min-height: 38px;
+    font-size: 9px;
+  }
+
+  .rental-detail__calendar-days button {
+    height: 39px;
+  }
+
+  .rental-detail__information {
+    padding: 45px 0 55px;
+  }
+
+  .rental-detail__info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .rental-detail__info-card {
+    padding: 22px 18px;
+    border-radius: 8px;
+  }
+
+  .rental-detail__spec-list > div {
+    font-size: 12px;
+  }
+
+  .rental-detail__floor-placeholder {
+    min-height: 200px;
+  }
+
+  .rental-detail__similar {
+    padding: 60px 0 65px;
+  }
+
+  .rental-detail__similar-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 22px;
+  }
+
+  .rental-detail__similar-heading h2 {
+    font-size: clamp(36px, 9vw, 48px);
+  }
+
+  .rental-detail__similar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .rental-detail__similar-image {
+    height: 150px;
+  }
+
+  .rental-detail__similar-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
+    padding: 13px;
+  }
+
+  .rental-detail__similar-content h3 {
+    font-size: 17px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+  .rental-detail__title {
+    font-size: 36px;
+  }
+
+  .rental-detail__booking {
+    padding: 15px;
+  }
+
+  .rental-detail__periods button {
+    font-size: 8px;
+  }
+
+  .rental-detail__price-from strong {
+    font-size: 24px;
+  }
+
+  .rental-detail__availability {
+    padding: 7px;
+    font-size: 9px;
+  }
+
+  .rental-detail__calendar-days button {
+    height: 34px;
+    font-size: 11px;
+  }
+
+  .rental-detail__similar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rental-detail__similar-image {
+    height: 190px;
+  }
+}

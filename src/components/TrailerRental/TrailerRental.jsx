@@ -8,6 +8,7 @@ import RentalTrailersByType from './RentalTrailersByType';
 import RentalFAQ from './RentalFAQ';
 import CTA from '../Home/CTA';
 
+
 function TrailerRental() {
   return (
     <div>

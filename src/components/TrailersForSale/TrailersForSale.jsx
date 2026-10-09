@@ -1,12 +1,14 @@
-import  { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import "./TrailersForSale.css";
 
 // NOTE: items 4–8 are sample entries so every header filter shows something.
 // Replace them with your real inventory.
+
 const stockTrailers = [
   {
     id: "stock-1",
+    slug: "all-purpose-food-trailer",
     name: "All-Purpose Food Trailer",
     category: "food",
     type: "all-purpose",
@@ -18,6 +20,7 @@ const stockTrailers = [
   },
   {
     id: "stock-2",
+    slug: "bbq-smokehouse-trailer",
     name: "BBQ Smokehouse Trailer",
     category: "food",
     type: "bbq",
@@ -29,6 +32,7 @@ const stockTrailers = [
   },
   {
     id: "stock-3",
+    slug: "coffee-drinks-trailer",
     name: "Coffee & Drinks Trailer",
     category: "food",
     type: "coffee",
@@ -40,6 +44,7 @@ const stockTrailers = [
   },
   {
     id: "stock-4",
+    slug: "latin-street-trailer",
     name: "Latin Street Trailer",
     category: "food",
     type: "latin",
@@ -51,6 +56,7 @@ const stockTrailers = [
   },
   {
     id: "stock-5",
+    slug: "ice-cream-and-sweets-trailer",
     name: "Ice Cream & Sweets Trailer",
     category: "food",
     type: "ice-cream",
@@ -62,6 +68,7 @@ const stockTrailers = [
   },
   {
     id: "stock-6",
+    slug: "nail-salon-trailer",
     name: "Nail Salon Trailer",
     category: "specialty",
     type: "nail-salon",
@@ -73,6 +80,7 @@ const stockTrailers = [
   },
   {
     id: "stock-7",
+    slug: "retail-and-boutique-trailer",
     name: "Retail & Boutique Trailer",
     category: "specialty",
     type: "retail",
@@ -84,6 +92,7 @@ const stockTrailers = [
   },
   {
     id: "stock-8",
+    slug: "specialty-trailer",
     name: "Specialty Trailer",
     category: "specialty",
     type: "specialty",
@@ -95,58 +104,179 @@ const stockTrailers = [
   },
 ];
 
-
 const standardTrailers = [
-  { size: "16 ft", name: "All-Purpose Food Trailer", use: "Burgers, fried food, breakfast", image: "/Images/truck3.jpeg" },
-  { size: "14 ft", name: "Latin Street Trailer", use: "Tacos, pupusas, arepas", image: "/Images/latin.jpg" },
-  { size: "18–20 ft", name: "BBQ Smokehouse Trailer", use: "Smoked meats, catering", image: "/Images/bbq.jpg" },
-  { size: "12 ft", name: "Coffee & Drinks Trailer", use: "Coffee, smoothies, drinks", image: "/Images/coffee.jpg" },
-  { size: "14 ft", name: "Ice Cream & Sweets Trailer", use: "Ice cream, churros, desserts", image: "/Images/icecream.jpg" },
+  {
+    size: "16 ft",
+    name: "All-Purpose Food Trailer",
+    use: "Burgers, fried food, breakfast",
+    image: "/Images/truck3.jpeg",
+  },
+  {
+    size: "14 ft",
+    name: "Latin Street Trailer",
+    use: "Tacos, pupusas, arepas",
+    image: "/Images/latin.jpg",
+  },
+  {
+    size: "18–20 ft",
+    name: "BBQ Smokehouse Trailer",
+    use: "Smoked meats, catering",
+    image: "/Images/bbq.jpg",
+  },
+  {
+    size: "12 ft",
+    name: "Coffee & Drinks Trailer",
+    use: "Coffee, smoothies, drinks",
+    image: "/Images/coffee.jpg",
+  },
+  {
+    size: "14 ft",
+    name: "Ice Cream & Sweets Trailer",
+    use: "Ice cream, churros, desserts",
+    image: "/Images/icecream.jpg",
+  },
 ];
 
 const includedItems = [
-  { title: "Photo inspection report", text: "Welds, wiring, gas and plumbing — photographed and signed before handover." },
-  { title: "NHTSA-compliant chassis", text: "VIN, lights, brakes, tires & DOT labels." },
-  { title: "UL / ETL listed components", text: "Listed electrical components." },
-  { title: "NSF certified equipment", text: "Food-contact surfaces, sinks, refrigeration." },
-  { title: "Title & registration docs", text: "Paperwork provided with every sale." },
-  { title: "Handover walk-through", text: "Equipment, propane, water and power — plus support after you roll." },
+  {
+    title: "Photo inspection report",
+    text: "Welds, wiring, gas and plumbing — photographed and signed before handover.",
+  },
+  {
+    title: "NHTSA-compliant chassis",
+    text: "VIN, lights, brakes, tires & DOT labels.",
+  },
+  {
+    title: "UL / ETL listed components",
+    text: "Listed electrical components.",
+  },
+  {
+    title: "NSF certified equipment",
+    text: "Food-contact surfaces, sinks, refrigeration.",
+  },
+  {
+    title: "Title & registration docs",
+    text: "Paperwork provided with every sale.",
+  },
+  {
+    title: "Handover walk-through",
+    text: "Equipment, propane, water and power — plus support after you roll.",
+  },
 ];
 
 const buyingSteps = [
-  { step: "STEP 01", title: "Choose & ask", text: "Pick a trailer in stock or a standard configuration. Send a quote request — a salesperson replies the same business day." },
-  { step: "STEP 02", title: "Quote & hold", text: "Get a written quote. A deposit reserves the trailer in your name." },
-  { step: "STEP 03", title: "Inspection & paperwork", text: "We complete the photo inspection report and prepare the title, registration and compliance documents." },
-  { step: "STEP 04", title: "Pickup or delivery", text: "Pay the balance, sign the sales agreement online, then pick up or receive your trailer with a full walk-through." },
+  {
+    step: "STEP 01",
+    title: "Choose & ask",
+    text: "Pick a trailer in stock or a standard configuration. Send a quote request — a salesperson replies the same business day.",
+  },
+  {
+    step: "STEP 02",
+    title: "Quote & hold",
+    text: "Get a written quote. A deposit reserves the trailer in your name.",
+  },
+  {
+    step: "STEP 03",
+    title: "Inspection & paperwork",
+    text: "We complete the photo inspection report and prepare the title, registration and compliance documents.",
+  },
+  {
+    step: "STEP 04",
+    title: "Pickup or delivery",
+    text: "Pay the balance, sign the sales agreement online, then pick up or receive your trailer with a full walk-through.",
+  },
 ];
 
 const sizeGuide = [
-  { length: 10, crew: "1–2", best: "Coffee, drinks, desserts, hot dogs", range: "10-14" },
-  { length: 12, crew: "2", best: "Coffee & drinks, ice cream, snacks", range: "10-14" },
-  { length: 14, crew: "2–3", best: "Tacos, sweets, street food", range: "10-14" },
-  { length: 16, crew: "3", best: "Burgers, fried food, full menus", range: "16-18" },
-  { length: 18, crew: "3–4", best: "BBQ, catering, high volume", range: "16-18" },
-  { length: 20, crew: "4", best: "BBQ smokehouse, events", range: "20-22" },
-  { length: 22, crew: "4–5", best: "Full kitchen, high-volume service", range: "20-22" },
+  {
+    length: 10,
+    crew: "1–2",
+    best: "Coffee, drinks, desserts, hot dogs",
+    range: "10-14",
+  },
+  {
+    length: 12,
+    crew: "2",
+    best: "Coffee & drinks, ice cream, snacks",
+    range: "10-14",
+  },
+  {
+    length: 14,
+    crew: "2–3",
+    best: "Tacos, sweets, street food",
+    range: "10-14",
+  },
+  {
+    length: 16,
+    crew: "3",
+    best: "Burgers, fried food, full menus",
+    range: "16-18",
+  },
+  {
+    length: 18,
+    crew: "3–4",
+    best: "BBQ, catering, high volume",
+    range: "16-18",
+  },
+  {
+    length: 20,
+    crew: "4",
+    best: "BBQ smokehouse, events",
+    range: "20-22",
+  },
+  {
+    length: 22,
+    crew: "4–5",
+    best: "Full kitchen, high-volume service",
+    range: "20-22",
+  },
 ];
 
 const faqs = [
-  { q: "How much does a food trailer cost?", a: "Price depends on size, condition and equipment. Every trailer in stock shows its price or \"call for price\"; send a quote request for a written price including delivery and any options." },
-  { q: "Do you sell used food trailers?", a: "Yes. We list pre-owned and ex-rental trailers alongside new units, each with a photo inspection report so you know exactly what you are buying." },
-  { q: "Can you deliver the trailer to my state?", a: "We can arrange delivery to most states. Tell us your delivery location in the quote form and we will include delivery in your written quote." },
-  { q: "What paperwork comes with the trailer?", a: "Every sale includes the title and registration documents, the photo inspection report, and the compliance documents your local inspector asks for." },
-  { q: "Do you offer financing?", a: "Yes — you can pay in full, finance, or choose Rent-to-Own. Select your preferred option in the quote form and our team will explain the next steps." },
-  { q: "Can I change the equipment on a trailer in stock?", a: "Units in stock are sold as listed. If you want a different layout or equipment, that is a Custom Trailer — start your custom build and we will quote it." },
+  {
+    q: "How much does a food trailer cost?",
+    a: 'Price depends on size, condition and equipment. Every trailer in stock shows its price or "call for price"; send a quote request for a written price including delivery and any options.',
+  },
+  {
+    q: "Do you sell used food trailers?",
+    a: "Yes. We list pre-owned and ex-rental trailers alongside new units, each with a photo inspection report so you know exactly what you are buying.",
+  },
+  {
+    q: "Can you deliver the trailer to my state?",
+    a: "We can arrange delivery to most states. Tell us your delivery location in the quote form and we will include delivery in your written quote.",
+  },
+  {
+    q: "What paperwork comes with the trailer?",
+    a: "Every sale includes the title and registration documents, the photo inspection report, and the compliance documents your local inspector asks for.",
+  },
+  {
+    q: "Do you offer financing?",
+    a: "Yes — you can pay in full, finance, or choose Rent-to-Own. Select your preferred option in the quote form and our team will explain the next steps.",
+  },
+  {
+    q: "Can I change the equipment on a trailer in stock?",
+    a: "Units in stock are sold as listed. If you want a different layout or equipment, that is a Custom Trailer — start your custom build and we will quote it.",
+  },
 ];
 
 const shieldIcon = (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+  <svg
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
     <path d="m9 12 2 2 4-4" />
   </svg>
 );
 
-// Hero background image (public/Images/truck3.jpeg  ->  served at /Images/truck3.jpeg)
+// Hero background image (public/Images/truck3.jpeg -> /Images/truck3.jpeg)
 const HERO_IMAGE = "/Images/truck3.jpeg";
 
 const CATEGORY_LABELS = {
@@ -160,34 +290,81 @@ const CATEGORY_FILTERS = [
   { key: "specialty", label: "Specialty Trailers" },
 ];
 
-// Used by the header menu links:  /trailers-for-sale?type=bbq   ?size=16   ?category=food
+// Used by header menu links: /trailers-for-sale?type=bbq, ?size=16, ?category=food
 const TYPE_META = {
-  "all-purpose": { label: "All-Purpose Food Trailer", category: "food" },
-  latin: { label: "Taco & Latin Street Trailer", category: "food" },
-  bbq: { label: "BBQ Smokehouse Trailer", category: "food" },
-  coffee: { label: "Coffee & Drinks Trailer", category: "food" },
-  "ice-cream": { label: "Ice Cream & Sweets Trailer", category: "food" },
-  bar: { label: "Mobile Bar Trailer", category: "food" },
-  "nail-salon": { label: "Nail Salon Trailer", category: "specialty" },
-  retail: { label: "Retail & Boutique Trailer", category: "specialty" },
-  specialty: { label: "Specialty Trailer", category: "specialty" },
+  "all-purpose": {
+    label: "All-Purpose Food Trailer",
+    category: "food",
+  },
+  latin: {
+    label: "Taco & Latin Street Trailer",
+    category: "food",
+  },
+  bbq: {
+    label: "BBQ Smokehouse Trailer",
+    category: "food",
+  },
+  coffee: {
+    label: "Coffee & Drinks Trailer",
+    category: "food",
+  },
+  "ice-cream": {
+    label: "Ice Cream & Sweets Trailer",
+    category: "food",
+  },
+  bar: {
+    label: "Mobile Bar Trailer",
+    category: "food",
+  },
+  "nail-salon": {
+    label: "Nail Salon Trailer",
+    category: "specialty",
+  },
+  retail: {
+    label: "Retail & Boutique Trailer",
+    category: "specialty",
+  },
+  specialty: {
+    label: "Specialty Trailer",
+    category: "specialty",
+  },
 };
 
 const SIZE_OPTIONS = [10, 12, 14, 16, 18, 20, 22];
 
 const CHIP_FILTERS = [
-  { key: "new", label: "New", test: (t) => t.condition === "new" },
-  { key: "preowned", label: "Pre-owned", test: (t) => t.condition === "preowned" },
-  { key: "10-14", label: "10–14 ft", test: (t) => t.size >= 10 && t.size <= 14 },
-  { key: "16-18", label: "16–18 ft", test: (t) => t.size >= 16 && t.size <= 18 },
-  { key: "20-22", label: "20–22 ft", test: (t) => t.size >= 20 && t.size <= 22 },
+  {
+    key: "new",
+    label: "New",
+    test: (t) => t.condition === "new",
+  },
+  {
+    key: "preowned",
+    label: "Pre-owned",
+    test: (t) => t.condition === "preowned",
+  },
+  {
+    key: "10-14",
+    label: "10–14 ft",
+    test: (t) => t.size >= 10 && t.size <= 14,
+  },
+  {
+    key: "16-18",
+    label: "16–18 ft",
+    test: (t) => t.size >= 16 && t.size <= 18,
+  },
+  {
+    key: "20-22",
+    label: "20–22 ft",
+    test: (t) => t.size >= 20 && t.size <= 22,
+  },
 ];
 
-
 /* =====================================================
-   SEO  (Sale hub  ->  /trailers-for-sale/)
-   ===================================================== */
-const SITE_URL = "https://www.calvinstools.com"; // TODO: replace with your real domain
+   SEO (Sale hub -> /trailers-for-sale/)
+===================================================== */
+
+const SITE_URL = "https://www.calvinstools.com"; // Replace with your real domain
 const PAGE_PATH = "/trailers-for-sale/";
 
 const SEO = {
@@ -206,35 +383,62 @@ const slugify = (s) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
-// Create or update a <meta>/<link> tag in <head> and return a function that undoes it
+// Create or update a <meta>/<link> tag in <head> and return an undo function.
 function upsertHeadTag(tag, matchSelector, attrs) {
   let el = document.head.querySelector(matchSelector);
   let created = false;
   const previous = {};
+
   if (!el) {
     el = document.createElement(tag);
     document.head.appendChild(el);
     created = true;
   } else {
-    Object.keys(attrs).forEach((k) => (previous[k] = el.getAttribute(k)));
+    Object.keys(attrs).forEach((key) => {
+      previous[key] = el.getAttribute(key);
+    });
   }
-  Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+
+  Object.entries(attrs).forEach(([key, value]) => {
+    el.setAttribute(key, value);
+  });
+
   return () => {
-    if (created) el.remove();
-    else Object.entries(previous).forEach(([k, v]) => (v === null ? el.removeAttribute(k) : el.setAttribute(k, v)));
+    if (created) {
+      el.remove();
+    } else {
+      Object.entries(previous).forEach(([key, value]) => {
+        if (value === null) {
+          el.removeAttribute(key);
+        } else {
+          el.setAttribute(key, value);
+        }
+      });
+    }
   };
 }
 
 function buildJsonLd(trailers, questions) {
   const pageUrl = SITE_URL + PAGE_PATH;
+
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL + "/" },
-          { "@type": "ListItem", position: 2, name: "Trailers for Sale", item: pageUrl },
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: SITE_URL + "/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Trailers for Sale",
+            item: pageUrl,
+          },
         ],
       },
       {
@@ -245,7 +449,7 @@ function buildJsonLd(trailers, questions) {
         itemListElement: trailers.map((t, i) => ({
           "@type": "ListItem",
           position: i + 1,
-          url: `${SITE_URL}${PAGE_PATH}${slugify(t.name)}/`,
+          url: `${SITE_URL}${PAGE_PATH}${t.slug}/`,
           name: `${t.name} for Sale – ${t.size} ft`,
           image: SITE_URL + t.image,
         })),
@@ -255,7 +459,10 @@ function buildJsonLd(trailers, questions) {
         mainEntity: questions.map((f) => ({
           "@type": "Question",
           name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.a,
+          },
         })),
       },
     ],
@@ -265,7 +472,7 @@ function buildJsonLd(trailers, questions) {
 export default function TrailersForSale() {
   const [chip, setChip] = useState(null);
 
-  // ---- Filters come from the URL so header links can open the right list ----
+  // Filters come from the URL so header links can open the right list.
   const [params, setParams] = useSearchParams();
 
   const typeParam = params.get("type");
@@ -273,92 +480,159 @@ export default function TrailersForSale() {
   const sizeParam = Number(params.get("size"));
 
   const type = TYPE_META[typeParam] ? typeParam : null;
+
   const category = type
     ? TYPE_META[type].category
     : categoryParam === "food" || categoryParam === "specialty"
-    ? categoryParam
-    : "all";
+      ? categoryParam
+      : "all";
+
   const sizeFilter = SIZE_OPTIONS.includes(sizeParam) ? sizeParam : null;
 
   const updateParams = (next) => {
     const clean = {};
-    Object.entries(next).forEach(([k, v]) => {
-      if (v) clean[k] = String(v);
+
+    Object.entries(next).forEach(([key, value]) => {
+      if (value) {
+        clean[key] = String(value);
+      }
     });
+
     setParams(clean);
   };
 
   const selectCategory = (key) =>
-    updateParams({ category: key === "all" ? null : key, size: sizeFilter });
+    updateParams({
+      category: key === "all" ? null : key,
+      size: sizeFilter,
+    });
 
   const clearFilters = () => {
     setChip(null);
     updateParams({});
   };
 
-
   const [openFaq, setOpenFaq] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({
-    name: "", phone: "", email: "", trailer: stockTrailers[0].id,
-    when: "30", pay: "full", lang: "both", budget: "", notes: "",
+
+  // Read the selected trailer from the detail page's quote URL.
+  const [form, setForm] = useState(() => {
+    const requestedTrailer = new URLSearchParams(
+      window.location.search
+    ).get("trailer");
+
+    const validTrailer = stockTrailers.some(
+      (trailer) => trailer.id === requestedTrailer
+    );
+
+    return {
+      name: "",
+      phone: "",
+      email: "",
+      trailer: validTrailer ? requestedTrailer : stockTrailers[0].id,
+      when: "30",
+      pay: "full",
+      lang: "both",
+      budget: "",
+      notes: "",
+    };
   });
-  const setField = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+
+  const setField = (key) => (event) => {
+    setForm({
+      ...form,
+      [key]: event.target.value,
+    });
+  };
 
   const showSizes = (length) => {
     setChip(null);
     updateParams({ size: length });
-    document.getElementById("stock")?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    document.getElementById("stock")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // TODO: connect your backend / WhatsApp / email logic here
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // TODO: Connect your backend / WhatsApp / email logic here.
     console.log("Trailer quote lead:", form);
     setSent(true);
   };
 
   const visible = useMemo(() => {
-    const chipFilter = CHIP_FILTERS.find((c) => c.key === chip);
+    const chipFilter = CHIP_FILTERS.find((item) => item.key === chip);
+
     return stockTrailers.filter(
-      (t) =>
-        (category === "all" || t.category === category) &&
-        (!type || t.type === type) &&
-        (!sizeFilter || t.size === sizeFilter) &&
-        (!chipFilter || chipFilter.test(t))
+      (trailer) =>
+        (category === "all" || trailer.category === category) &&
+        (!type || trailer.type === type) &&
+        (!sizeFilter || trailer.size === sizeFilter) &&
+        (!chipFilter || chipFilter.test(trailer))
     );
   }, [category, type, sizeFilter, chip]);
 
-  // Labels for the "Showing ..." bar
-  const chipLabel = CHIP_FILTERS.find((c) => c.key === chip)?.label;
+  // Labels for the "Showing..." bar.
+  const chipLabel = CHIP_FILTERS.find((item) => item.key === chip)?.label;
+
   const activeLabels = [
     type
       ? TYPE_META[type].label
       : category !== "all"
-      ? CATEGORY_FILTERS.find((c) => c.key === category)?.label
-      : null,
+        ? CATEGORY_FILTERS.find((item) => item.key === category)?.label
+        : null,
     sizeFilter ? `${sizeFilter} ft` : null,
     chipLabel || null,
   ].filter(Boolean);
 
-
-  // ---- SEO: title, meta tags, canonical, Open Graph, JSON-LD (runs once) ----
+  // SEO: title, meta tags, canonical, Open Graph, JSON-LD.
   useEffect(() => {
     const pageUrl = SITE_URL + PAGE_PATH;
     const previousTitle = document.title;
+
     document.title = SEO.title;
 
     const undo = [
-      upsertHeadTag("meta", 'meta[name="description"]', { name: "description", content: SEO.description }),
-      upsertHeadTag("meta", 'meta[name="keywords"]', { name: "keywords", content: SEO.keywords }),
-      upsertHeadTag("link", 'link[rel="canonical"]', { rel: "canonical", href: pageUrl }),
-      upsertHeadTag("meta", 'meta[property="og:type"]', { property: "og:type", content: "website" }),
-      upsertHeadTag("meta", 'meta[property="og:title"]', { property: "og:title", content: SEO.title }),
-      upsertHeadTag("meta", 'meta[property="og:description"]', { property: "og:description", content: SEO.description }),
-      upsertHeadTag("meta", 'meta[property="og:url"]', { property: "og:url", content: pageUrl }),
-      upsertHeadTag("meta", 'meta[property="og:image"]', { property: "og:image", content: SITE_URL + HERO_IMAGE }),
-      upsertHeadTag("meta", 'meta[name="twitter:card"]', { name: "twitter:card", content: "summary_large_image" }),
+      upsertHeadTag("meta", 'meta[name="description"]', {
+        name: "description",
+        content: SEO.description,
+      }),
+      upsertHeadTag("meta", 'meta[name="keywords"]', {
+        name: "keywords",
+        content: SEO.keywords,
+      }),
+      upsertHeadTag("link", 'link[rel="canonical"]', {
+        rel: "canonical",
+        href: pageUrl,
+      }),
+      upsertHeadTag("meta", 'meta[property="og:type"]', {
+        property: "og:type",
+        content: "website",
+      }),
+      upsertHeadTag("meta", 'meta[property="og:title"]', {
+        property: "og:title",
+        content: SEO.title,
+      }),
+      upsertHeadTag("meta", 'meta[property="og:description"]', {
+        property: "og:description",
+        content: SEO.description,
+      }),
+      upsertHeadTag("meta", 'meta[property="og:url"]', {
+        property: "og:url",
+        content: pageUrl,
+      }),
+      upsertHeadTag("meta", 'meta[property="og:image"]', {
+        property: "og:image",
+        content: SITE_URL + HERO_IMAGE,
+      }),
+      upsertHeadTag("meta", 'meta[name="twitter:card"]', {
+        name: "twitter:card",
+        content: "summary_large_image",
+      }),
     ];
 
     const script = document.createElement("script");
@@ -369,13 +643,15 @@ export default function TrailersForSale() {
 
     return () => {
       document.title = previousTitle;
-      undo.forEach((fn) => fn());
+      undo.forEach((undoTag) => undoTag());
       script.remove();
     };
   }, []);
 
-  // ---- SEO: filtered lists are noindex, canonical always points to the hub ----
-  const isFiltered = category !== "all" || !!type || !!sizeFilter || chip !== null;
+  // Filtered lists are noindex; canonical always points to the hub.
+  const isFiltered =
+    category !== "all" || Boolean(type) || Boolean(sizeFilter) || chip !== null;
+
   useEffect(() => {
     return upsertHeadTag("meta", 'meta[name="robots"]', {
       name: "robots",
@@ -401,23 +677,34 @@ export default function TrailersForSale() {
               <a href="/">Home</a> / <strong>Trailers for Sale</strong>
             </div>
 
-            <p className="tfs-eyebrow">FOOD TRAILERS &amp; SPECIALTY TRAILERS FOR SALE</p>
+            <p className="tfs-eyebrow">
+              FOOD TRAILERS &amp; SPECIALTY TRAILERS FOR SALE
+            </p>
+
             <h1>
               Food Trailers for Sale.
               <br />
               Get Your Trailer Today.
             </h1>
+
             <p className="tfs-hero-text">
-              Ready-to-buy Food Trailers and Specialty Trailers from 10 to 22 ft — new and
-              pre-owned, documented for inspection, with a photo inspection report on every
-              trailer.
+              Ready-to-buy Food Trailers and Specialty Trailers from 10 to 22
+              ft — new and pre-owned, documented for inspection, with a photo
+              inspection report on every trailer.
             </p>
 
             <div className="tfs-hero-actions">
-              <a href="#" className="tfs-btn tfs-btn-primary tfs-btn-lg">
+              <a
+                href="#stock"
+                className="tfs-btn tfs-btn-primary tfs-btn-lg"
+              >
                 GET YOUR TRAILER TODAY →
               </a>
-              <a href="#" className="tfs-btn tfs-btn-outline tfs-btn-lg">
+
+              <a
+                href="#quote"
+                className="tfs-btn tfs-btn-outline tfs-btn-lg"
+              >
                 Get a Quote
               </a>
             </div>
@@ -441,6 +728,7 @@ export default function TrailersForSale() {
                 <span className="tfs-section-line" />
                 <span className="tfs-section-text">IN STOCK NOW</span>
               </div>
+
               <h2>
                 Trailers for sale,
                 <br />
@@ -450,8 +738,9 @@ export default function TrailersForSale() {
 
             <div className="tfs-listing-side">
               <p>
-                Every trailer listed here is on our lot and ready to buy. Reserved trailers
-                stay listed until sold — join the waitlist to hear about similar units.
+                Every trailer listed here is on our lot and ready to buy.
+                Reserved trailers stay listed until sold — join the waitlist to
+                hear about similar units.
               </p>
             </div>
           </div>
@@ -459,26 +748,33 @@ export default function TrailersForSale() {
           {/* FILTER BAR */}
           <div className="tfs-filters">
             <div className="tfs-filter-group">
-              {CATEGORY_FILTERS.map((f) => (
+              {CATEGORY_FILTERS.map((filter) => (
                 <button
-                  key={f.key}
+                  key={filter.key}
                   type="button"
-                  className={`tfs-pill tfs-pill-lg ${category === f.key ? "is-active" : ""}`}
-                  onClick={() => selectCategory(f.key)}
+                  className={`tfs-pill tfs-pill-lg ${
+                    category === filter.key ? "is-active" : ""
+                  }`}
+                  onClick={() => selectCategory(filter.key)}
                 >
-                  {f.label}
+                  {filter.label}
                 </button>
               ))}
             </div>
+
             <div className="tfs-filter-group">
-              {CHIP_FILTERS.map((f) => (
+              {CHIP_FILTERS.map((filter) => (
                 <button
-                  key={f.key}
+                  key={filter.key}
                   type="button"
-                  className={`tfs-pill tfs-pill-sm ${chip === f.key ? "is-active" : ""}`}
-                  onClick={() => setChip(chip === f.key ? null : f.key)}
+                  className={`tfs-pill tfs-pill-sm ${
+                    chip === filter.key ? "is-active" : ""
+                  }`}
+                  onClick={() =>
+                    setChip(chip === filter.key ? null : filter.key)
+                  }
                 >
-                  {f.label}
+                  {filter.label}
                 </button>
               ))}
             </div>
@@ -487,13 +783,22 @@ export default function TrailersForSale() {
           {/* RESULTS BAR */}
           <div className="tfs-results">
             <p>
-              Showing <strong>{visible.length}</strong> {visible.length === 1 ? "trailer" : "trailers"}
-              {activeLabels.map((l) => (
-                <span className="tfs-result-chip" key={l}>{l}</span>
+              Showing <strong>{visible.length}</strong>{" "}
+              {visible.length === 1 ? "trailer" : "trailers"}
+
+              {activeLabels.map((label) => (
+                <span className="tfs-result-chip" key={label}>
+                  {label}
+                </span>
               ))}
             </p>
-            {(activeLabels.length > 0) && (
-              <button type="button" className="tfs-clear" onClick={clearFilters}>
+
+            {activeLabels.length > 0 && (
+              <button
+                type="button"
+                className="tfs-clear"
+                onClick={clearFilters}
+              >
                 Clear filters ×
               </button>
             )}
@@ -501,11 +806,17 @@ export default function TrailersForSale() {
 
           {/* GRID */}
           <div className="tfs-grid">
-            {visible.map((t) => (
-              <article className="tfs-card" key={t.id}>
+            {visible.map((trailer) => (
+              <article className="tfs-card" key={trailer.id}>
                 <div className="tfs-card-photo">
-                  <img src={t.image} alt={t.name} loading="lazy" />
-                  <span className="tfs-card-tag">{CATEGORY_LABELS[t.category]}</span>
+                  <img
+                    src={trailer.image}
+                    alt={trailer.name}
+                    loading="lazy"
+                  />
+                  <span className="tfs-card-tag">
+                    {CATEGORY_LABELS[trailer.category]}
+                  </span>
                 </div>
 
                 <div className="tfs-card-body">
@@ -513,38 +824,53 @@ export default function TrailersForSale() {
                     <div className="tfs-badges">
                       <span
                         className={`tfs-badge ${
-                          t.condition === "new" ? "tfs-badge-new" : "tfs-badge-used"
+                          trailer.condition === "new"
+                            ? "tfs-badge-new"
+                            : "tfs-badge-used"
                         }`}
                       >
-                        {t.conditionLabel}
+                        {trailer.conditionLabel}
                       </span>
+
                       <span className="tfs-badge tfs-badge-stock">
                         <i className="tfs-dot" /> IN STOCK
                       </span>
                     </div>
-                    <span className="tfs-card-length">{t.size} FT</span>
+
+                    <span className="tfs-card-length">
+                      {trailer.size} FT
+                    </span>
                   </div>
 
-                  <h3>{t.name}</h3>
+                  <h3>{trailer.name}</h3>
 
                   <ul className="tfs-features">
-                    {t.tags.map((f) => (
-                      <li key={f}>{f}</li>
+                    {trailer.tags.map((feature) => (
+                      <li key={feature}>{feature}</li>
                     ))}
                   </ul>
 
                   <div className="tfs-card-price">
                     <span className="tfs-price">$—</span>
-                    <span className="tfs-price-note">VIN-documented · inspection report</span>
+                    <span className="tfs-price-note">
+                      VIN-documented · inspection report
+                    </span>
                   </div>
 
                   <div className="tfs-card-actions">
-                    <a href="#" className="tfs-btn tfs-btn-primary">
+                    <Link
+                      to={`/trailers-for-sale/${trailer.slug}`}
+                      className="tfs-btn tfs-btn-primary"
+                    >
                       GET YOUR TRAILER TODAY →
-                    </a>
-                    <a href="#" className="tfs-btn tfs-btn-outline-dark">
+                    </Link>
+
+                    <Link
+                      to={`/trailers-for-sale/${trailer.slug}`}
+                      className="tfs-btn tfs-btn-outline-dark"
+                    >
                       Details
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </article>
@@ -553,11 +879,20 @@ export default function TrailersForSale() {
             {visible.length === 0 && (
               <div className="tfs-empty">
                 <p>No trailers match these filters right now.</p>
+
                 <div className="tfs-empty-actions">
-                  <button type="button" className="tfs-btn tfs-btn-primary" onClick={clearFilters}>
+                  <button
+                    type="button"
+                    className="tfs-btn tfs-btn-primary"
+                    onClick={clearFilters}
+                  >
                     SHOW ALL TRAILERS
                   </button>
-                  <a href="#quote" className="tfs-btn tfs-btn-outline-dark">
+
+                  <a
+                    href="#quote"
+                    className="tfs-btn tfs-btn-outline-dark"
+                  >
                     Ask about this trailer →
                   </a>
                 </div>
@@ -570,36 +905,57 @@ export default function TrailersForSale() {
       {/* 02 STANDARD CONFIGURATIONS */}
       <section className="tfs-section tfs-bg-soft">
         <div className="tfs-container">
-            <div className="tfs-head">
-              <div>
-                <div className="tfs-section-label">
-                  <span className="tfs-section-num">02</span>
-                  <span className="tfs-section-line"></span>
-                  <span className="tfs-section-text">STANDARD CONFIGURATIONS</span>
-                </div>
-                <h2>Proven layouts.<br /><em>Ordered as standard.</em></h2>
+          <div className="tfs-head">
+            <div>
+              <div className="tfs-section-label">
+                <span className="tfs-section-num">02</span>
+                <span className="tfs-section-line" />
+                <span className="tfs-section-text">
+                  STANDARD CONFIGURATIONS
+                </span>
               </div>
-              <div className="tfs-head-side">
-                <p>
-                  Don't see it in stock? Order one of our standard Food Trailers — a fixed, proven
-                  layout with a set equipment list. Want to change the layout or equipment? That's a
-                  Custom Trailer.
-                </p>
-                <a href="#" className="tfs-text-link">Start your custom build →</a>
-              </div>
+
+              <h2>
+                Proven layouts.
+                <br />
+                <em>Ordered as standard.</em>
+              </h2>
             </div>
 
+            <div className="tfs-head-side">
+              <p>
+                Don't see it in stock? Order one of our standard Food Trailers
+                — a fixed, proven layout with a set equipment list. Want to
+                change the layout or equipment? That's a Custom Trailer.
+              </p>
+
+              <a href="#" className="tfs-text-link">
+                Start your custom build →
+              </a>
+            </div>
+          </div>
+
           <div className="tfs-std-grid">
-            {standardTrailers.map((t) => (
-              <article className="tfs-std-card" key={t.name}>
+            {standardTrailers.map((trailer) => (
+              <article className="tfs-std-card" key={trailer.name}>
                 <div className="tfs-std-photo">
-                  <img src={t.image} alt={t.name} loading="lazy" />
+                  <img
+                    src={trailer.image}
+                    alt={trailer.name}
+                    loading="lazy"
+                  />
                 </div>
+
                 <div className="tfs-std-body">
-                  <span className="tfs-std-size">{t.size}</span>
-                  <h3>{t.name}</h3>
-                  <p>{t.use}</p>
-                  <a href="#" className="tfs-text-link tfs-text-link-sm">GET A QUOTE →</a>
+                  <span className="tfs-std-size">{trailer.size}</span>
+                  <h3>{trailer.name}</h3>
+                  <p>{trailer.use}</p>
+                  <a
+                    href="#quote"
+                    className="tfs-text-link tfs-text-link-sm"
+                  >
+                    GET A QUOTE →
+                  </a>
                 </div>
               </article>
             ))}
@@ -614,32 +970,39 @@ export default function TrailersForSale() {
             <div>
               <div className="tfs-section-label">
                 <span className="tfs-section-num">03</span>
-                <span className="tfs-section-line"></span>
-                <span className="tfs-section-text">WHAT COMES WITH EVERY TRAILER</span>
+                <span className="tfs-section-line" />
+                <span className="tfs-section-text">
+                  WHAT COMES WITH EVERY TRAILER
+                </span>
               </div>
+
               <h2>
-                Built to U.S. standards. <em>Documented for inspection.</em>
+                Built to U.S. standards.{" "}
+                <em>Documented for inspection.</em>
               </h2>
             </div>
+
             <div className="tfs-head-side tfs-head-side-btn">
-              <a href="#" className="tfs-btn tfs-btn-white">SEE DOCUMENTS →</a>
+              <a href="#" className="tfs-btn tfs-btn-white">
+                SEE DOCUMENTS →
+              </a>
             </div>
           </div>
 
           <div className="tfs-included">
-            {includedItems.map((it) => (
-              <div className="tfs-included-item" key={it.title}>
+            {includedItems.map((item) => (
+              <div className="tfs-included-item" key={item.title}>
                 <span className="tfs-included-icon">{shieldIcon}</span>
-                <h4>{it.title}</h4>
-                <p>{it.text}</p>
+                <h4>{item.title}</h4>
+                <p>{item.text}</p>
               </div>
             ))}
           </div>
 
           <p className="tfs-ahj-note">
-            Final health and fire approval is made by your local authority having jurisdiction
-            (AHJ); requirements vary by county. We provide the documentation your inspector asks
-            for.
+            Final health and fire approval is made by your local authority
+            having jurisdiction (AHJ); requirements vary by county. We provide
+            the documentation your inspector asks for.
           </p>
         </div>
       </section>
@@ -647,60 +1010,80 @@ export default function TrailersForSale() {
       {/* 04 HOW BUYING WORKS */}
       <section className="tfs-section tfs-bg-soft">
         <div className="tfs-container">
-            <div className="tfs-head">
-              <div>
-                <div className="tfs-section-label">
-                  <span className="tfs-section-num">04</span>
-                  <span className="tfs-section-line"></span>
-                  <span className="tfs-section-text">HOW BUYING WORKS</span>
-                </div>
-                <h2>From "that one"<br /><em>to the open road.</em></h2>
+          <div className="tfs-head">
+            <div>
+              <div className="tfs-section-label">
+                <span className="tfs-section-num">04</span>
+                <span className="tfs-section-line" />
+                <span className="tfs-section-text">HOW BUYING WORKS</span>
               </div>
-              <div className="tfs-head-side">
-                <p>A clear four-step process with documents at every step — no guesswork on paperwork or pickup.</p>
-              </div>
+
+              <h2>
+                From "that one"
+                <br />
+                <em>to the open road.</em>
+              </h2>
             </div>
 
+            <div className="tfs-head-side">
+              <p>
+                A clear four-step process with documents at every step — no
+                guesswork on paperwork or pickup.
+              </p>
+            </div>
+          </div>
+
           <div className="tfs-steps">
-            {buyingSteps.map((s, i) => {
-              const state = i === activeStep ? "is-active" : i < activeStep ? "is-done" : "";
+            {buyingSteps.map((step, index) => {
+              const state =
+                index === activeStep
+                  ? "is-active"
+                  : index < activeStep
+                    ? "is-done"
+                    : "";
+
               return (
                 <div
-                  className={`tfs-step ${state} ${i <= activeStep ? "is-reached" : ""}`}
-                  key={s.step}
+                  className={`tfs-step ${state} ${
+                    index <= activeStep ? "is-reached" : ""
+                  }`}
+                  key={step.step}
                   role="button"
                   tabIndex={0}
-                  aria-pressed={i === activeStep}
-                  onClick={() => setActiveStep(i)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setActiveStep(i);
+                  aria-pressed={index === activeStep}
+                  onClick={() => setActiveStep(index)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setActiveStep(index);
                     }
                   }}
                 >
-                  <span className="tfs-step-chip">{s.step}</span>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
+                  <span className="tfs-step-chip">{step.step}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.text}</p>
 
-                  {i === activeStep && (
-                    i < buyingSteps.length - 1 ? (
+                  {index === activeStep &&
+                    (index < buyingSteps.length - 1 ? (
                       <button
                         type="button"
                         className="tfs-step-next"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setActiveStep(i + 1);
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          setActiveStep(index + 1);
                         }}
                       >
                         Next step →
                       </button>
                     ) : (
-                      <a href="#quote" className="tfs-step-next" onClick={(e) => e.stopPropagation()}>
+                      <a
+                        href="#quote"
+                        className="tfs-step-next"
+                        onClick={(event) => event.stopPropagation()}
+                      >
                         Get your trailer →
                       </a>
-                    )
-                  )}
+                    ))}
                 </div>
               );
             })}
@@ -711,20 +1094,32 @@ export default function TrailersForSale() {
       {/* 05 COMPARE SIZES */}
       <section className="tfs-section">
         <div className="tfs-container">
-            <div className="tfs-head">
-              <div>
-                <div className="tfs-section-label">
-                  <span className="tfs-section-num">05</span>
-                  <span className="tfs-section-line"></span>
-                  <span className="tfs-section-text">COMPARE SIZES</span>
-                </div>
-                <h2>Which size<br /><em>fits your menu?</em></h2>
+          <div className="tfs-head">
+            <div>
+              <div className="tfs-section-label">
+                <span className="tfs-section-num">05</span>
+                <span className="tfs-section-line" />
+                <span className="tfs-section-text">COMPARE SIZES</span>
               </div>
-              <div className="tfs-head-side">
-                <p>A quick guide to crew size and menu by trailer length. For layouts and floor plans, read the full size guide.</p>
-                <a href="#" className="tfs-text-link">Read the food trailer size guide →</a>
-              </div>
+
+              <h2>
+                Which size
+                <br />
+                <em>fits your menu?</em>
+              </h2>
             </div>
+
+            <div className="tfs-head-side">
+              <p>
+                A quick guide to crew size and menu by trailer length. For
+                layouts and floor plans, read the full size guide.
+              </p>
+
+              <a href="#" className="tfs-text-link">
+                Read the food trailer size guide →
+              </a>
+            </div>
+          </div>
 
           <div className="tfs-table-wrap">
             <table className="tfs-table">
@@ -733,18 +1128,22 @@ export default function TrailersForSale() {
                   <th>LENGTH</th>
                   <th>CREW</th>
                   <th>BEST FOR</th>
-                  <th></th>
+                  <th />
                 </tr>
               </thead>
+
               <tbody>
-                {sizeGuide.map((r) => (
-                  <tr key={r.length}>
-                    <td className="tfs-td-strong">{r.length} ft</td>
-                    <td>{r.crew}</td>
-                    <td>{r.best}</td>
+                {sizeGuide.map((row) => (
+                  <tr key={row.length}>
+                    <td className="tfs-td-strong">{row.length} ft</td>
+                    <td>{row.crew}</td>
+                    <td>{row.best}</td>
                     <td className="tfs-td-link">
-                      <button type="button" onClick={() => showSizes(r.length)}>
-                        SEE {r.length} FT TRAILERS →
+                      <button
+                        type="button"
+                        onClick={() => showSizes(row.length)}
+                      >
+                        SEE {row.length} FT TRAILERS →
                       </button>
                     </td>
                   </tr>
@@ -761,18 +1160,22 @@ export default function TrailersForSale() {
           <div className="tfs-contact-copy">
             <div className="tfs-section-label">
               <span className="tfs-section-num">06</span>
-              <span className="tfs-section-line"></span>
+              <span className="tfs-section-line" />
               <span className="tfs-section-text">TALK TO SALES</span>
             </div>
+
             <h2>
               Get your trailer
               <br />
               <em>today.</em>
             </h2>
+
             <p>
-              Tell us which trailer you're looking at and when you need it. A salesperson replies
-              the same business day with price, availability and next steps.
+              Tell us which trailer you're looking at and when you need it. A
+              salesperson replies the same business day with price,
+              availability and next steps.
             </p>
+
             <ul className="tfs-contact-list">
               <li>WhatsApp · English / Español</li>
               <li>+1 770-746-4733</li>
@@ -783,62 +1186,125 @@ export default function TrailersForSale() {
             {sent ? (
               <div className="tfs-form-sent">
                 <h3>Thank you!</h3>
-                <p>We have received your request. Our sales team will reply the same business day.</p>
+                <p>
+                  We have received your request. Our sales team will reply the
+                  same business day.
+                </p>
               </div>
             ) : (
               <>
                 <div className="tfs-form-grid">
                   <label className="tfs-field">
-                    <span>Name <b>*</b></span>
-                    <input type="text" required value={form.name} onChange={setField("name")} />
+                    <span>
+                      Name <b>*</b>
+                    </span>
+                    <input
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={setField("name")}
+                    />
                   </label>
+
                   <label className="tfs-field">
-                    <span>Phone / WhatsApp <b>*</b></span>
-                    <input type="tel" required value={form.phone} onChange={setField("phone")} />
+                    <span>
+                      Phone / WhatsApp <b>*</b>
+                    </span>
+                    <input
+                      type="tel"
+                      required
+                      value={form.phone}
+                      onChange={setField("phone")}
+                    />
                   </label>
+
                   <label className="tfs-field">
-                    <span>Email <b>*</b></span>
-                    <input type="email" required value={form.email} onChange={setField("email")} />
+                    <span>
+                      Email <b>*</b>
+                    </span>
+                    <input
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={setField("email")}
+                    />
                   </label>
+
                   <label className="tfs-field">
-                    <span>Trailer of interest <b>*</b></span>
-                    <select required value={form.trailer} onChange={setField("trailer")}>
-                      {stockTrailers.map((t, i) => (
-                        <option key={t.id} value={t.id}>
-                          {t.name} · {t.size} ft{i === 0 ? " (pre-filled)" : ""}
+                    <span>
+                      Trailer of interest <b>*</b>
+                    </span>
+                    <select
+                      required
+                      value={form.trailer}
+                      onChange={setField("trailer")}
+                    >
+                      {stockTrailers.map((trailer, index) => (
+                        <option key={trailer.id} value={trailer.id}>
+                          {trailer.name} · {trailer.size} ft
+                          {index === 0 ? " (pre-filled)" : ""}
                         </option>
                       ))}
                     </select>
                   </label>
+
                   <label className="tfs-field">
-                    <span>When do you need it? <b>*</b></span>
-                    <select required value={form.when} onChange={setField("when")}>
+                    <span>
+                      When do you need it? <b>*</b>
+                    </span>
+                    <select
+                      required
+                      value={form.when}
+                      onChange={setField("when")}
+                    >
                       <option value="30">Within 30 days</option>
                       <option value="90">1–3 months</option>
                       <option value="180">3–6 months</option>
                       <option value="research">Just researching</option>
                     </select>
                   </label>
+
                   <label className="tfs-field">
-                    <span>How will you pay? <b>*</b></span>
-                    <select required value={form.pay} onChange={setField("pay")}>
-                      <option value="full">Pay in full / Financing / Rent-to-Own</option>
+                    <span>
+                      How will you pay? <b>*</b>
+                    </span>
+                    <select
+                      required
+                      value={form.pay}
+                      onChange={setField("pay")}
+                    >
+                      <option value="full">
+                        Pay in full / Financing / Rent-to-Own
+                      </option>
                       <option value="pay-full">Pay in full</option>
                       <option value="financing">Financing</option>
                       <option value="rto">Rent-to-Own</option>
                     </select>
                   </label>
+
                   <label className="tfs-field">
-                    <span>Preferred language <b>*</b></span>
-                    <select required value={form.lang} onChange={setField("lang")}>
+                    <span>
+                      Preferred language <b>*</b>
+                    </span>
+                    <select
+                      required
+                      value={form.lang}
+                      onChange={setField("lang")}
+                    >
                       <option value="both">English / Español</option>
                       <option value="en">English</option>
                       <option value="es">Español</option>
                     </select>
                   </label>
+
                   <label className="tfs-field">
-                    <span>Budget range <em>(optional)</em></span>
-                    <select value={form.budget} onChange={setField("budget")}>
+                    <span>
+                      Budget range <em>(optional)</em>
+                    </span>
+                    <select
+                      value={form.budget}
+                      onChange={setField("budget")}
+                    >
                       <option value="">Select a range</option>
                       <option value="u10">Under $10k</option>
                       <option value="10-20">$10k – $20k</option>
@@ -849,7 +1315,9 @@ export default function TrailersForSale() {
                 </div>
 
                 <label className="tfs-field tfs-field-full">
-                  <span>Anything we should know? <em>(optional)</em></span>
+                  <span>
+                    Anything we should know? <em>(optional)</em>
+                  </span>
                   <textarea
                     rows={3}
                     placeholder="Your menu, equipment needs, delivery location..."
@@ -858,7 +1326,10 @@ export default function TrailersForSale() {
                   />
                 </label>
 
-                <button type="submit" className="tfs-btn tfs-btn-primary tfs-submit">
+                <button
+                  type="submit"
+                  className="tfs-btn tfs-btn-primary tfs-submit"
+                >
                   GET YOUR TRAILER TODAY →
                 </button>
               </>
@@ -870,33 +1341,53 @@ export default function TrailersForSale() {
       {/* 07 BUYING FAQ */}
       <section className="tfs-section tfs-bg-soft">
         <div className="tfs-container">
-            <div className="tfs-head">
-              <div>
-                <div className="tfs-section-label">
-                  <span className="tfs-section-num">07</span>
-                  <span className="tfs-section-line"></span>
-                  <span className="tfs-section-text">BUYING FAQ</span>
-                </div>
-                <h2>Questions before<br /><em>you buy.</em></h2>
+          <div className="tfs-head">
+            <div>
+              <div className="tfs-section-label">
+                <span className="tfs-section-num">07</span>
+                <span className="tfs-section-line" />
+                <span className="tfs-section-text">BUYING FAQ</span>
               </div>
-              <div className="tfs-head-side">
-                <p>What buyers ask most. Still unsure? Talk to our sales team.</p>
-              </div>
+
+              <h2>
+                Questions before
+                <br />
+                <em>you buy.</em>
+              </h2>
             </div>
 
+            <div className="tfs-head-side">
+              <p>
+                What buyers ask most. Still unsure? Talk to our sales team.
+              </p>
+            </div>
+          </div>
+
           <div className="tfs-faq">
-            {faqs.map((f, i) => (
-              <div className={`tfs-faq-item ${openFaq === i ? "is-open" : ""}`} key={f.q}>
+            {faqs.map((faq, index) => (
+              <div
+                className={`tfs-faq-item ${
+                  openFaq === index ? "is-open" : ""
+                }`}
+                key={faq.q}
+              >
                 <button
                   type="button"
                   className="tfs-faq-q"
-                  aria-expanded={openFaq === i}
-                  onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                  aria-expanded={openFaq === index}
+                  onClick={() =>
+                    setOpenFaq(openFaq === index ? -1 : index)
+                  }
                 >
-                  <span>{f.q}</span>
-                  <span className="tfs-faq-icon">{openFaq === i ? "–" : "+"}</span>
+                  <span>{faq.q}</span>
+                  <span className="tfs-faq-icon">
+                    {openFaq === index ? "–" : "+"}
+                  </span>
                 </button>
-                {openFaq === i && <p className="tfs-faq-a">{f.a}</p>}
+
+                {openFaq === index && (
+                  <p className="tfs-faq-a">{faq.a}</p>
+                )}
               </div>
             ))}
           </div>
@@ -907,13 +1398,17 @@ export default function TrailersForSale() {
               <span className="tfs-rto-eyebrow">RENT-TO-OWN PROGRAM</span>
               <h3>Want to own your trailer over time?</h3>
               <p>
-                Not ready to pay in full? Qualified customers can make monthly payments toward
-                owning a trailer through our Rent-to-Own program. Apply online in about two
-                minutes — our team reviews every application and replies with options. Subject
-                to approval.
+                Not ready to pay in full? Qualified customers can make monthly
+                payments toward owning a trailer through our Rent-to-Own
+                program. Apply online in about two minutes — our team reviews
+                every application and replies with options. Subject to
+                approval.
               </p>
             </div>
-            <a href="/rent-to-own" className="tfs-rto-btn">See Rent-to-Own Options →</a>
+
+            <a href="/rent-to-own" className="tfs-rto-btn">
+              See Rent-to-Own Options →
+            </a>
           </div>
         </div>
       </section>
@@ -927,11 +1422,25 @@ export default function TrailersForSale() {
               <br />
               Get your trailer today.
             </h2>
-            <p>Trailers in stock can be ready for pickup or delivery soon after paperwork.</p>
+            <p>
+              Trailers in stock can be ready for pickup or delivery soon after
+              paperwork.
+            </p>
           </div>
+
           <div className="tfs-cta-actions">
-            <a href="#quote" className="tfs-btn tfs-btn-white tfs-cta-btn">GET YOUR TRAILER TODAY →</a>
-            <a href="#" className="tfs-btn tfs-btn-black tfs-cta-btn">RENT NOW →</a>
+            <a
+              href="#quote"
+              className="tfs-btn tfs-btn-white tfs-cta-btn"
+            >
+              GET YOUR TRAILER TODAY →
+            </a>
+            <a
+              href="#stock"
+              className="tfs-btn tfs-btn-black tfs-cta-btn"
+            >
+              VIEW TRAILERS →
+            </a>
           </div>
         </div>
       </section>

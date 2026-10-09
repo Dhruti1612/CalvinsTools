@@ -13,7 +13,6 @@ const RentalTrailers = () => {
   const sizeFromUrl = searchParams.get("size");
   const typeFromUrl = searchParams.get("type");
 
-
   /* =========================================================
      CATEGORY MAP
   ========================================================= */
@@ -25,25 +24,14 @@ const RentalTrailers = () => {
     event: "Event & Pop-Up",
   };
 
-
-  /* =========================================================
-     INITIAL FILTER STATE
-  ========================================================= */
-
- 
   const activeCategory =
     categoryMap[categoryFromUrl] || "All Rental Trailers";
 
-  const activeSize =
-    sizeFromUrl ? `${sizeFromUrl} ft` : "SIZE";
+  const activeSize = sizeFromUrl
+    ? `${sizeFromUrl} ft`
+    : "SIZE";
 
-  const activeType =
-    typeFromUrl || "TYPE";
-
-
-
- 
-
+  const activeType = typeFromUrl || "TYPE";
 
   /* =========================================================
      CATEGORY OPTIONS
@@ -56,7 +44,6 @@ const RentalTrailers = () => {
     "Retail & Boutique",
     "Event & Pop-Up",
   ];
-
 
   /* =========================================================
      SIZE OPTIONS
@@ -72,13 +59,13 @@ const RentalTrailers = () => {
     "20 ft",
   ];
 
-
   /* =========================================================
      TRAILER DATA
   ========================================================= */
 
   const trailers = [
     {
+      slug: "all-purpose-food-trailer",
       image: "/Images/truck1.jpeg",
       category: "FOOD & CONCESSION",
       filterCategory: "Food & Concession",
@@ -95,6 +82,7 @@ const RentalTrailers = () => {
     },
 
     {
+      slug: "latin-street-trailer",
       image: "/Images/truck6.jpg",
       category: "FOOD & CONCESSION",
       filterCategory: "Food & Concession",
@@ -111,6 +99,7 @@ const RentalTrailers = () => {
     },
 
     {
+      slug: "bbq-smokehouse-trailer",
       image: "/Images/bbq.jpg",
       category: "FOOD & CONCESSION",
       filterCategory: "Food & Concession",
@@ -127,6 +116,7 @@ const RentalTrailers = () => {
     },
 
     {
+      slug: "coffee-drinks-trailer",
       image: "/Images/coffee.jpg",
       category: "FOOD & CONCESSION",
       filterCategory: "Food & Concession",
@@ -143,6 +133,7 @@ const RentalTrailers = () => {
     },
 
     {
+      slug: "nail-studio-trailer",
       image: "/Images/nail.jpg",
       category: "NAIL SALON",
       filterCategory: "Nail Salon",
@@ -159,6 +150,7 @@ const RentalTrailers = () => {
     },
 
     {
+      slug: "mobile-retail-trailer",
       image: "/Images/truck8.jpg",
       category: "RETAIL & BOUTIQUE",
       filterCategory: "Retail & Boutique",
@@ -175,7 +167,6 @@ const RentalTrailers = () => {
     },
   ];
 
-
   /* =========================================================
      FILTER TRAILERS
   ========================================================= */
@@ -190,113 +181,74 @@ const RentalTrailers = () => {
       trailer.size === activeSize.toUpperCase();
 
     const typeMatch =
+      !activeType ||
       activeType === "TYPE" ||
       trailer.filterType === activeType;
 
-    return (
-      categoryMatch &&
-      sizeMatch &&
-      typeMatch
-    );
+    return categoryMatch && sizeMatch && typeMatch;
   });
 
-
   /* =========================================================
-     CATEGORY URLS
+     FILTER URL HELPER
+     Preserves other active filters when possible
   ========================================================= */
 
-  const categoryUrls = {
-    "All Rental Trailers":
-      "/trailer-rental",
+  const createFilterUrl = (key, value) => {
+    const params = new URLSearchParams(searchParams);
 
-    "Food & Concession":
-      "/trailer-rental?category=food",
+    if (value) {
+      params.set(key, value);
+    } else {
+      params.delete(key);
+    }
 
-    "Nail Salon":
-      "/trailer-rental?category=nail-salon",
+    const query = params.toString();
 
-    "Retail & Boutique":
-      "/trailer-rental?category=retail",
-
-    "Event & Pop-Up":
-      "/trailer-rental?category=event",
+    return query
+      ? `/trailer-rental?${query}`
+      : "/trailer-rental";
   };
 
+  const categoryValues = {
+    "All Rental Trailers": "",
+    "Food & Concession": "food",
+    "Nail Salon": "nail-salon",
+    "Retail & Boutique": "retail",
+    "Event & Pop-Up": "event",
+  };
 
   /* =========================================================
-     SIZE URLS
+     RENDER
   ========================================================= */
-
-  const sizeUrls = {
-    "10 ft":
-      "/trailer-rental?size=10",
-
-    "12 ft":
-      "/trailer-rental?size=12",
-
-    "14 ft":
-      "/trailer-rental?size=14",
-
-    "16 ft":
-      "/trailer-rental?size=16",
-
-    "18 ft":
-      "/trailer-rental?size=18",
-
-    "20 ft":
-      "/trailer-rental?size=20",
-  };
-
 
   return (
     <section className="rental-trailers-section">
-
       <div className="rental-trailers-section__container">
 
-        {/* =========================================
-            TOP SECTION
-        ========================================= */}
+        {/* TOP SECTION */}
 
         <div className="rental-trailers-section__top">
-
           <div className="rental-trailers-section__heading-area">
 
             <div className="rental-trailers-section__label">
-
               <span>02</span>
-
               <i></i>
-
-              <strong>
-                AVAILABLE RENTAL TRAILERS
-              </strong>
-
+              <strong>AVAILABLE RENTAL TRAILERS</strong>
             </div>
 
-
             <h2 className="rental-trailers-section__title">
-
               Choose your trailer.
-
               <br />
-
-              <em>
-                See live availability.
-              </em>
-
+              <em>See live availability.</em>
             </h2>
-
           </div>
 
-
           <div className="rental-trailers-section__intro">
-
             <p>
               Only trailers in our current rental fleet are listed.
               Booked trailers show the next open date — or join the
               waitlist and we'll text you when it frees up.
             </p>
-
 
             <Link
               to="/trailer-rental"
@@ -304,27 +256,23 @@ const RentalTrailers = () => {
             >
               See live availability.
             </Link>
-
           </div>
-
         </div>
 
-
-        {/* =========================================
-            FILTERS
-        ========================================= */}
+        {/* FILTERS */}
 
         <div className="rental-trailers-section__filters">
 
           {/* CATEGORY FILTERS */}
 
           <div className="rental-trailers-section__category-filters">
-
             {categories.map((category) => (
-
               <Link
                 key={category}
-                to={categoryUrls[category]}
+                to={createFilterUrl(
+                  "category",
+                  categoryValues[category]
+                )}
                 className={`rental-trailers-section__filter-button ${
                   activeCategory === category
                     ? "rental-trailers-section__filter-button--active"
@@ -333,185 +281,144 @@ const RentalTrailers = () => {
               >
                 {category}
               </Link>
-
             ))}
-
           </div>
-
 
           {/* SIZE FILTERS */}
 
           <div className="rental-trailers-section__size-filters">
-
             <span className="rental-trailers-section__size-label">
               SIZE
             </span>
 
+            {sizes.slice(1).map((size) => {
+              const sizeValue = size.replace(" ft", "");
 
-            {sizes.slice(1).map((size) => (
-
-              <Link
-                key={size}
-                to={sizeUrls[size]}
-                className={`rental-trailers-section__size-button ${
-                  activeSize === size
-                    ? "rental-trailers-section__size-button--active"
-                    : ""
-                }`}
-              >
-                {size}
-              </Link>
-
-            ))}
-
+              return (
+                <Link
+                  key={size}
+                  to={createFilterUrl("size", sizeValue)}
+                  className={`rental-trailers-section__size-button ${
+                    activeSize === size
+                      ? "rental-trailers-section__size-button--active"
+                      : ""
+                  }`}
+                >
+                  {size}
+                </Link>
+              );
+            })}
           </div>
-
         </div>
 
-
-        {/* =========================================
-            TRAILER GRID
-        ========================================= */}
+        {/* TRAILER GRID */}
 
         <div className="rental-trailers-section__grid">
-
           {filteredTrailers.length > 0 ? (
+            filteredTrailers.map((trailer) => {
+              const detailUrl = `/trailer-rental/${trailer.slug}`;
 
-            filteredTrailers.map((trailer) => (
+              return (
+                <article
+                  className="rental-trailers-section__card"
+                  key={trailer.slug}
+                >
 
-              <article
-                className="rental-trailers-section__card"
-                key={trailer.name}
-              >
+                  {/* PHOTO */}
 
-                {/* PHOTO */}
+                  <Link
+                    to={detailUrl}
+                    className="rental-trailers-section__photo"
+                    aria-label={`View ${trailer.name} details`}
+                  >
+                    <img
+                      src={trailer.image}
+                      alt={trailer.name}
+                      className="rental-trailers-section__photo-image"
+                    />
 
-                <div className="rental-trailers-section__photo">
+                    <div className="rental-trailers-section__photo-overlay"></div>
 
-                  <img
-                    src={trailer.image}
-                    alt={trailer.name}
-                    className="rental-trailers-section__photo-image"
-                  />
+                    <div className="rental-trailers-section__category-badge">
+                      {trailer.category}
+                    </div>
+                  </Link>
 
-                  <div className="rental-trailers-section__photo-overlay"></div>
+                  {/* CARD CONTENT */}
 
-                  <div className="rental-trailers-section__category-badge">
-                    {trailer.category}
-                  </div>
+                  <div className="rental-trailers-section__card-content">
 
-                </div>
-
-
-                {/* CARD CONTENT */}
-
-                <div className="rental-trailers-section__card-content">
-
-                  <div className="rental-trailers-section__card-meta">
-
-                    <span
-                      className={`rental-trailers-section__status rental-trailers-section__status--${trailer.statusType}`}
-                    >
-
-                      <i></i>
-
-                      {trailer.status}
-
-                    </span>
-
-
-                    <span className="rental-trailers-section__size">
-                      {trailer.size}
-                    </span>
-
-                  </div>
-
-
-                  <h3 className="rental-trailers-section__card-title">
-                    {trailer.name}
-                  </h3>
-
-
-                  <div className="rental-trailers-section__highlights">
-
-                    {trailer.highlights.map((highlight) => (
-
-                      <span key={highlight}>
-                        {highlight}
+                    <div className="rental-trailers-section__card-meta">
+                      <span
+                        className={`rental-trailers-section__status rental-trailers-section__status--${trailer.statusType}`}
+                      >
+                        <i></i>
+                        {trailer.status}
                       </span>
 
-                    ))}
+                      <span className="rental-trailers-section__size">
+                        {trailer.size}
+                      </span>
+                    </div>
 
-                  </div>
+                    <h3 className="rental-trailers-section__card-title">
+                      {trailer.name}
+                    </h3>
 
+                    <div className="rental-trailers-section__highlights">
+                      {trailer.highlights.map((highlight) => (
+                        <span key={highlight}>
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
 
-                  <div className="rental-trailers-section__price-row">
+                    <div className="rental-trailers-section__price-row">
+                      <span>From</span>
+                      <strong>$—</strong>
+                      <span>
+                        /day · $— /week · $— /month
+                      </span>
+                    </div>
 
-                    <span>
-                      From
-                    </span>
+                    {/* UPDATED DETAIL PAGE LINKS */}
 
-                    <strong>
-                      $—
-                    </strong>
+                    <div className="rental-trailers-section__actions">
 
-                    <span>
-                      /day · $— /week · $— /month
-                    </span>
-
-                  </div>
-
-
-                  <div className="rental-trailers-section__actions">
-
-                    {trailer.statusType === "booked" ? (
+                      {trailer.statusType === "booked" ? (
+                        <Link
+                          to={detailUrl}
+                          className="rental-trailers-section__rent-button rental-trailers-section__rent-button--waitlist"
+                        >
+                          JOIN WAITLIST →
+                        </Link>
+                      ) : (
+                        <Link
+                          to={detailUrl}
+                          className="rental-trailers-section__rent-button"
+                        >
+                          RENT NOW →
+                        </Link>
+                      )}
 
                       <Link
-                        to="/trailer-rental"
-                        className="rental-trailers-section__rent-button rental-trailers-section__rent-button--waitlist"
+                        to={detailUrl}
+                        className="rental-trailers-section__details-button"
                       >
-                        JOIN WAITLIST →
+                        Details
                       </Link>
-
-                    ) : (
-
-                      <Link
-                        to="/trailer-rental"
-                        className="rental-trailers-section__rent-button"
-                      >
-                        RENT NOW →
-                      </Link>
-
-                    )}
-
-
-                    <Link
-                      to="/trailer-rental"
-                      className="rental-trailers-section__details-button"
-                    >
-                      Details
-                    </Link>
-
+                    </div>
                   </div>
-
-                </div>
-
-              </article>
-
-            ))
-
+                </article>
+              );
+            })
           ) : (
-
             <div className="rental-trailers-section__empty">
               No trailers available for this selection.
             </div>
-
           )}
-
         </div>
-
       </div>
-
     </section>
   );
 };

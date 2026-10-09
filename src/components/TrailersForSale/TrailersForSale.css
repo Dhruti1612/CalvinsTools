@@ -129,7 +129,7 @@
 }
 .tfs-eyebrow {
   color: var(--tfs-orange-light);
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2.2px;
   margin: 0 0 20px;
@@ -469,10 +469,10 @@
 
 @media (max-width: 600px) {
   .tfs-hero h1 {
-    font-size: 34px;
+    font-size: 54px;
   }
   .tfs-hero-text {
-    font-size: 16px;
+    font-size: 18px;
   }
   .tfs-section h2 {
     font-size: 32px;

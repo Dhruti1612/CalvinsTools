@@ -48,11 +48,17 @@
 }
 
 .food-sale-eyebrow {
-  display: inline-block;
-  margin-bottom: 22px;
-  font-size: 12px;
-  font-weight: 700;
+   margin-bottom: 24px;
+  color: #d89163;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
   letter-spacing: 2px;
+
+  line-height: 1;
 }
 
 .food-sale-hero h1 {
@@ -561,12 +567,12 @@
   }
 
   .food-sale-hero h1 {
-    font-size: 48px;
+    font-size: 49px;
     letter-spacing: -1.5px;
   }
 
   .food-sale-hero p {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .food-sale-section {
